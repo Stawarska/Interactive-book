@@ -1,4 +1,6 @@
-﻿namespace Book
+﻿using System;
+
+namespace Book
 {
     public interface IPageContent
     {
@@ -6,6 +8,7 @@
 
         #if UNITY_EDITOR
         void DrawEditor();
+        event Action OnContentChanged; 
         #endif
     }
 }

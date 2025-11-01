@@ -1,8 +1,10 @@
-﻿using Book;
+﻿using System.Linq;
+using Book;
 using Nodes;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using Utils;
 using XNodeEditor;
 
 namespace Graph.Editor.Nodes
@@ -13,6 +15,9 @@ namespace Graph.Editor.Nodes
         private ParagraphNode node;
         private Texture2D cachedPreview;
         private Page lastPrefab;
+        private readonly string[] excludes = { "m_Script", "graph", "position", "ports", "<PageTemplate>k__BackingField"};
+        private Object templatePreviousValue;
+        private bool isContentChanged;
 
         public override void OnHeaderGUI()
         {
@@ -22,110 +27,94 @@ namespace Graph.Editor.Nodes
 
         public override void OnBodyGUI()
         {
-            base.OnBodyGUI();
+            serializedObject.Update();
             
-            if (node.PageTemplate != null)
-            {
-                foreach (var content in node.PageTemplate.PageContents)
-                    content.DrawEditor();
-                
-                EditorGUILayout.Space(5);
-
-                CreatePagePreview();
-            }
+            DrawPorts();
+            DrawPageTemplate();
+            DrawPageTemplateContent();
+            
             serializedObject.ApplyModifiedProperties();
         }
-
+        
         private void CreatePagePreview()
         {
-            // Regeneruj podgląd jeśli prefab się zmienił
-            if (lastPrefab != node.PageTemplate)
+            if (lastPrefab != node.PageVariant || isContentChanged)
             {
                 cachedPreview = null;
-                lastPrefab = node.PageTemplate;
+                lastPrefab = node.PageVariant;
+                isContentChanged = false;
             }
-
-            // Sprawdź czy to UI element
-            bool isUIElement = node.PageTemplate.GetComponent<RectTransform>() != null;
+            
+            var isUIElement = node.PageVariant.TryGetComponent(out RectTransform _);
 
             if (isUIElement && cachedPreview == null)
             {
-                cachedPreview = GenerateUIPreview(node.PageTemplate);
+                cachedPreview = GenerateUIPreview(node.PageVariant);
             }
+            
+            var preview = isUIElement ? cachedPreview : AssetPreview.GetAssetPreview(node.PageVariant);
 
-            // Użyj custom preview dla UI lub standardowego dla innych
-            Texture2D preview = isUIElement ? cachedPreview : AssetPreview.GetAssetPreview(node.PageTemplate);
-
-            if (preview != null)
-            {
-                float previewSize = 400f;
-                Rect previewRect = GUILayoutUtility.GetRect(previewSize, previewSize);
-
-                float width = Mathf.Min(previewSize, previewRect.width);
-                previewRect.x += (previewRect.width - width) / 2;
-                previewRect.width = width;
-                previewRect.height = width;
-
-                // Dodaj ramkę dla lepszej widoczności
-                EditorGUI.DrawRect(
-                    new Rect(previewRect.x - 1, previewRect.y - 1, previewRect.width + 2, previewRect.height + 2),
-                    Color.gray);
-                EditorGUI.DrawRect(previewRect, new Color(0.2f, 0.2f, 0.2f));
-
-                GUI.DrawTexture(previewRect, preview, ScaleMode.ScaleToFit);
-
-                EditorGUILayout.LabelField(node.PageTemplate.name, EditorStyles.centeredGreyMiniLabel);
-            }
-            else if (!isUIElement)
+            if (preview == null && !isUIElement)
             {
                 EditorGUILayout.HelpBox("Ładowanie podglądu...", MessageType.Info);
-                // Repaint();
+                return;
             }
-            else
+
+            if (preview == null && isUIElement)
             {
                 EditorGUILayout.HelpBox("Nie można wygenerować podglądu", MessageType.Warning);
+                return;
             }
+
+            var previewSize = 400f;
+            var previewRect = GUILayoutUtility.GetRect(previewSize, previewSize);
+
+            var width = Mathf.Min(previewSize, previewRect.width);
+            previewRect.x += (previewRect.width - width) / 2;
+            previewRect.width = width;
+            previewRect.height = width;
+            
+            EditorGUI.DrawRect(
+                new Rect(previewRect.x - 1, previewRect.y - 1, previewRect.width + 2, previewRect.height + 2),
+                Color.gray);
+            EditorGUI.DrawRect(previewRect, new Color(0.2f, 0.2f, 0.2f));
+
+            GUI.DrawTexture(previewRect, preview, ScaleMode.ScaleToFit);
+
+            EditorGUILayout.LabelField(node.PageTemplate.name, EditorStyles.centeredGreyMiniLabel);
         }
+
         private Texture2D GenerateUIPreview(Page uiPrefab)
         {
-            // Stwórz tymczasową instancję UI
-            GameObject tempInstance = (GameObject)PrefabUtility.InstantiatePrefab(uiPrefab.gameObject);
+            var tempInstance = (GameObject)PrefabUtility.InstantiatePrefab(uiPrefab.gameObject);
 
             if (tempInstance == null)
                 return null;
 
             try
             {
-                RectTransform rectTransform = tempInstance.GetComponent<RectTransform>();
-                if (rectTransform == null)
+                if(!tempInstance.TryGetComponent<RectTransform>(out var rectTransform))
                     return null;
 
-                // Stwórz tymczasowy Canvas
-                GameObject canvasObj = new GameObject("TempCanvas");
-                Canvas canvas = canvasObj.AddComponent<Canvas>();
+                var canvasObj = new GameObject("TempCanvas");
+                var canvas = canvasObj.AddComponent<Canvas>();
                 canvas.renderMode = RenderMode.WorldSpace;
 
-                CanvasScaler scaler = canvasObj.AddComponent<CanvasScaler>();
+                var scaler = canvasObj.AddComponent<CanvasScaler>();
                 scaler.dynamicPixelsPerUnit = 10;
-
-                // Dodaj UI element do canvas
+                
                 tempInstance.transform.SetParent(canvasObj.transform, false);
-
-                // Ustaw rozmiar i pozycję
-                Rect rect = rectTransform.rect;
-                float scale = 512f / Mathf.Max(rect.width, rect.height);
-
-                var width = EditorPrefs.GetFloat(Utils.Consts.BookSizeX);
-                var height = EditorPrefs.GetFloat(Utils.Consts.BookSizeY);
+                
+                var width = EditorPrefs.GetFloat(Consts.BookSizeX);
+                var height = EditorPrefs.GetFloat(Consts.BookSizeY);
                 
                 canvas.GetComponent<RectTransform>().sizeDelta = new Vector2(width, height);
                 rectTransform.anchoredPosition = Vector2.zero;
                 rectTransform.offsetMin = Vector2.zero;
                 rectTransform.offsetMax = Vector2.zero;
-
-                // Stwórz kamerę do renderowania
-                GameObject camObj = new GameObject("TempCamera");
-                Camera camera = camObj.AddComponent<Camera>();
+                
+                var camObj = new GameObject("TempCamera");
+                var camera = camObj.AddComponent<Camera>();
                 camera.clearFlags = CameraClearFlags.SolidColor;
                 camera.backgroundColor = new Color(0.2f, 0.2f, 0.2f, 1f);
                 camera.orthographic = true;
@@ -134,21 +123,17 @@ namespace Graph.Editor.Nodes
                 camera.farClipPlane = 1000f;
 
                 camObj.transform.position = new Vector3(0, 0, -10);
-
-                // Render Texture
-                RenderTexture renderTexture = new RenderTexture((int)width, (int)height, 24);
+                
+                var renderTexture = new RenderTexture((int)width, (int)height, 24);
                 camera.targetTexture = renderTexture;
-
-                // Renderuj
+                
                 camera.Render();
-
-                // Skopiuj do Texture2D
+                
                 RenderTexture.active = renderTexture;
-                Texture2D preview = new Texture2D((int)width, (int)height, TextureFormat.RGBA32, false);
+                var preview = new Texture2D((int)width, (int)height, TextureFormat.RGBA32, false);
                 preview.ReadPixels(new Rect(0, 0, (int)width, (int)height), 0, 0);
                 preview.Apply();
-
-                // Cleanup
+                
                 RenderTexture.active = null;
                 camera.targetTexture = null;
                 Object.DestroyImmediate(renderTexture);
@@ -163,7 +148,75 @@ namespace Graph.Editor.Nodes
                 return null;
             }
         }
+        private void DrawPorts()
+        {
+            var iterator = serializedObject.GetIterator();
+            var enterChildren = true;
+            while (iterator.NextVisible(enterChildren))
+            {
+                enterChildren = false;
+                if (excludes.Contains(iterator.name)) continue;
+                NodeEditorGUILayout.PropertyField(iterator);
+            }
 
+            foreach (var dynamicPort in target.DynamicPorts) {
+                if (NodeEditorGUILayout.IsDynamicPortListPort(dynamicPort)) continue;
+                NodeEditorGUILayout.PortField(dynamicPort);
+            }
+        }
+        private void DrawPageTemplate()
+        {
+            var pageTemplateProperty = serializedObject.FindAutoProperty("PageTemplate");
+    
+            if (pageTemplateProperty == null)
+            {
+                EditorGUILayout.HelpBox("Nie znaleziono property 'pageTemplate'", MessageType.Error);
+                return;
+            }
+    
+            EditorGUILayout.BeginVertical(EditorStyles.helpBox);
+    
+            EditorGUI.BeginChangeCheck();
+            
+            EditorGUILayout.PropertyField(pageTemplateProperty, new GUIContent("Page template"), true);
+    
+            if (EditorGUI.EndChangeCheck())
+            {
+                serializedObject.ApplyModifiedProperties();
+                var newValue = pageTemplateProperty.objectReferenceValue;
+                
+                if (templatePreviousValue == null && newValue != null)
+                    node.CreatePrefabVariant(newValue);
+                
+                else if (templatePreviousValue != null && newValue == null)
+                    node.DeletePagePrefab();
+                
+                else if (templatePreviousValue != newValue)
+                    node.OnPageChanged?.Invoke(newValue);
+                
+                templatePreviousValue = newValue;
+                
+                serializedObject.Update();
+                NodeEditorWindow.RepaintAll();
+            }
+    
+            EditorGUILayout.EndVertical();
+        }
+        private void DrawPageTemplateContent()
+        {
+            if (node.PageVariant == null) return;
+            if(!node.PageVariant.TryGetComponent(out Page page))
+                   return;
+
+            foreach (var content in page.PageContents)
+            {
+                content.DrawEditor();
+               content.OnContentChanged += () => isContentChanged = true;
+            }
+            
+            EditorGUILayout.Space(5);
+            CreatePagePreview();
+        }
         public override int GetWidth()
         {
             return 400;
