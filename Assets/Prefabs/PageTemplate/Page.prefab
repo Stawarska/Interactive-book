@@ -220,6 +220,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3693563408632539783}
+  - component: {fileID: 8155684257867031777}
   m_Layer: 5
   m_Name: Choices
   m_TagString: Untagged
@@ -246,6 +247,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8155684257867031777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3989389229864689977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.VerticalLayoutGroup
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 1
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &5584970404856349322
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,6 +471,9 @@ MonoBehaviour:
   - rid: 5625638404082630726
   - rid: 5625638404082630728
   - rid: 5625638404082630727
+  <Choices>k__BackingField: []
+  <ChoiceParent>k__BackingField: {fileID: 3693563408632539783}
+  <ChoiceTemplate>k__BackingField: {fileID: 4129077335517252314, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
   references:
     version: 2
     RefIds:

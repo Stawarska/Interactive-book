@@ -8,9 +8,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5173843818124351913, guid: 2ef88378a7730f846aa7a2cec7c4dd2e, type: 3}
+      propertyPath: <ChoiceTemplate>k__BackingField
+      value: 
+      objectReference: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
     - target: {fileID: 6245519580763252434, guid: 2ef88378a7730f846aa7a2cec7c4dd2e, type: 3}
       propertyPath: m_Name
-      value: Page Variant
+      value: Test
       objectReference: {fileID: 0}
     - target: {fileID: 6626788620660627496, guid: 2ef88378a7730f846aa7a2cec7c4dd2e, type: 3}
       propertyPath: m_Pivot.x
@@ -74,11 +78,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6626788620660627496, guid: 2ef88378a7730f846aa7a2cec7c4dd2e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.28962
+      value: -0.28961182
       objectReference: {fileID: 0}
     - target: {fileID: 6626788620660627496, guid: 2ef88378a7730f846aa7a2cec7c4dd2e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.04658
+      value: -0.046569824
       objectReference: {fileID: 0}
     - target: {fileID: 6626788620660627496, guid: 2ef88378a7730f846aa7a2cec7c4dd2e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
