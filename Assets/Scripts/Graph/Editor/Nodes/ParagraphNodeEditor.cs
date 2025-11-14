@@ -226,7 +226,7 @@ namespace Graph.Editor.Nodes
                     node.DeletePagePrefab();
 
                 else if (templatePreviousValue != newValue)
-                    node.OnPageChanged?.Invoke(newValue);
+                    node.OnPageTemplateChanged(newValue);
 
                 templatePreviousValue = newValue;
 
@@ -277,7 +277,6 @@ namespace Graph.Editor.Nodes
                     }
                 }
                 ContentChanged();
-                //TODO: zmieniono kolejność na liście, do smthg
             }
             
             serializedObject.Update();

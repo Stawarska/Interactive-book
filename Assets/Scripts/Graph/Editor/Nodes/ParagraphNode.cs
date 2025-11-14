@@ -16,7 +16,6 @@ namespace Nodes
         [Input] public ChoiceEditor choice;
         [field: SerializeField] public Page PageTemplate { get; private set; }
         [field: SerializeField, Output(dynamicPortList = true)] public ChoiceEditor[] EditorChoices { get; private set; }
-        public Action<Object> OnPageChanged;
         
         [Tooltip("It is created automatically when you select a page template")]
         [field: SerializeField, ReadOnly] public Page PageVariant { get; private set; }
@@ -47,6 +46,12 @@ namespace Nodes
                 
             Utils.PageCounter.ReturnIndexToPool(index);
             AssetDatabase.DeleteAsset(AssetDatabase.GetAssetPath(PageVariant));
+        }
+        
+        public void OnPageTemplateChanged(Object newValue)
+        {
+            DeletePagePrefab();
+            CreatePrefabVariant(newValue);
         }
 
         public void CreateNewChoice()
