@@ -1,4 +1,6 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR
+
+using UnityEditor;
 using UnityEngine;
 using Utils;
 
@@ -24,3 +26,5 @@ namespace Book
         }
     }
 }
+
+#endif

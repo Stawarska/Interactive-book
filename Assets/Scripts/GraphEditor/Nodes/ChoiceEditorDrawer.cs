@@ -1,19 +1,12 @@
-﻿using System;
-using Book;
+﻿using Book;
+using Graph.Editor.Nodes;
 using Nodes;
 using UnityEditor;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Graph.Editor.Nodes
+namespace GraphEditor.Nodes
 {
-    [Serializable]
-    public class ChoiceEditor
-    {
-        public Choice choice;
-    }
-
-
     [CustomPropertyDrawer(typeof(ChoiceEditor))]
     public class ChoiceEditorDrawer : PropertyDrawer
     {
@@ -42,28 +35,26 @@ namespace Graph.Editor.Nodes
 
             choice.ChoiceText.text = EditorGUI.TextArea(textRect, choice.ChoiceText.text);
             EditorStyles.textField.wordWrap = true;
+            
 
             if (GUI.Button(buttonRect, new GUIContent("-", "Remove choice")))
             {
                 Object.DestroyImmediate(choice.gameObject, true);
                 var node = (ParagraphNode)property.serializedObject.targetObject;
-                OnContentChanged?.Invoke(node);
-                OnChoiceRemoved?.Invoke(node);
+                ChoiceEditor.OnContentChanged?.Invoke(node);
+                ChoiceEditor.OnChoiceRemoved?.Invoke(node);
             }
                 
 
             if (choice.ChoiceText.text == previousText)
                 return;
             
-            OnContentChanged?.Invoke((ParagraphNode)property.serializedObject.targetObject);
+            ChoiceEditor.OnContentChanged?.Invoke((ParagraphNode)property.serializedObject.targetObject);
         }
 
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
             return 30;
         }
-
-        public static event Action<ParagraphNode> OnContentChanged;
-        public static event Action<ParagraphNode> OnChoiceRemoved;
     }
 }

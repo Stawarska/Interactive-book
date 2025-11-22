@@ -13,5 +13,17 @@ namespace Book
         [field: SerializeField] public Choice ChoiceTemplate { get; private set; }
 
         public void OnValidate() => this.ValidateRefs();
+
+        public void CopyContentFrom(IPageContent[] pageContents)
+        {
+            //TODO: dokończyć logikę kopiowania noda
+            for (var i = 0; i < pageContents.Length; i++)
+            {
+                if(pageContents[i].GetType() != PageContents[i].GetType())
+                    return;
+                PageContents[i] = pageContents[i];
+                PageContents[i].DrawEditor();
+            }
+        }
     }
 }

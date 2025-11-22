@@ -34,14 +34,14 @@ namespace Graph.Editor.Nodes
         public override void OnCreate()
         {
             base.OnCreate();
-            ChoiceEditorDrawer.OnChoiceRemoved += node =>
+            ChoiceEditor.OnChoiceRemoved += node =>
             {
                 if (!ReferenceEquals(node, this.node))
                     return;
                 list.onRemoveCallback?.Invoke(list);
             };
 
-            ChoiceEditorDrawer.OnContentChanged += node =>
+            ChoiceEditor.OnContentChanged += node =>
             {
                 if (!ReferenceEquals(node, this.node))
                     return;
@@ -92,13 +92,13 @@ namespace Graph.Editor.Nodes
 
             if (preview == null && !isUIElement)
             {
-                EditorGUILayout.HelpBox("Ładowanie podglądu...", MessageType.Info);
+                EditorGUILayout.HelpBox("Loading preview...", MessageType.Info);
                 return;
             }
 
             if (preview == null && isUIElement)
             {
-                EditorGUILayout.HelpBox("Nie można wygenerować podglądu", MessageType.Warning);
+                EditorGUILayout.HelpBox("Can't generate preview", MessageType.Warning);
                 return;
             }
 
@@ -178,12 +178,14 @@ namespace Graph.Editor.Nodes
 
                 return preview;
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
-                Debug.LogError($"Błąd podczas generowania podglądu UI: {e.Message}");
+                Debug.LogError($"Error generating UI preview: {e.Message}");
                 return null;
             }
         }
+        
+        #region DrawElements
 
         private void DrawPorts()
         {
@@ -307,6 +309,8 @@ namespace Graph.Editor.Nodes
             CreatePagePreview();
         }
 
+        #endregion
+        
         private void ContentChanged()
         {
             isContentChanged = true;
