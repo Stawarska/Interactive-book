@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Book.Animation;
 using Graph;
+using KBCore.Refs;
 using UnityEngine;
 
 namespace Book
@@ -11,7 +12,8 @@ namespace Book
         private Page currentPage;
         private Page targetPage;
         private RectTransform currentSpawnedPage;
-        [field: SerializeReference, SubclassSelector] public ISwapPageAnimation PageAnimation { get; private set; }
+        //[field: SerializeReference, SubclassSelector] public ISwapPageAnimation PageAnimation { get; private set; }
+        [SerializeField] private FlipPageAnimation PageAnimation;
         [SerializeField] private BookGraph bookGraph;
         
         private Stack<Page> pagesHistory = new();
@@ -50,7 +52,7 @@ namespace Book
             currentPage = targetPage;
             targetPage = page;
         
-            PageAnimation.FlipPage();
+            PageAnimation.FlipPage(page);
         
             // if(moveRight)
             //     PageAnimation.FlipRightPage();

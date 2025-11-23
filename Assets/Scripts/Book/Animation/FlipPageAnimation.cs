@@ -41,6 +41,7 @@ namespace Book.Animation
         private Coroutine currentCoroutine;
         
         private RectTransform currentSpawnedPage;
+        private Page nextPage;
         
 
         private void Awake()
@@ -291,7 +292,7 @@ namespace Book.Animation
             shadow.gameObject.SetActive(false);
             shadowLtr.gameObject.SetActive(false);
 
-            // currentSpawnedPage = Instantiate(targetPage.TextPagePrefab, textPlace).GetComponent<RectTransform>();
+            currentSpawnedPage = Instantiate(nextPage, bookPanel).GetComponent<RectTransform>();
             currentSpawnedPage.anchorMin = Vector2.zero;
             currentSpawnedPage.anchorMax = Vector2.one;
             currentSpawnedPage.offsetMax = Vector2.zero;
@@ -351,15 +352,15 @@ namespace Book.Animation
             onFinish?.Invoke();
         }
 
-        private IEnumerator FlipRTL(float xc, float xl, float h, float frameTime, float dx)
+        private IEnumerator FlipRTL(float bottomMiddlePoint, float xl, float h, float frameTime, float dx)
         {
-            float x = xc + xl;
-            float y = -h / (xl * xl) * (x - xc) * (x - xc);
+            float x = bottomMiddlePoint + xl;
+            float y = -h / (xl * xl) * (x - bottomMiddlePoint) * (x - bottomMiddlePoint);
 
             DragRightPageToPoint(new Vector3(x, y, 0));
             for (int i = 0; i < animationFramesCount; i++)
             {
-                y = -h / (xl * xl) * (x - xc) * (x - xc);
+                y = -h / (xl * xl) * (x - bottomMiddlePoint) * (x - bottomMiddlePoint);
                 UpdateBookRtlToPoint(new Vector3(x, y, 0));
                 yield return new WaitForSeconds(frameTime);
                 x -= dx;
@@ -368,15 +369,15 @@ namespace Book.Animation
             ReleasePage();
         }
 
-        private IEnumerator FlipLTR(float xc, float xl, float h, float frameTime, float dx)
+        private IEnumerator FlipLTR(float bottomMiddlePoint, float xl, float h, float frameTime, float dx)
         {
-            float x = xc - xl;
-            float y = -h / (xl * xl) * (x - xc) * (x - xc);
+            float x = bottomMiddlePoint - xl;
+            float y = -h / (xl * xl) * (x - bottomMiddlePoint) * (x - bottomMiddlePoint);
 
             DragLeftPageToPoint(new Vector3(x, y, 0));
             for (int i = 0; i < animationFramesCount; i++)
             {
-                y = -h / (xl * xl) * (x - xc) * (x - xc);
+                y = -h / (xl * xl) * (x - bottomMiddlePoint) * (x - bottomMiddlePoint);
                 UpdateBookLtrToPoint(new Vector3(x, y, 0));
                 yield return new WaitForSeconds(frameTime);
                 x += dx;
@@ -406,12 +407,12 @@ namespace Book.Animation
                 return;
 
             float frameTime = pageFlipTime / animationFramesCount;
-            float xc = (EndBottomRight.x + EndBottomLeft.x) / 2;
+            float bottomMiddlePoint = (EndBottomRight.x + EndBottomLeft.x) / 2;
             float xl = (EndBottomRight.x - EndBottomLeft.x) / 2 * 0.9f;
             float h = Mathf.Abs(EndBottomRight.y) * 0.9f;
             float dx = xl * 2 / animationFramesCount;
 
-            StartCoroutine(FlipRTL(xc, xl, h, frameTime, dx));
+            StartCoroutine(FlipRTL(bottomMiddlePoint, xl, h, frameTime, dx));
         }
 
         public void FlipLeftPage()
@@ -420,16 +421,17 @@ namespace Book.Animation
                 return;
 
             float frameTime = pageFlipTime / animationFramesCount;
-            float xc = (EndBottomRight.x + EndBottomLeft.x) / 2;
+            float bottomMiddlePoint = (EndBottomRight.x + EndBottomLeft.x) / 2;
             float xl = (EndBottomRight.x - EndBottomLeft.x) / 2 * 0.9f;
             float h = Mathf.Abs(EndBottomRight.y) * 0.9f;
             float dx = xl * 2 / animationFramesCount;
-            StartCoroutine(FlipLTR(xc, xl, h, frameTime, dx));
+            StartCoroutine(FlipLTR(bottomMiddlePoint, xl, h, frameTime, dx));
         }
 
-        public void FlipPage()
+        public void FlipPage(Page page)
         {
             //TODO: dodać implementacje
+            nextPage = page;
             FlipLeftPage();
         }
     }

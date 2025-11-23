@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Book::Book.Choice
   <ChoiceText>k__BackingField: {fileID: 974710638123591746}
-  <ConnectedPage>k__BackingField: {fileID: 3049893605879432032, guid: c740230d57a3a3d49afb8af41039fb59, type: 3}
+  <ConnectedPage>k__BackingField: {fileID: 7336231359940409167, guid: 2a1beaf24de2444418c9883e15a9d7cd, type: 3}
   button: {fileID: 3143421213511628366}
 --- !u!114 &8604941746348640843
 MonoBehaviour:
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Choice text
+  m_text: Strona 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -326,7 +326,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Choice text
+  m_text: Strona 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -528,6 +528,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2926773256855507436, guid: 69f597114e3aeba4f9ec458337a09552, type: 3}
+      propertyPath: m_text
+      value: Strona 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5173843818124351913, guid: 69f597114e3aeba4f9ec458337a09552, type: 3}
       propertyPath: <Choices>k__BackingField.Array.size
       value: 2

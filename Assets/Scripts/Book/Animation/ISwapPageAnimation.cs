@@ -7,7 +7,7 @@ namespace Book.Animation
         Action<FlipMode> OnPageSwapped { get; set; }
         void FlipRightPage();
         void FlipLeftPage();
-        void FlipPage();
+        void FlipPage(Page next);
 
     }
 }
