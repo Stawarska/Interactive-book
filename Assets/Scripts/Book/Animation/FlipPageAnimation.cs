@@ -431,6 +431,10 @@ namespace Book.Animation
         public void FlipPage(Page page)
         {
             //TODO: dodać implementacje
+            
+            if(currentSpawnedPage)
+                Destroy(currentSpawnedPage.gameObject);
+      
             nextPage = page;
             FlipLeftPage();
         }

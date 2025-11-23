@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 using Book.Animation;
 using Graph;
-using KBCore.Refs;
+using SaintsField;
+using SaintsField.Playa;
+using UnityEditor;
 using UnityEngine;
 
 namespace Book
@@ -9,22 +11,28 @@ namespace Book
     public class BookManager : MonoBehaviour
     {
         public static BookManager Instance;
-        private Page currentPage;
-        private Page targetPage;
-        private RectTransform currentSpawnedPage;
-        //[field: SerializeReference, SubclassSelector] public ISwapPageAnimation PageAnimation { get; private set; }
-        [SerializeField] private FlipPageAnimation PageAnimation;
+        
+        [Header("Graph")]
         [SerializeField] private BookGraph bookGraph;
         
-        private Stack<Page> pagesHistory = new();
+        [Header("Animation")]
+        [ResourcePath(typeof(ISwapPageAnimation)), SerializeField] private string pageAnimationPath;
+        [SerializeField, ReadOnly] private string previousPageAnimationPath;
+        [SerializeField, ReadOnly] private GameObject pageAnimationPrefab;
+        [SerializeField] private Transform animationParent;
 
-        public void Awake()
+        private Stack<Page> pagesHistory = new();
+        private Page targetPage;
+        private ISwapPageAnimation pageAnimation;
+
+        private void Awake()
         {
             if (Instance == null)
                 Instance = this;
+            pageAnimation = pageAnimationPrefab.GetComponent<ISwapPageAnimation>();
             SelectNextPage(bookGraph.GetFirstPage());
         }
-
+        
         public void SelectNextPage(Page page)
         {
             if(targetPage != null)
@@ -44,20 +52,40 @@ namespace Book
     
         private void SelectPage(Page page)
         {
-            if(currentSpawnedPage)
-                Destroy(currentSpawnedPage.gameObject);
-    
-            // bool moveRight = currentPage == null || targetPage == null || targetPage.PageId < page.PageId;
-        
-            currentPage = targetPage;
             targetPage = page;
-        
-            PageAnimation.FlipPage(page);
-        
-            // if(moveRight)
-            //     PageAnimation.FlipRightPage();
-            // else
-            //     PageAnimation.FlipLeftPage();
+            pageAnimation.FlipPage(page);
         }
+
+#if UNITY_EDITOR
+        [Button("Click after picking or changing animation")]
+        private void SpawnPageAnimationPrefab()
+        {
+            if (pageAnimationPath == null)
+            {
+                Debug.LogError("Page animation is null, please pick animation first");
+                previousPageAnimationPath = null;
+                DestroyImmediate(pageAnimationPrefab.gameObject);
+                pageAnimation = null;
+                return;
+            }
+
+            if (previousPageAnimationPath == pageAnimationPath)
+            {
+                Debug.Log("Animation was not changed, nothing happened");
+                return;
+            }
+            
+            if (pageAnimationPrefab != null)
+            {
+                DestroyImmediate(pageAnimationPrefab.gameObject);
+                pageAnimationPrefab = null;
+                pageAnimation = null;
+            }
+
+            var prefab = AssetDatabase.LoadAssetAtPath<GameObject>($"{pageAnimationPath}.prefab");
+            pageAnimationPrefab = Instantiate(prefab, animationParent);
+            previousPageAnimationPath = pageAnimationPath;
+        }
+#endif
     }
 }
