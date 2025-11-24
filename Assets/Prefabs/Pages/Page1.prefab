@@ -532,6 +532,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Strona 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3394606300017860125, guid: 69f597114e3aeba4f9ec458337a09552, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1988719929255752625, guid: 4b71d1b0081502042a594bfbec287d0a, type: 3}
     - target: {fileID: 5173843818124351913, guid: 69f597114e3aeba4f9ec458337a09552, type: 3}
       propertyPath: <Choices>k__BackingField.Array.size
       value: 2
@@ -628,6 +632,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9040638933008893913, guid: 69f597114e3aeba4f9ec458337a09552, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6482372423383335506, guid: 4b71d1b0081502042a594bfbec287d0a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

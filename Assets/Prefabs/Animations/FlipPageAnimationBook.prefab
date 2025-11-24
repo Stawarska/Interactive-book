@@ -791,7 +791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Book::Book.Animation.FlipPageAnimation
   bookPanel: {fileID: 22443772}
-  enableShadowEffect: 1
+  enableShadowEffect: 0
   clippingPlane: {fileID: 11480238}
   nextPageClip: {fileID: 11435694}
   shadow: {fileID: 11425334}

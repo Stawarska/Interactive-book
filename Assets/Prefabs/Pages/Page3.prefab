@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Book::Book.Choice
   <ChoiceText>k__BackingField: {fileID: 4437432232971990857}
-  <ConnectedPage>k__BackingField: {fileID: 8401505830748927861, guid: 7c16ec73c89cb9a468818bed92318566, type: 3}
+  <ConnectedPage>k__BackingField: {fileID: 8332253087844764508, guid: 7803c27b82e59384aad7bce7fb715b5c, type: 3}
   button: {fileID: 4697614190624657114}
 --- !u!114 &4412969666677223857
 MonoBehaviour:
@@ -532,6 +532,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Strona 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3394606300017860125, guid: 2ef88378a7730f846aa7a2cec7c4dd2e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5520161906380084241, guid: 72985938ccbcf4847b13bf0636c5452d, type: 3}
     - target: {fileID: 5173843818124351913, guid: 2ef88378a7730f846aa7a2cec7c4dd2e, type: 3}
       propertyPath: <Choices>k__BackingField.Array.size
       value: 2
@@ -547,6 +551,10 @@ PrefabInstance:
     - target: {fileID: 6245519580763252434, guid: 2ef88378a7730f846aa7a2cec7c4dd2e, type: 3}
       propertyPath: m_Name
       value: Page3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555182722502769573, guid: 2ef88378a7730f846aa7a2cec7c4dd2e, type: 3}
+      propertyPath: m_text
+      value: Ala ma kota
       objectReference: {fileID: 0}
     - target: {fileID: 6626788620660627496, guid: 2ef88378a7730f846aa7a2cec7c4dd2e, type: 3}
       propertyPath: m_Pivot.x

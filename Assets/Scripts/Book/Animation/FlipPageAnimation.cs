@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using Utils;
 
 namespace Book.Animation
 {
@@ -42,6 +43,7 @@ namespace Book.Animation
         
         private RectTransform currentSpawnedPage;
         private Page nextPage;
+        private Page currentPage;
         
 
         private void Awake()
@@ -236,9 +238,12 @@ namespace Book.Animation
             UpdateBookRtlToPoint(f);
 
 
-            // if (currentPage != null)
-            //     left.sprite = currentPage.ImagePagePrefab.SpritePage;
-            //
+            if (currentPage != null)
+                left.sprite = GeneratePreview.GenerateLeftPagePreview(currentPage.gameObject);
+            
+            right.sprite = GeneratePreview.GenerateLeftPagePreview(nextPage.gameObject);  
+            rightNext.sprite = GeneratePreview.GenerateRightPagePreview(nextPage.gameObject);
+            
             // right.sprite = targetPage.TextPagePrefab.SpritePage;
             // rightNext.sprite = targetPage.ImagePagePrefab.SpritePage;
         }
@@ -269,8 +274,13 @@ namespace Book.Animation
             if (enableShadowEffect) shadowLtr.gameObject.SetActive(true);
             UpdateBookLtrToPoint(f);
 
+            if (currentPage != null)
+                right.sprite = GeneratePreview.GenerateLeftPagePreview(currentPage.gameObject);
+            left.sprite = GeneratePreview.GenerateRightPagePreview(nextPage.gameObject);
+            leftNext.sprite = GeneratePreview.GenerateLeftPagePreview(nextPage.gameObject);
+            
             // right.sprite = currentPage.TextPagePrefab.SpritePage;
-            // left.sprite = targetPage.ImagePagePrefab.SpritePage;
+            // left.sprite = targetPage.ImagePaePrefab.SpritePage;
             // leftNext.sprite = targetPage.TextPagePrefab.SpritePage;
         }
 
@@ -297,6 +307,9 @@ namespace Book.Animation
             currentSpawnedPage.anchorMax = Vector2.one;
             currentSpawnedPage.offsetMax = Vector2.zero;
             currentSpawnedPage.offsetMin = Vector2.zero;
+            
+            leftNext.sprite = GeneratePreview.GenerateLeftPagePreview(nextPage.gameObject);
+            rightNext.sprite = GeneratePreview.GenerateRightPagePreview(nextPage.gameObject);
 
             // leftNext.sprite = targetPage.TextPagePrefab.SpritePage;
             // rightNext.sprite = targetPage.ImagePagePrefab.SpritePage;
@@ -434,7 +447,8 @@ namespace Book.Animation
             
             if(currentSpawnedPage)
                 Destroy(currentSpawnedPage.gameObject);
-      
+
+            currentPage = nextPage;
             nextPage = page;
             FlipLeftPage();
         }
