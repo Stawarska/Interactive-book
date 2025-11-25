@@ -535,7 +535,7 @@ PrefabInstance:
     - target: {fileID: 3394606300017860125, guid: 69f597114e3aeba4f9ec458337a09552, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1448384957617087091, guid: 5ffbbc893378d2a4ba5cf51bfb98c405, type: 3}
+      objectReference: {fileID: 21300000, guid: 5ffbbc893378d2a4ba5cf51bfb98c405, type: 3}
     - target: {fileID: 5173843818124351913, guid: 69f597114e3aeba4f9ec458337a09552, type: 3}
       propertyPath: <Choices>k__BackingField.Array.size
       value: 2
@@ -635,7 +635,7 @@ PrefabInstance:
     - target: {fileID: 9040638933008893913, guid: 69f597114e3aeba4f9ec458337a09552, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2979261323976326883, guid: 742ec36aeda94af4e9ad101d75c46c3c, type: 3}
+      objectReference: {fileID: 21300000, guid: 742ec36aeda94af4e9ad101d75c46c3c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

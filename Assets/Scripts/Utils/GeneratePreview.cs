@@ -88,15 +88,9 @@ namespace Utils
             }
         }
         
-        public static Sprite GenerateLeftPagePreview(GameObject uiPrefab)
+        public static Sprite GeneratePageSprite(GameObject uiPrefab, PageSection section)
         {
-            var texture = GeneratePagePreview(uiPrefab, PageSection.Left);
-            return texture != null ? Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f)) : null;
-        }
-
-        public static Sprite GenerateRightPagePreview(GameObject uiPrefab)
-        {
-            var texture = GeneratePagePreview(uiPrefab, PageSection.Right);
+            var texture = GeneratePagePreview(uiPrefab, section);
             return texture != null ? Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f)) : null;
         }
     }

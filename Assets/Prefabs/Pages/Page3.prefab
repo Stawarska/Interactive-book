@@ -535,7 +535,7 @@ PrefabInstance:
     - target: {fileID: 3394606300017860125, guid: 2ef88378a7730f846aa7a2cec7c4dd2e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -5520161906380084241, guid: 72985938ccbcf4847b13bf0636c5452d, type: 3}
+      objectReference: {fileID: 21300000, guid: 72985938ccbcf4847b13bf0636c5452d, type: 3}
     - target: {fileID: 5173843818124351913, guid: 2ef88378a7730f846aa7a2cec7c4dd2e, type: 3}
       propertyPath: <Choices>k__BackingField.Array.size
       value: 2

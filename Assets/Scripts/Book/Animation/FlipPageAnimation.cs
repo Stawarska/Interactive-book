@@ -239,10 +239,10 @@ namespace Book.Animation
 
 
             if (currentPage != null)
-                left.sprite = GeneratePreview.GenerateLeftPagePreview(currentPage.gameObject);
+                left.sprite = GeneratePreview.GeneratePageSprite(currentPage.gameObject, GeneratePreview.PageSection.Left);
             
-            right.sprite = GeneratePreview.GenerateLeftPagePreview(nextPage.gameObject);  
-            rightNext.sprite = GeneratePreview.GenerateRightPagePreview(nextPage.gameObject);
+            right.sprite = GeneratePreview.GeneratePageSprite(nextPage.gameObject, GeneratePreview.PageSection.Left);  
+            rightNext.sprite = GeneratePreview.GeneratePageSprite(nextPage.gameObject, GeneratePreview.PageSection.Right);
             
             // right.sprite = targetPage.TextPagePrefab.SpritePage;
             // rightNext.sprite = targetPage.ImagePagePrefab.SpritePage;
@@ -275,9 +275,9 @@ namespace Book.Animation
             UpdateBookLtrToPoint(f);
 
             if (currentPage != null)
-                right.sprite = GeneratePreview.GenerateLeftPagePreview(currentPage.gameObject);
-            left.sprite = GeneratePreview.GenerateRightPagePreview(nextPage.gameObject);
-            leftNext.sprite = GeneratePreview.GenerateLeftPagePreview(nextPage.gameObject);
+                right.sprite = GeneratePreview.GeneratePageSprite(currentPage.gameObject, GeneratePreview.PageSection.Left);
+            left.sprite = GeneratePreview.GeneratePageSprite(nextPage.gameObject, GeneratePreview.PageSection.Right);
+            leftNext.sprite = GeneratePreview.GeneratePageSprite(nextPage.gameObject, GeneratePreview.PageSection.Left);
             
             // right.sprite = currentPage.TextPagePrefab.SpritePage;
             // left.sprite = targetPage.ImagePaePrefab.SpritePage;
@@ -308,8 +308,8 @@ namespace Book.Animation
             currentSpawnedPage.offsetMax = Vector2.zero;
             currentSpawnedPage.offsetMin = Vector2.zero;
             
-            leftNext.sprite = GeneratePreview.GenerateLeftPagePreview(nextPage.gameObject);
-            rightNext.sprite = GeneratePreview.GenerateRightPagePreview(nextPage.gameObject);
+            leftNext.sprite = GeneratePreview.GeneratePageSprite(nextPage.gameObject, GeneratePreview.PageSection.Left);
+            rightNext.sprite = GeneratePreview.GeneratePageSprite(nextPage.gameObject, GeneratePreview.PageSection.Right);
 
             // leftNext.sprite = targetPage.TextPagePrefab.SpritePage;
             // rightNext.sprite = targetPage.ImagePagePrefab.SpritePage;
