@@ -95,6 +95,8 @@ MonoBehaviour:
   <EditorChoices>k__BackingField:
   - choice: {fileID: 8242838055659423758, guid: 7803c27b82e59384aad7bce7fb715b5c, type: 3}
   - choice: {fileID: 5323711624787930242, guid: 7803c27b82e59384aad7bce7fb715b5c, type: 3}
+  - choice: {fileID: 5323711624787930242, guid: 7803c27b82e59384aad7bce7fb715b5c, type: 3}
+  - choice: {fileID: 5323711624787930242, guid: 7803c27b82e59384aad7bce7fb715b5c, type: 3}
   <PageVariant>k__BackingField: {fileID: 8332253087844764508, guid: 7803c27b82e59384aad7bce7fb715b5c, type: 3}
 --- !u!114 &-3517088356892867672
 MonoBehaviour:

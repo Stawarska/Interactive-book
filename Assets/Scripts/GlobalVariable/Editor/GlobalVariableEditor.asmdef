@@ -1,0 +1,4 @@
+{
+	"name": "GlobalVariableEditor",
+	"references":[ "GUID:ad524c0dd87b5474890058d2bc81f1b1", "GUID:c7c0ac4abf46a984483775da166604d8" ]
+}
