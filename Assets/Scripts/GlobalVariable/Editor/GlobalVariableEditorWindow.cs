@@ -293,7 +293,7 @@ namespace GlobalVariable.Editor
 
             var originalColor = GUI.backgroundColor;
             GUI.backgroundColor = DeleteButtonColor;
-            if (GUILayout.Button("🗑️", GUILayout.Width(ButtonWidth), GUILayout.Height(ButtonHeight)))
+            if (GUILayout.Button("❌", GUILayout.Width(ButtonWidth), GUILayout.Height(ButtonHeight)))
             {
                 if (EditorUtility.DisplayDialog("Remove Variable",
                         $"Remove '{nameProperty.stringValue}'?", "Yes", "Cancel"))

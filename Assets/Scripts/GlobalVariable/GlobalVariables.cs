@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -22,6 +23,11 @@ namespace GlobalVariable
         }
         
         [field: SerializeField] public List<Variable> Variables { get; private set; }
+        
+        public IEnumerable<string> VariablesNames()
+        {
+            return Variables.Select(var => var.variableName);
+        }
     }
 }
 

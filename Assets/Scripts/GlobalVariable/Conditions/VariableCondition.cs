@@ -11,10 +11,7 @@ namespace GlobalVariable.Conditions
     {
         [field: SerializeField, TreeDropdown(nameof(Variables))] public string VariableID { get; private set; }
         
-        private IEnumerable<string> Variables()
-        {
-            return GlobalVariables.instance.Variables.Select(var => var.variableName);
-        }
+        private IEnumerable<string> Variables() => GlobalVariables.instance.VariablesNames();
         
         [ShowIf(nameof(ShowString)), SerializeReference, SubclassSelector] public IStringCondition stringConditions;
         [ShowIf(nameof(ShowBool)), SerializeReference, SubclassSelector] public IBoolCondition boolConditions;
