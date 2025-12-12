@@ -1,13 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace GlobalVariable
 {
     public class VariablesManager : MonoBehaviour
     {
-        
         public static VariablesManager Instance;
         public Dictionary<string, IGlobalVariableType> Variables { get; private set; }
+        public Action<string, IGlobalVariableType> OnVariableChanged;
 
         private void Awake()
         {

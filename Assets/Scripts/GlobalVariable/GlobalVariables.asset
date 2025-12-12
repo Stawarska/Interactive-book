@@ -43,6 +43,9 @@ MonoBehaviour:
   - variableName: Zaufanie
     variableType:
       rid: 1013236398597603400
+  - variableName: Item stary klucz
+    variableType:
+      rid: 1013236445153853511
   references:
     version: 2
     RefIds:
@@ -92,6 +95,11 @@ MonoBehaviour:
         <Value>k__BackingField: 0
         <DefaultValue>k__BackingField: 0
     - rid: 1013236398597603400
+      type: {class: IntGlobalVariable, ns: GlobalVariable, asm: GlobalVariables}
+      data:
+        <Value>k__BackingField: 0
+        <DefaultValue>k__BackingField: 0
+    - rid: 1013236445153853511
       type: {class: IntGlobalVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: 0

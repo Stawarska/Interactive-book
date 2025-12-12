@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using SaintsField;
 using SaintsField.Playa;
 using UnityEngine;
@@ -11,24 +9,17 @@ namespace GlobalVariable.Conditions
     {
         [field: SerializeField, TreeDropdown(nameof(Variables))] public string VariableID { get; private set; }
         
-        private IEnumerable<string> Variables() => GlobalVariables.instance.VariablesNames();
+        private IEnumerable<string> Variables() => GlobalVariables.instance.GetAllVariablesNames();
         
         [ShowIf(nameof(ShowString)), SerializeReference, SubclassSelector] public IStringCondition stringConditions;
         [ShowIf(nameof(ShowBool)), SerializeReference, SubclassSelector] public IBoolCondition boolConditions;
         [ShowIf(nameof(ShowInt)), SerializeReference, SubclassSelector] public IIntCondition intConditions;
         [ShowIf(nameof(ShowFloat)), SerializeReference, SubclassSelector] public IFloatCondition floatConditions;
-        
-        private Type GetTypeFromName()
-        {
-            var type = GlobalVariables.instance.Variables.Find(x => x.variableName == VariableID).variableType.GetType();
-            return type;
-        }
 
-        private bool ShowString() => GetTypeFromName() == typeof(StringGlobalVariable);
-        private bool ShowBool() => GetTypeFromName() == typeof(BoolGlobalVariable);
-        private bool ShowInt() => GetTypeFromName() == typeof(IntGlobalVariable);
-        private bool ShowFloat() => GetTypeFromName() == typeof(FloatGlobalVariable);
-
+        private bool ShowString() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(StringGlobalVariable);
+        private bool ShowBool() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(BoolGlobalVariable);
+        private bool ShowInt() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(IntGlobalVariable);
+        private bool ShowFloat() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(FloatGlobalVariable);
         
         public bool Check()
         {

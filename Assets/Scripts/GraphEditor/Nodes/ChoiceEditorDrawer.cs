@@ -27,8 +27,9 @@ namespace GraphEditor.Nodes
             const float padding = 4f;
             const float buttonWidth = 20f;
             
-            var textRect = new Rect(position.x, position.y, position.width - buttonWidth - padding, position.height);
-            var buttonRect = new Rect(position.x + position.width - buttonWidth, position.y, buttonWidth, position.height);
+            var textRect = new Rect(position.x, position.y, position.width - buttonWidth*2 - padding, position.height);
+            var buttonRectRemove = new Rect(position.x + position.width - buttonWidth, position.y, buttonWidth, position.height);
+            var buttonRectEdit = new Rect(position.x + position.width - buttonWidth*2, position.y, buttonWidth, position.height);
 
             var previousText = choice.ChoiceText.text;
             Undo.RecordObject(choice, "Edit Choice Text");
@@ -37,12 +38,17 @@ namespace GraphEditor.Nodes
             EditorStyles.textField.wordWrap = true;
             
 
-            if (GUI.Button(buttonRect, new GUIContent("-", "Remove choice")))
+            if (GUI.Button(buttonRectRemove, new GUIContent("❌", "Remove choice")))
             {
                 Object.DestroyImmediate(choice.gameObject, true);
                 var node = (ParagraphNode)property.serializedObject.targetObject;
                 ChoiceEditor.OnContentChanged?.Invoke(node);
                 ChoiceEditor.OnChoiceRemoved?.Invoke(node);
+            }
+            
+            if (GUI.Button(buttonRectEdit, new GUIContent("✍️", "Open choice editor")))
+            {
+
             }
                 
 

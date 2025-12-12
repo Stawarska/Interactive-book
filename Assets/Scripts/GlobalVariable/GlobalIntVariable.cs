@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace GlobalVariable
+﻿namespace GlobalVariable
 {
     public class IntGlobalVariable : GlobalVariableType<int> { }
     public class FloatGlobalVariable : GlobalVariableType<float> { }
