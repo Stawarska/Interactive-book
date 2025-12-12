@@ -239,7 +239,7 @@ namespace Book.Animation
 
 
             if (currentPage != null)
-                left.sprite = GeneratePreview.GeneratePageSprite(currentPage.gameObject, GeneratePreview.PageSection.Left);
+                left.sprite = GeneratePreview.GeneratePageSprite(currentPage.gameObject, GeneratePreview.PageSection.Right);
             
             right.sprite = GeneratePreview.GeneratePageSprite(nextPage.gameObject, GeneratePreview.PageSection.Left);  
             rightNext.sprite = GeneratePreview.GeneratePageSprite(nextPage.gameObject, GeneratePreview.PageSection.Right);
@@ -450,7 +450,7 @@ namespace Book.Animation
 
             currentPage = nextPage;
             nextPage = page;
-            FlipLeftPage();
+            FlipRightPage();
         }
     }
 }
