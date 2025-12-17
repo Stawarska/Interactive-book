@@ -56,6 +56,7 @@ MonoBehaviour:
   inventoryItemsData: {fileID: 11400000, guid: fac98cd4a8d4ae8459a3a126865646a3, type: 2}
   itemSlotPrefab: {fileID: 2681055777574804050, guid: f6514627023d04947a7617016224df62, type: 3}
   itemSlotContainer: {fileID: 5548574348930394348}
+  quantityDebug: 0
 --- !u!1 &1543417968501012341
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,7 +443,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 57.5, y: 3.479}
+  m_AnchoredPosition: {x: 57.5, y: 3.479004}
   m_SizeDelta: {x: -807, y: -447.0421}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1020914675110807704
@@ -466,6 +467,6 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 120, y: 120}
-  m_Spacing: {x: 42.41, y: 0}
+  m_Spacing: {x: 40, y: 50}
   m_Constraint: 0
   m_ConstraintCount: 2

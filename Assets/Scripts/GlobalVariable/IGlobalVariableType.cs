@@ -7,6 +7,7 @@ namespace GlobalVariable
     {
         public Type VariableType { get; }
         public T GetValue<T>();
+        public void SetValue<T>(T value);
     }
 
     [Serializable]
@@ -24,6 +25,14 @@ namespace GlobalVariable
                 return value;
             
             throw new TypeAccessException();
+        }
+
+        public void SetValue<T1>(T1 value)
+        {
+            if (value is not T newValue)
+                throw new TypeAccessException();
+
+            Value = newValue;
         }
     }
 }

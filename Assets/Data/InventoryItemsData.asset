@@ -9,16 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bee14f4172074f9eae969aa9b8594cb7, type: 3}
+  m_Script: {fileID: 11500000, guid: e53872fa9f8d4582b3eb9a296e82e915, type: 3}
   m_Name: InventoryItemsData
-  m_EditorClassIdentifier: Book::Book.Inventory.InventoryItemsData
+  m_EditorClassIdentifier: Book::Book.Inventory.InventoryBaseItemData
   <Items>k__BackingField:
-  - rid: 1013236445153853510
-  references:
-    version: 2
-    RefIds:
-    - rid: 1013236445153853510
-      type: {class: BaseItemData, ns: Book.Inventory, asm: Book}
-      data:
-        <VariableNameInt>k__BackingField: Item stary klucz
-        <Icon>k__BackingField: {fileID: 4677531925145623770, guid: 483d8f647bd3d204e825534c74287d2e, type: 3}
+  - <VariableNameInt>k__BackingField: Item stary klucz
+    <Icon>k__BackingField: {fileID: 4677531925145623770, guid: 483d8f647bd3d204e825534c74287d2e, type: 3}

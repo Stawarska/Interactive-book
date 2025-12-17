@@ -7,7 +7,7 @@ using UnityEngine;
 namespace Book.Inventory
 {
     [Serializable]
-    public struct BaseItemData : IItemData
+    public struct BaseItemData
     {
         [field: SerializeField, AdvancedDropdown(nameof(IntVariables))] public string VariableNameInt { get; private set; }
         [field: SerializeField] public Sprite Icon { get; private set; }

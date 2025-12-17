@@ -3,9 +3,8 @@ using UnityEngine;
 
 namespace Book.Inventory
 {
-    [CreateAssetMenu(fileName = "InventoryItemsData", menuName = "Inventory/Inventory Items Data")]
-    public class InventoryItemsData : ScriptableObject
+    public abstract class InventoryItemsData<T> : ScriptableObject 
     {
-        [field: SerializeReference, SubclassSelector] public List<IItemData> Items { get; set; } 
+        [field: SerializeField] public List<T> Items { get; set; }
     }
 }

@@ -7,8 +7,8 @@ namespace GlobalVariable
     public class VariablesManager : MonoBehaviour
     {
         public static VariablesManager Instance;
-        public Dictionary<string, IGlobalVariableType> Variables { get; private set; }
-        public Action<string, IGlobalVariableType> OnVariableChanged;
+        public Dictionary<string, IGlobalVariableType> Variables { get; private set; } = new();
+        public Action<GlobalVariables.Variable> OnVariableChanged;
 
         private void Awake()
         {

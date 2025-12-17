@@ -37,8 +37,12 @@ namespace GlobalVariable
         
         public Type GetTypeFromName(string variableName)
         {
-            var type = Variables.Find(x => x.variableName == variableName).variableType.GetType();
-            return type;
+            return Variables.Find(x => x.variableName == variableName)?.variableType.GetType();
+        }
+
+        public Variable GetVariableFromName(string variableName)
+        {
+            return Variables.FirstOrDefault(x => x.variableName == variableName);
         }
     }
 }

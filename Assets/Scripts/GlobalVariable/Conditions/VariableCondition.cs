@@ -37,5 +37,11 @@ namespace GlobalVariable.Conditions
                 return stringConditions.CheckCondition(variable.GetValue<string>());
             return false;
         }
+
+        [Button("Check")]
+        public void PerformCheck()
+        {
+            Debug.Log(Check());
+        }
     }
 }
