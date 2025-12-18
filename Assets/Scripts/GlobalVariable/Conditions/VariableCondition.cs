@@ -1,11 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using SaintsField;
 using SaintsField.Playa;
 using UnityEngine;
 
 namespace GlobalVariable.Conditions
 {
-    public class VariableCondition : MonoBehaviour
+    [Serializable]
+    public class VariableCondition 
     {
         [field: SerializeField, TreeDropdown(nameof(Variables))] public string VariableID { get; private set; }
         
@@ -36,12 +38,6 @@ namespace GlobalVariable.Conditions
             if(varType == typeof(string))
                 return stringConditions.CheckCondition(variable.GetValue<string>());
             return false;
-        }
-
-        [Button("Check")]
-        public void PerformCheck()
-        {
-            Debug.Log(Check());
         }
     }
 }

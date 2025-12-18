@@ -1,11 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using SaintsField;
 using SaintsField.Playa;
 using UnityEngine;
 
 namespace GlobalVariable.Actions
 {
-    public class VariableAction : MonoBehaviour
+    [Serializable]
+    public class VariableAction 
     {
         [field: SerializeField, TreeDropdown(nameof(Variables))] public string VariableID { get; private set; }
         private IEnumerable<string> Variables() => GlobalVariables.instance.GetAllVariablesNames();
@@ -29,28 +31,31 @@ namespace GlobalVariable.Actions
             if (varType == typeof(bool))
             {
                 variable.SetValue<bool>(boolActions.Perform(variable.GetValue<bool>()));
+                PerformAction();
                 return;
             }
 
             if (varType == typeof(int))
             {
                 variable.SetValue<int>(intActions.Perform(variable.GetValue<int>()));
+                PerformAction();
                 return;
             }
             
             if (varType == typeof(float))
             {
                 variable.SetValue<float>(floatActions.Perform(variable.GetValue<float>()));
+                PerformAction();
                 return;
             }
             
             variable.SetValue<string>(stringActions.Perform(variable.GetValue<string>()));
+            PerformAction();
         }
-
-        [Button("Perform")]
-        public void PerformAction()
+        
+        
+        private void PerformAction()
         {
-            Perform();
             var variable = GlobalVariables.instance.GetVariableFromName(VariableID);
             VariablesManager.Instance.OnVariableChanged.Invoke(variable);
         }

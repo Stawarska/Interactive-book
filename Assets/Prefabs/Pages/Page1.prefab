@@ -52,7 +52,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: Book::Book.Choice
   <ChoiceText>k__BackingField: {fileID: 8476358232625430024}
   <ConnectedPage>k__BackingField: {fileID: 6427079661783655431, guid: f5554806a93a4844f81329f0a8d0737d, type: 3}
+  <Conditions>k__BackingField:
+  - <VariableID>k__BackingField: Monety
+    stringConditions:
+      rid: -2
+    boolConditions:
+      rid: -2
+    intConditions:
+      rid: 1013236668661497941
+    floatConditions:
+      rid: -2
+  <Actions>k__BackingField:
+  - <VariableID>k__BackingField: Item stary klucz
+    stringActions:
+      rid: -2
+    boolActions:
+      rid: -2
+    intActions:
+      rid: 1013236668661497942
+    floatActions:
+      rid: -2
   button: {fileID: 8757168449742328885}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 1013236668661497941
+      type: {class: GreaterThanConditionInt, ns: GlobalVariable.Conditions, asm: GlobalVariables}
+      data:
+        value: 0
+    - rid: 1013236668661497942
+      type: {class: AddActionInt, ns: GlobalVariable.Actions, asm: GlobalVariables}
+      data:
+        value: 2
 --- !u!114 &8430995234016472550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,7 +164,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Book::Book.Choice
   <ChoiceText>k__BackingField: {fileID: 5684020233408506996}
   <ConnectedPage>k__BackingField: {fileID: 5155077497445191108, guid: 36e134bbf4e574e4a9b69135e5e5f382, type: 3}
+  <Conditions>k__BackingField: []
+  <Actions>k__BackingField: []
   button: {fileID: 3414474386388303228}
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &4847603169203521917
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -48,7 +48,7 @@ namespace GraphEditor.Nodes
             
             if (GUI.Button(buttonRectEdit, new GUIContent("✍️", "Open choice editor")))
             {
-
+                ChoiceEditorWindow.ShowWindow(choice);
             }
                 
 

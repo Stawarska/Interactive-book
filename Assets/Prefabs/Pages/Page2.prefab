@@ -414,7 +414,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Book::Book.Choice
   <ChoiceText>k__BackingField: {fileID: 1810245064769491246}
   <ConnectedPage>k__BackingField: {fileID: 5155077497445191108, guid: 36e134bbf4e574e4a9b69135e5e5f382, type: 3}
+  <Conditions>k__BackingField: []
+  <Actions>k__BackingField: []
   button: {fileID: 55905638629439069}
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &1689460473359701408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,7 +498,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Book::Book.Choice
   <ChoiceText>k__BackingField: {fileID: 4306819075886394231}
   <ConnectedPage>k__BackingField: {fileID: 4243619044979244584, guid: c87deb6ac9c948247a9261534432ab6d, type: 3}
+  <Conditions>k__BackingField: []
+  <Actions>k__BackingField: []
   button: {fileID: 8838595498413698043}
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &1097609751997148466
 MonoBehaviour:
   m_ObjectHideFlags: 0
