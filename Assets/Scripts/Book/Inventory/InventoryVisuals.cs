@@ -29,6 +29,7 @@ namespace Book.Inventory
             closeButton.onClick.AddListener(CloseInventory);
 
             VariablesManager.Instance.OnVariableChanged += UpdateSlotContent;
+            CloseInventory();
             SetContentOnStart();
         }
 
@@ -66,6 +67,9 @@ namespace Book.Inventory
 
         private void UpdateSlotContent(GlobalVariables.Variable variable)
         {
+            if(!inventoryItemsData.GetItem(variable.variableName, out var baseItemData))
+                return;
+            
             if (variable.variableType.GetValue<int>() == 0)
             {
                 RemoveItem(variable);
@@ -108,7 +112,8 @@ namespace Book.Inventory
 
         private void SetItem(GlobalVariables.Variable variable, BaseItemSlot slot)
         {
-            var baseItemData= inventoryItemsData.GetItem(variable.variableName);
+            if(!inventoryItemsData.GetItem(variable.variableName, out var baseItemData))
+                return;
             
             slot.itemName.text = variable.variableName;
             slot.quantity.SetText(variable.variableType.GetValue<int>().ToString());
