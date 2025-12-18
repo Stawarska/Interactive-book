@@ -35,6 +35,9 @@ namespace Book
             });
 
             OnChoicePicked += PerformActions;
+            
+            if(!MeetConditions())
+                DisableChoice();
         }
 
         public bool MeetConditions()
@@ -46,6 +49,11 @@ namespace Book
         {
             foreach (var action in Actions)
                 action.Perform();
+        }
+
+        private void DisableChoice()
+        {
+            button.interactable = false;
         }
         private void OnValidate() => this.ValidateRefs();
     }

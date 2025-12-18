@@ -59,7 +59,7 @@ MonoBehaviour:
     boolConditions:
       rid: -2
     intConditions:
-      rid: 1013236668661497941
+      rid: 1013236668661497945
     floatConditions:
       rid: -2
   <Actions>k__BackingField:
@@ -78,14 +78,14 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 1013236668661497941
-      type: {class: GreaterThanConditionInt, ns: GlobalVariable.Conditions, asm: GlobalVariables}
-      data:
-        value: 0
     - rid: 1013236668661497942
       type: {class: AddActionInt, ns: GlobalVariable.Actions, asm: GlobalVariables}
       data:
         value: 2
+    - rid: 1013236668661497945
+      type: {class: GreaterThanOrEqualConditionInt, ns: GlobalVariable.Conditions, asm: GlobalVariables}
+      data:
+        value: 0
 --- !u!114 &8430995234016472550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,12 +164,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: Book::Book.Choice
   <ChoiceText>k__BackingField: {fileID: 5684020233408506996}
   <ConnectedPage>k__BackingField: {fileID: 5155077497445191108, guid: 36e134bbf4e574e4a9b69135e5e5f382, type: 3}
-  <Conditions>k__BackingField: []
+  <Conditions>k__BackingField:
+  - <VariableID>k__BackingField: Item stary klucz
+    stringConditions:
+      rid: 1013236668661497944
+    boolConditions:
+      rid: -2
+    intConditions:
+      rid: 1013236668661497946
+    floatConditions:
+      rid: -2
   <Actions>k__BackingField: []
   button: {fileID: 3414474386388303228}
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 1013236668661497944
+      type: {class: EqualsConditionString, ns: GlobalVariable.Conditions, asm: GlobalVariables}
+      data:
+        value: Bubciu
+    - rid: 1013236668661497946
+      type: {class: GreaterThanConditionInt, ns: GlobalVariable.Conditions, asm: GlobalVariables}
+      data:
+        value: 0
 --- !u!114 &4847603169203521917
 MonoBehaviour:
   m_ObjectHideFlags: 0
