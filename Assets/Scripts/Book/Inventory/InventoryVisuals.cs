@@ -29,8 +29,12 @@ namespace Book.Inventory
             closeButton.onClick.AddListener(CloseInventory);
 
             VariablesManager.Instance.OnVariableChanged += UpdateSlotContent;
-            CloseInventory();
+            
+            foreach (var slot in freeItemSlots)
+                slot.gameObject.SetActive(false);
+            
             SetContentOnStart();
+            CloseInventory();
         }
 
         [Button("Spawn Slots")]

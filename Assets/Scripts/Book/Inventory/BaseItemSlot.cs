@@ -9,10 +9,5 @@ namespace Book.Inventory
         public TMP_Text itemName;
         public Image image;
         public TMP_Text quantity;
-
-        public void Awake()
-        {
-            gameObject.SetActive(false);
-        }
     }
 }

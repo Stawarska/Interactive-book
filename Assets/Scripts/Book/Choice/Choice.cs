@@ -7,6 +7,7 @@ using KBCore.Refs;
 using SaintsField;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace Book
@@ -19,7 +20,9 @@ namespace Book
         [field: SerializeField] public List<VariableCondition> Conditions { get; private set; }
         [field: SerializeField] public List<VariableAction> Actions { get; private set; }
         [SerializeField, Child] private Button button;
+        [SerializeField] private Color hoverColor;
         public event Action OnChoicePicked;
+        private Color originalColor;
 
         private void Awake()
         {
@@ -38,6 +41,8 @@ namespace Book
             
             if(!MeetConditions())
                 DisableChoice();
+            
+            originalColor = ChoiceText.color;
         }
 
         public bool MeetConditions()
@@ -54,7 +59,19 @@ namespace Book
         private void DisableChoice()
         {
             button.interactable = false;
+            ChoiceText.color = Color.gray;
         }
         private void OnValidate() => this.ValidateRefs();
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            if(!button.interactable)
+                return;
+            ChoiceText.color = hoverColor;
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            ChoiceText.color = originalColor;
+        }
     }
 }

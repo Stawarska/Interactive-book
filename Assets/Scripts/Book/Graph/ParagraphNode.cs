@@ -76,7 +76,7 @@ namespace Nodes
         public void CreateNewChoice()
         {
             var instantiatePrefab = (Page)UnityEditor.PrefabUtility.InstantiatePrefab(PageVariant);
-            var newChoice = Instantiate(PageVariant.ChoiceTemplate, instantiatePrefab.ChoiceParent);
+            var newChoice = (Choice)UnityEditor.PrefabUtility.InstantiatePrefab(PageVariant.ChoiceTemplate, instantiatePrefab.ChoiceParent);
             
             instantiatePrefab.Choices.Add(newChoice);
             
