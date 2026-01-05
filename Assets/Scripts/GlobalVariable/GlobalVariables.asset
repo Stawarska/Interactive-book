@@ -50,57 +50,57 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: 1013236396207898710
-      type: {class: IntGlobalVariable, ns: GlobalVariable, asm: GlobalVariables}
+      type: {class: IntVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: 0
         <DefaultValue>k__BackingField: 2
     - rid: 1013236396207898711
-      type: {class: FloatGlobalVariable, ns: GlobalVariable, asm: GlobalVariables}
+      type: {class: FloatVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: 0
         <DefaultValue>k__BackingField: 0
     - rid: 1013236396207898712
-      type: {class: BoolGlobalVariable, ns: GlobalVariable, asm: GlobalVariables}
+      type: {class: BoolVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: 0
         <DefaultValue>k__BackingField: 0
     - rid: 1013236396207898713
-      type: {class: StringGlobalVariable, ns: GlobalVariable, asm: GlobalVariables}
+      type: {class: StringVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: Kamila
         <DefaultValue>k__BackingField: Gracz
     - rid: 1013236396207898714
-      type: {class: IntGlobalVariable, ns: GlobalVariable, asm: GlobalVariables}
+      type: {class: IntVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: 0
         <DefaultValue>k__BackingField: 0
     - rid: 1013236396207898715
-      type: {class: IntGlobalVariable, ns: GlobalVariable, asm: GlobalVariables}
+      type: {class: IntVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: 0
         <DefaultValue>k__BackingField: 0
     - rid: 1013236396207898717
-      type: {class: BoolGlobalVariable, ns: GlobalVariable, asm: GlobalVariables}
+      type: {class: BoolVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: 1
         <DefaultValue>k__BackingField: 1
     - rid: 1013236398597603328
-      type: {class: StringGlobalVariable, ns: GlobalVariable, asm: GlobalVariables}
+      type: {class: StringVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: 
         <DefaultValue>k__BackingField: Kot
     - rid: 1013236398597603399
-      type: {class: IntGlobalVariable, ns: GlobalVariable, asm: GlobalVariables}
+      type: {class: IntVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: 0
         <DefaultValue>k__BackingField: 0
     - rid: 1013236398597603400
-      type: {class: IntGlobalVariable, ns: GlobalVariable, asm: GlobalVariables}
+      type: {class: IntVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: 0
         <DefaultValue>k__BackingField: 0
     - rid: 1013236445153853511
-      type: {class: IntGlobalVariable, ns: GlobalVariable, asm: GlobalVariables}
+      type: {class: IntVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: 0
         <DefaultValue>k__BackingField: 0

@@ -17,10 +17,10 @@ namespace GlobalVariable.Actions
         [ShowIf(nameof(ShowInt)), SerializeReference, SubclassSelector] public IIntAction intActions;
         [ShowIf(nameof(ShowFloat)), SerializeReference, SubclassSelector] public IFloatAction floatActions;
         
-        private bool ShowString() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(StringGlobalVariable);
-        private bool ShowBool() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(BoolGlobalVariable);
-        private bool ShowInt() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(IntGlobalVariable);
-        private bool ShowFloat() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(FloatGlobalVariable);
+        private bool ShowString() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(StringVariable);
+        private bool ShowBool() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(BoolVariable);
+        private bool ShowInt() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(IntVariable);
+        private bool ShowFloat() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(FloatVariable);
         
         public void Perform()
         {
@@ -31,30 +31,36 @@ namespace GlobalVariable.Actions
             if (varType == typeof(bool))
             {
                 variable.SetValue<bool>(boolActions.Perform(variable.GetValue<bool>()));
-                PerformAction();
+                ActionPerformed();
                 return;
             }
 
             if (varType == typeof(int))
             {
                 variable.SetValue<int>(intActions.Perform(variable.GetValue<int>()));
-                PerformAction();
+                ActionPerformed();
                 return;
             }
             
             if (varType == typeof(float))
             {
                 variable.SetValue<float>(floatActions.Perform(variable.GetValue<float>()));
-                PerformAction();
+                ActionPerformed();
                 return;
             }
-            
-            variable.SetValue<string>(stringActions.Perform(variable.GetValue<string>()));
-            PerformAction();
+
+            if (varType == typeof(string))
+            {
+                variable.SetValue<string>(stringActions.Perform(variable.GetValue<string>()));
+                ActionPerformed();
+                return;
+            }
+
+            throw new Exception();
         }
         
         
-        private void PerformAction()
+        private void ActionPerformed()
         {
             var variable = GlobalVariables.instance.GetVariableFromName(VariableID);
             VariablesManager.Instance.OnVariableChanged.Invoke(variable);

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Paragraph
   m_EditorClassIdentifier: Book::Nodes.ParagraphNode
   graph: {fileID: 11400000}
-  position: {x: -46.8541, y: -6.022167}
+  position: {x: -24, y: 24}
   ports:
     keys:
     - choice
@@ -118,11 +118,11 @@ MonoBehaviour:
       _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: <EditorChoices>k__BackingField 0
-        node: {fileID: -2941509133944818688}
-        reroutePoints: []
       - fieldName: <EditorChoices>k__BackingField 1
         node: {fileID: 7738804019568279915}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: -2941509133944818688}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -195,10 +195,10 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: <EditorChoices>k__BackingField 1
-        node: {fileID: -2941509133944818688}
+        node: {fileID: 6918514830548823513}
         reroutePoints: []
       - fieldName: <EditorChoices>k__BackingField 1
-        node: {fileID: 6918514830548823513}
+        node: {fileID: -2941509133944818688}
         reroutePoints: []
       _direction: 0
       _connectionType: 0

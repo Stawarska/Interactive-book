@@ -350,9 +350,69 @@ PrefabInstance:
       value: Strona 1
       objectReference: {fileID: 0}
     - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: 'managedReferences[-2]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
       propertyPath: <ConnectedPage>k__BackingField
       value: 
       objectReference: {fileID: 4243619044979244584, guid: c87deb6ac9c948247a9261534432ab6d, type: 3}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: <Actions>k__BackingField.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: <Conditions>k__BackingField.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: 'managedReferences[1519397647738732615]'
+      value: GlobalVariables GlobalVariable.Actions.AddActionInt
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: managedReferences[1519397647738732615].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: <Actions>k__BackingField.Array.data[0].intActions
+      value: 1519397647738732615
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: <Actions>k__BackingField.Array.data[0].boolActions
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: <Actions>k__BackingField.Array.data[0].floatActions
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: <Actions>k__BackingField.Array.data[0].stringActions
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: <Conditions>k__BackingField.Array.data[0].intConditions
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: <Conditions>k__BackingField.Array.data[0].boolConditions
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: <Conditions>k__BackingField.Array.data[0].floatConditions
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: <Conditions>k__BackingField.Array.data[0].stringConditions
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: <Actions>k__BackingField.Array.data[0].<VariableID>k__BackingField
+      value: Monety
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: <Conditions>k__BackingField.Array.data[0].<VariableID>k__BackingField
+      value: Stamina
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

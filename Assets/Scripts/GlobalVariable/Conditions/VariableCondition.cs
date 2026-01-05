@@ -18,10 +18,10 @@ namespace GlobalVariable.Conditions
         [ShowIf(nameof(ShowInt)), SerializeReference, SubclassSelector] public IIntCondition intConditions;
         [ShowIf(nameof(ShowFloat)), SerializeReference, SubclassSelector] public IFloatCondition floatConditions;
 
-        private bool ShowString() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(StringGlobalVariable);
-        private bool ShowBool() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(BoolGlobalVariable);
-        private bool ShowInt() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(IntGlobalVariable);
-        private bool ShowFloat() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(FloatGlobalVariable);
+        private bool ShowString() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(StringVariable);
+        private bool ShowBool() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(BoolVariable);
+        private bool ShowInt() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(IntVariable);
+        private bool ShowFloat() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(FloatVariable);
         
         public bool Check()
         {

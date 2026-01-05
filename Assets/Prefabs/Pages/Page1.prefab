@@ -251,7 +251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5849285117779513869, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
       propertyPath: m_text
-      value: 'Strona 2 '
+      value: Strona 1
       objectReference: {fileID: 0}
     - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
       propertyPath: 'managedReferences[-2]'
@@ -267,15 +267,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
       propertyPath: <Conditions>k__BackingField.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
       propertyPath: 'managedReferences[1013236921246679111]'
       value: GlobalVariables GlobalVariable.Actions.AddActionInt
       objectReference: {fileID: 0}
     - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: 'managedReferences[1519397647738732614]'
+      value: GlobalVariables GlobalVariable.Conditions.EqualsConditionFloat
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
       propertyPath: managedReferences[1013236921246679111].value
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: managedReferences[1519397647738732614].value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
       propertyPath: <Actions>k__BackingField.Array.data[0].intActions
@@ -303,7 +311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
       propertyPath: <Conditions>k__BackingField.Array.data[0].floatConditions
-      value: -2
+      value: 1519397647738732614
       objectReference: {fileID: 0}
     - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
       propertyPath: <Conditions>k__BackingField.Array.data[0].stringConditions
@@ -312,6 +320,10 @@ PrefabInstance:
     - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
       propertyPath: <Actions>k__BackingField.Array.data[0].<VariableID>k__BackingField
       value: Item stary klucz
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: <Conditions>k__BackingField.Array.data[0].<VariableID>k__BackingField
+      value: "\u017Bycie"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

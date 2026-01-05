@@ -44,10 +44,10 @@ namespace GlobalVariable.Editor
                 var type = GlobalVariables.instance
                     .GetTypeFromName(variableIdProp.stringValue);
 
-                SetVisible(stringActionField, type == typeof(StringGlobalVariable));
-                SetVisible(boolActionField, type == typeof(BoolGlobalVariable));
-                SetVisible(intActionField, type == typeof(IntGlobalVariable));
-                SetVisible(floatActionField, type == typeof(FloatGlobalVariable));
+                SetVisible(stringActionField, type == typeof(StringVariable));
+                SetVisible(boolActionField, type == typeof(BoolVariable));
+                SetVisible(intActionField, type == typeof(IntVariable));
+                SetVisible(floatActionField, type == typeof(FloatVariable));
             }
 
             void HideAll()

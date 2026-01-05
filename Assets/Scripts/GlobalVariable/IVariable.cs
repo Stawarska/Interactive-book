@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace GlobalVariable
 {
-    public interface IGlobalVariableType
+    public interface IVariable
     {
         public Type VariableType { get; }
         public T GetValue<T>();
@@ -11,15 +11,14 @@ namespace GlobalVariable
     }
 
     [Serializable]
-    public abstract class GlobalVariableType<T> : IGlobalVariableType
+    public abstract class Variable<T> : IVariable
     {
-        
         [field: SerializeField] public T Value { get; set; }
         [field: SerializeField] public T DefaultValue { get; set; }
 
         public Type VariableType => typeof(T);
 
-        T1 IGlobalVariableType.GetValue<T1>() 
+        T1 IVariable.GetValue<T1>() 
         {
             if(Value is T1 value)
                 return value;

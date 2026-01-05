@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace GlobalVariable
 {
@@ -11,19 +12,19 @@ namespace GlobalVariable
     public class GlobalVariables : ScriptableSingleton<GlobalVariables>
     {
         [Serializable]
-        public class Variable
+        public class VariableWrapper
         {
             public string variableName;
-            [SerializeReference] public IGlobalVariableType variableType;
+            [FormerlySerializedAs("variableType")] [SerializeReference] public IVariable variable;
 
-            public Variable(string variableName, IGlobalVariableType variableType)
+            public VariableWrapper(string variableName, IVariable variable)
             {
                 this.variableName = variableName;
-                this.variableType = variableType;
+                this.variable = variable;
             }
         }
         
-        [field: SerializeField] public List<Variable> Variables { get; private set; }
+        [field: SerializeField] public List<VariableWrapper> Variables { get; private set; }
         
         public IEnumerable<string> GetAllVariablesNames()
         {
@@ -32,15 +33,15 @@ namespace GlobalVariable
         
         public IEnumerable<string> GetVariablesNamesOfType(Type type)
         {
-            return Variables.Where(x =>x.variableType.GetType() == type).Select(var => var.variableName);
+            return Variables.Where(x =>x.variable.GetType() == type).Select(var => var.variableName);
         }
         
         public Type GetTypeFromName(string variableName)
         {
-            return Variables.Find(x => x.variableName == variableName)?.variableType.GetType();
+            return Variables.Find(x => x.variableName == variableName)?.variable.GetType();
         }
 
-        public Variable GetVariableFromName(string variableName)
+        public VariableWrapper GetVariableFromName(string variableName)
         {
             return Variables.FirstOrDefault(x => x.variableName == variableName);
         }

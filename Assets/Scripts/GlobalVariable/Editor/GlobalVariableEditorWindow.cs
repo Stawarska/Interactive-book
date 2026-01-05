@@ -26,18 +26,18 @@ namespace GlobalVariable.Editor
 
         private static readonly Dictionary<Type, string> TypeLabels = new()
         {
-            { typeof(IntGlobalVariable), "🔢" },
-            { typeof(FloatGlobalVariable), "📊" },
-            { typeof(BoolGlobalVariable), "☑️" },
-            { typeof(StringGlobalVariable), "📝" }
+            { typeof(IntVariable), "🔢" },
+            { typeof(FloatVariable), "📊" },
+            { typeof(BoolVariable), "☑️" },
+            { typeof(StringVariable), "📝" }
         };
 
         private static readonly Dictionary<Type, Color> TypeColors = new()
         {
-            { typeof(IntGlobalVariable), new Color(0.7f, 0.85f, 1f, 0.3f) },
-            { typeof(FloatGlobalVariable), new Color(1f, 0.85f, 0.7f, 0.3f) },
-            { typeof(BoolGlobalVariable), new Color(0.7f, 1f, 0.85f, 0.3f) },
-            { typeof(StringGlobalVariable), new Color(1f, 1f, 0.7f, 0.3f) }
+            { typeof(IntVariable), new Color(0.7f, 0.85f, 1f, 0.3f) },
+            { typeof(FloatVariable), new Color(1f, 0.85f, 0.7f, 0.3f) },
+            { typeof(BoolVariable), new Color(0.7f, 1f, 0.85f, 0.3f) },
+            { typeof(StringVariable), new Color(1f, 1f, 0.7f, 0.3f) }
         };
 
         private static readonly Color DuplicateColor = new(1f, 0.3f, 0.3f, 0.3f);
@@ -122,7 +122,7 @@ namespace GlobalVariable.Editor
             for (var i = 0; i < variablesProperty.arraySize; i++)
             {
                 var variable = variablesProperty.GetArrayElementAtIndex(i);
-                var nameProperty = variable.FindPropertyRelative(nameof(GlobalVariables.Variable.variableName));
+                var nameProperty = variable.FindPropertyRelative(nameof(GlobalVariables.VariableWrapper.variableName));
 
                 if (nameProperty == null) continue;
 
@@ -155,10 +155,10 @@ namespace GlobalVariable.Editor
 
             var originalColor = GUI.backgroundColor;
 
-            ShowTypeButton<IntGlobalVariable>();
-            ShowTypeButton<FloatGlobalVariable>();
-            ShowTypeButton<BoolGlobalVariable>();
-            ShowTypeButton<StringGlobalVariable>();
+            ShowTypeButton<IntVariable>();
+            ShowTypeButton<FloatVariable>();
+            ShowTypeButton<BoolVariable>();
+            ShowTypeButton<StringVariable>();
 
             GUI.backgroundColor = originalColor;
 
@@ -166,7 +166,7 @@ namespace GlobalVariable.Editor
             EditorGUILayout.EndVertical();
             EditorGUILayout.Space(5);
 
-            void ShowTypeButton<T>() where T : IGlobalVariableType, new()
+            void ShowTypeButton<T>() where T : IVariable, new()
             {
                 GUI.backgroundColor = TypeColors[typeof(T)];
                 if (GUILayout.Button($"{TypeLabels[typeof(T)]} {GetTypeName(typeof(T))}", addButtonStyle, GUILayout.Height(AddButtonHeight)))
@@ -225,8 +225,8 @@ namespace GlobalVariable.Editor
                 var variable = variablesProperty.GetArrayElementAtIndex(i);
                 if (variable == null) continue;
 
-                var nameProperty = variable.FindPropertyRelative(nameof(GlobalVariables.Variable.variableName));
-                var typeProperty = variable.FindPropertyRelative(nameof(GlobalVariables.Variable.variableType));
+                var nameProperty = variable.FindPropertyRelative(nameof(GlobalVariables.VariableWrapper.variableName));
+                var typeProperty = variable.FindPropertyRelative(nameof(GlobalVariables.VariableWrapper.variable));
 
                 if (nameProperty == null || typeProperty == null) continue;
                 if (typeProperty.managedReferenceValue == null) continue;
@@ -344,7 +344,7 @@ namespace GlobalVariable.Editor
 
         private void DrawVariableValueField(SerializedProperty typeProperty)
         {
-            var defaultProperty = typeProperty.FindAutoPropertyRelative(nameof(GlobalVariableType<int>.DefaultValue));
+            var defaultProperty = typeProperty.FindAutoPropertyRelative(nameof(Variable<int>.DefaultValue));
 
             if (defaultProperty == null)
             {
@@ -411,7 +411,7 @@ namespace GlobalVariable.Editor
             EditorGUILayout.EndHorizontal();
         }
 
-        private void AddVariable<T>(string baseName) where T : IGlobalVariableType, new()
+        private void AddVariable<T>(string baseName) where T : IVariable, new()
         {
             if (variablesProperty == null) return;
 
@@ -426,8 +426,8 @@ namespace GlobalVariable.Editor
             serializedObject.Update();
 
             var newVariable = variablesProperty.GetArrayElementAtIndex(newIndex);
-            var nameProperty = newVariable.FindPropertyRelative(nameof(GlobalVariables.Variable.variableName));
-            var typeProperty = newVariable.FindPropertyRelative(nameof(GlobalVariables.Variable.variableType));
+            var nameProperty = newVariable.FindPropertyRelative(nameof(GlobalVariables.VariableWrapper.variableName));
+            var typeProperty = newVariable.FindPropertyRelative(nameof(GlobalVariables.VariableWrapper.variable));
 
             if (nameProperty != null)
                 nameProperty.stringValue = uniqueName;
@@ -440,7 +440,7 @@ namespace GlobalVariable.Editor
                 serializedObject.Update();
 
                 var defaultProperty =
-                    typeProperty.FindAutoPropertyRelative(nameof(GlobalVariableType<int>.DefaultValue));
+                    typeProperty.FindAutoPropertyRelative(nameof(Variable<int>.DefaultValue));
 
                 if (defaultProperty != null)
                     SetDefaultValue(defaultProperty);
@@ -483,7 +483,7 @@ namespace GlobalVariable.Editor
             for (var i = 0; i < variablesProperty.arraySize; i++)
             {
                 var variable = variablesProperty.GetArrayElementAtIndex(i);
-                var nameProperty = variable.FindPropertyRelative(nameof(GlobalVariables.Variable.variableName));
+                var nameProperty = variable.FindPropertyRelative(nameof(GlobalVariables.VariableWrapper.variableName));
                 if (nameProperty != null)
                     existingNames.Add(nameProperty.stringValue);
             }
@@ -513,7 +513,7 @@ namespace GlobalVariable.Editor
             for (var i = 0; i < variablesProperty.arraySize; i++)
             {
                 var variable = variablesProperty.GetArrayElementAtIndex(i);
-                var nameProperty = variable.FindPropertyRelative(nameof(GlobalVariables.Variable.variableName));
+                var nameProperty = variable.FindPropertyRelative(nameof(GlobalVariables.VariableWrapper.variableName));
                 if (nameProperty != null && nameProperty.stringValue.ToLower().Contains(searchLower))
                     count++;
             }
@@ -523,10 +523,10 @@ namespace GlobalVariable.Editor
 
         private static string GetTypeName(Type type)
         {
-            if (type == typeof(IntGlobalVariable)) return "Int";
-            if (type == typeof(FloatGlobalVariable)) return "Float";
-            if (type == typeof(BoolGlobalVariable)) return "Bool";
-            if (type == typeof(StringGlobalVariable)) return "String";
+            if (type == typeof(IntVariable)) return "Int";
+            if (type == typeof(FloatVariable)) return "Float";
+            if (type == typeof(BoolVariable)) return "Bool";
+            if (type == typeof(StringVariable)) return "String";
             return type.Name;
         }
     }
