@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Book.Animation;
+using Book.Inventory;
 using Graph;
 using SaintsField;
 using SaintsField.Playa;
@@ -20,6 +21,13 @@ namespace Book
         [SerializeField, ReadOnly] private string previousPageAnimationPath;
         [SerializeField, ReadOnly] private GameObject pageAnimationPrefab;
         [SerializeField] private Transform animationParent;
+        
+        [Header("Inventory")]
+        [SerializeField] private bool useInventory;
+        [ShowIf(nameof(useInventory)), ResourcePath(typeof(InventoryVisuals)), SerializeField] private string inventoryVisualsPath;
+        [ShowIf(nameof(useInventory)), SerializeField, ReadOnly] private string previousInventoryPath;
+        [ShowIf(nameof(useInventory)), SerializeField, ReadOnly] private GameObject inventoryPrefab;
+        [ShowIf(nameof(useInventory)), SerializeField] private Transform inventoryParent;
 
         private Stack<Page> pagesHistory = new();
         private Page targetPage;
@@ -57,7 +65,14 @@ namespace Book
         }
 
 #if UNITY_EDITOR
-        [Button("Click after picking or changing animation")]
+        
+        [Button("Apply changes")]
+        private void ApplyChanges()
+        {
+            SpawnPageAnimationPrefab();
+            SwapInventoryPrefab();
+        }
+        
         private void SpawnPageAnimationPrefab()
         {
             if (pageAnimationPath == null)
@@ -85,6 +100,42 @@ namespace Book
             var prefab = AssetDatabase.LoadAssetAtPath<GameObject>($"{pageAnimationPath}.prefab");
             pageAnimationPrefab = Instantiate(prefab, animationParent);
             previousPageAnimationPath = pageAnimationPath;
+        }
+
+        private void SwapInventoryPrefab()
+        {
+            if (!useInventory)
+            {
+                if(inventoryPrefab != null)
+                    DestroyImmediate(inventoryPrefab.gameObject);
+                inventoryPrefab = null;
+                return;
+            }
+            
+            if (inventoryVisualsPath == null)
+            {
+                Debug.LogError("Inventory is null, please pick inventory first or deselect use inventory");
+                previousInventoryPath = null;
+                DestroyImmediate(inventoryPrefab.gameObject);
+                inventoryPrefab = null;
+                return;
+            }
+
+            if (previousInventoryPath == inventoryVisualsPath)
+            {
+                Debug.Log("Inventory was not changed, nothing happened");
+                return;
+            }
+
+            if (inventoryPrefab != null)
+            {
+                DestroyImmediate(inventoryPrefab.gameObject);
+                inventoryPrefab = null;
+            }
+            
+            var prefab = AssetDatabase.LoadAssetAtPath<GameObject>($"{inventoryVisualsPath}.prefab");
+            inventoryPrefab = Instantiate(prefab, inventoryParent);
+            previousInventoryPath = inventoryVisualsPath;
         }
 #endif
     }
