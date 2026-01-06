@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using SaintsField;
-using SaintsField.Playa;
 using UnityEngine;
 
 namespace GlobalVariable.Actions
@@ -9,61 +6,12 @@ namespace GlobalVariable.Actions
     [Serializable]
     public class VariableAction 
     {
-        [field: SerializeField, TreeDropdown(nameof(Variables))] public string VariableID { get; private set; }
-        private IEnumerable<string> Variables() => GlobalVariables.instance.GetAllVariablesNames();
-        
-        [ShowIf(nameof(ShowString)), SerializeReference, SubclassSelector] public IStringAction stringActions;
-        [ShowIf(nameof(ShowBool)), SerializeReference, SubclassSelector] public IBoolAction boolActions;
-        [ShowIf(nameof(ShowInt)), SerializeReference, SubclassSelector] public IIntAction intActions;
-        [ShowIf(nameof(ShowFloat)), SerializeReference, SubclassSelector] public IFloatAction floatActions;
-        
-        private bool ShowString() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(StringVariable);
-        private bool ShowBool() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(BoolVariable);
-        private bool ShowInt() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(IntVariable);
-        private bool ShowFloat() => GlobalVariables.instance.GetTypeFromName(VariableID) == typeof(FloatVariable);
+        [SerializeReference] private VariableOperation<IVariableAction> variableAction = new();
         
         public void Perform()
         {
-            var variable = VariablesManager.Instance.Variables[VariableID];
-
-            var varType = variable.VariableType;
-
-            if (varType == typeof(bool))
-            {
-                variable.SetValue<bool>(boolActions.Perform(variable.GetValue<bool>()));
-                ActionPerformed();
-                return;
-            }
-
-            if (varType == typeof(int))
-            {
-                variable.SetValue<int>(intActions.Perform(variable.GetValue<int>()));
-                ActionPerformed();
-                return;
-            }
-            
-            if (varType == typeof(float))
-            {
-                variable.SetValue<float>(floatActions.Perform(variable.GetValue<float>()));
-                ActionPerformed();
-                return;
-            }
-
-            if (varType == typeof(string))
-            {
-                variable.SetValue<string>(stringActions.Perform(variable.GetValue<string>()));
-                ActionPerformed();
-                return;
-            }
-
-            throw new Exception();
-        }
-        
-        
-        private void ActionPerformed()
-        {
-            var variable = GlobalVariables.instance.GetVariableFromName(VariableID);
-            VariablesManager.Instance.OnVariableChanged.Invoke(variable);
+            var variable = VariablesManager.Instance.Variables[variableAction.VariableID];
+            variableAction.Operation?.Perform(variable);
         }
     }
 }

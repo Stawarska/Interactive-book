@@ -344,7 +344,7 @@ namespace GlobalVariable.Editor
 
         private void DrawVariableValueField(SerializedProperty typeProperty)
         {
-            var defaultProperty = typeProperty.FindAutoPropertyRelative(nameof(Variable<int>.DefaultValue));
+            var defaultProperty = typeProperty.FindAutoPropertyRelative(nameof(Variable<int>.Value));
 
             if (defaultProperty == null)
             {
@@ -440,7 +440,7 @@ namespace GlobalVariable.Editor
                 serializedObject.Update();
 
                 var defaultProperty =
-                    typeProperty.FindAutoPropertyRelative(nameof(Variable<int>.DefaultValue));
+                    typeProperty.FindAutoPropertyRelative(nameof(Variable<int>.Value));
 
                 if (defaultProperty != null)
                     SetDefaultValue(defaultProperty);

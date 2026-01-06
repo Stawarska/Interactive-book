@@ -3,21 +3,17 @@
 namespace GlobalVariable.Actions
 {
     [Serializable]
-    public class SwitchStateAction<T> : IVariableAction<T>
+    public abstract class SwitchStateAction<T> : IVariableAction<T>
     {
-        public virtual T Perform(T other)
-        {
-            return other;
-        }
+        public abstract void Perform(Variable<T> variable);
     }
     
     [Serializable]
-    public class SwitchStateActionBool : SwitchStateAction<bool>, IBoolAction
+    public class SwitchStateActionBool : SwitchStateAction<bool>
     {
-        public override bool Perform(bool other)
+        public override void Perform(Variable<bool> other)
         {
-            other = !other;
-            return base.Perform(other);
+            other.SetValue(!other.Value);
         }
     }
 }

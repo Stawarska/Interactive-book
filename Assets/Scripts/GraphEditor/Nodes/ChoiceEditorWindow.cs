@@ -41,8 +41,8 @@ namespace GraphEditor.Nodes
 
             serializedChoice = new SerializedObject(choice);
             
-            conditionsProperty = serializedChoice.FindAutoProperty("Conditions");
-            actionsProperty = serializedChoice.FindAutoProperty("Actions");
+            conditionsProperty = serializedChoice.FindAutoProperty(nameof(choice.Conditions));
+            actionsProperty = serializedChoice.FindAutoProperty(nameof(choice.Actions));
 
             rootVisualElement.Clear();
             CreateGUI();

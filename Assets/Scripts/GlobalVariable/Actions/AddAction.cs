@@ -1,4 +1,5 @@
 ﻿using System;
+using MiscUtil;
 using UnityEngine;
 
 namespace GlobalVariable.Actions
@@ -8,29 +9,12 @@ namespace GlobalVariable.Actions
     {
         [SerializeField] protected T value;
         
-        public virtual T Perform(T other)
+        public void Perform(Variable<T> variable)
         {
-           return other;
+            variable.SetValue(Operator<T>.Add(value, variable.Value));
         }
     }
     
-    [Serializable]
-    public class AddActionInt : AddAction<int>, IIntAction
-    {
-        public override int Perform(int other)
-        {
-            other += value;
-            return base.Perform(other);
-        }
-    }
-
-    [Serializable]
-    public class AddActionFloat : AddAction<float>, IFloatAction
-    {
-        public override float Perform(float other)
-        {
-            other += value;
-            return base.Perform(other);
-        }
-    }
+    [Serializable] public class AddActionInt : AddAction<int> { }
+    [Serializable] public class AddActionFloat : AddAction<float> { }
 }

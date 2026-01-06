@@ -5,18 +5,17 @@ namespace GlobalVariable
 {
     public interface IVariable
     {
-        public Type VariableType { get; }
         public T GetValue<T>();
         public void SetValue<T>(T value);
+        public IVariable Clone();
     }
 
     [Serializable]
     public abstract class Variable<T> : IVariable
     {
-        [field: SerializeField] public T Value { get; set; }
-        [field: SerializeField] public T DefaultValue { get; set; }
-
-        public Type VariableType => typeof(T);
+        public delegate void OnValueChangedDelegate(T newValue, T oldValue);
+        public event OnValueChangedDelegate OnValueChanged;
+        [field: SerializeField] public T Value { get; private set; }
 
         T1 IVariable.GetValue<T1>() 
         {
@@ -31,7 +30,17 @@ namespace GlobalVariable
             if (value is not T newValue)
                 throw new TypeAccessException();
 
+            var oldValue = Value;
             Value = newValue;
+            OnValueChanged?.Invoke(Value, oldValue);
+            VariablesManager.Instance.OnVariableChanged?.Invoke(this);
+        }
+
+        public virtual IVariable Clone()
+        {
+            var newVariable = (Variable<T>)Activator.CreateInstance(GetType());
+            newVariable.Value = Value;
+            return newVariable;
         }
     }
 }

@@ -94,12 +94,91 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5849285117779513869, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
       propertyPath: m_text
-      value: Strona 1
+      value: Strona 1 - wykorzystaj klucz
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: 'managedReferences[-2]'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
       propertyPath: <ConnectedPage>k__BackingField
       value: 
       objectReference: {fileID: 4243619044979244584, guid: c87deb6ac9c948247a9261534432ab6d, type: 3}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: <Actions>k__BackingField.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: <Conditions>k__BackingField.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: 'managedReferences[1519397671653605446]'
+      value: 'GlobalVariables GlobalVariable.VariableOperation`1[[GlobalVariable.Conditions.IVariableCondition,
+        GlobalVariables]]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: 'managedReferences[1519397671653605447]'
+      value: GlobalVariables GlobalVariable.Conditions.GreaterThanConditionInt
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: 'managedReferences[1519397671653605448]'
+      value: 'GlobalVariables GlobalVariable.VariableOperation`1[[GlobalVariable.Actions.IVariableAction,
+        GlobalVariables]]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: 'managedReferences[1519397671653605449]'
+      value: GlobalVariables GlobalVariable.Actions.SubtractActionInt
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: 'managedReferences[1519397671653605450]'
+      value: 'GlobalVariables GlobalVariable.VariableOperation`1[[GlobalVariable.Actions.IVariableAction,
+        GlobalVariables]]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: managedReferences[1519397671653605447].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: managedReferences[1519397671653605449].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: <Actions>k__BackingField.Array.data[0].variableAction
+      value: 1519397671653605448
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: <Actions>k__BackingField.Array.data[1].variableAction
+      value: 1519397671653605450
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: <Conditions>k__BackingField.Array.data[0].variableCondition
+      value: 1519397671653605446
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: managedReferences[1519397671653605446].<Operation>k__BackingField
+      value: 1519397671653605447
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: managedReferences[1519397671653605448].<Operation>k__BackingField
+      value: 1519397671653605449
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: managedReferences[1519397671653605450].<Operation>k__BackingField
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: managedReferences[1519397671653605446].<VariableID>k__BackingField
+      value: Item stary klucz
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: managedReferences[1519397671653605448].<VariableID>k__BackingField
+      value: Item stary klucz
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8e8c9292334a60f42a58c1f5a83abad3, type: 3}
+      propertyPath: managedReferences[1519397671653605450].<VariableID>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

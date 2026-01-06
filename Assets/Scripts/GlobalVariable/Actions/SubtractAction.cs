@@ -1,35 +1,20 @@
 ﻿using System;
+using MiscUtil;
 using UnityEngine;
 
 namespace GlobalVariable.Actions
 {
     [Serializable]
-    public class SubtractAction<T> : IVariableAction<T>
+    public abstract class SubtractAction<T> : IVariableAction<T>
     {
         [SerializeField] protected T value;
-        public T Perform(T other)
+        
+        public void Perform(Variable<T> variable)
         {
-            return other;
+            variable.SetValue(Operator<T>.Subtract(variable.Value, value));
         }
     }
     
-    [Serializable]
-    public class SubtractActionInt : AddAction<int>, IIntAction
-    {
-        public override int Perform(int other)
-        {
-            other -= value;
-            return base.Perform(other);
-        }
-    }
-
-    [Serializable]
-    public class SubtractActionFloat : AddAction<float>, IFloatAction
-    {
-        public override float Perform(float other)
-        {
-            other -= value;
-            return base.Perform(other);
-        }
-    }
+    [Serializable] public class SubtractActionInt : SubtractAction<int> { }
+    [Serializable] public class SubtractActionFloat : SubtractAction<float> { }
 }

@@ -14,37 +14,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: Book::Book.GlobalVariables.GlobalVariables
   <Variables>k__BackingField:
   - variableName: Monety
-    variableType:
+    variable:
       rid: 1013236396207898710
   - variableName: "\u017Bycie"
-    variableType:
+    variable:
       rid: 1013236396207898711
   - variableName: Posiadanie klucza
-    variableType:
+    variable:
       rid: 1013236396207898712
   - variableName: Imie
-    variableType:
+    variable:
       rid: 1013236396207898713
   - variableName: Charyzma
-    variableType:
+    variable:
       rid: 1013236396207898714
   - variableName: Stamina
-    variableType:
+    variable:
       rid: 1013236396207898715
   - variableName: Posiadanie broni
-    variableType:
+    variable:
       rid: 1013236396207898717
   - variableName: "Imi\u0119 kota"
-    variableType:
+    variable:
       rid: 1013236398597603328
   - variableName: Poziom
-    variableType:
+    variable:
       rid: 1013236398597603399
   - variableName: Zaufanie
-    variableType:
+    variable:
       rid: 1013236398597603400
   - variableName: Item stary klucz
-    variableType:
+    variable:
       rid: 1013236445153853511
   references:
     version: 2
@@ -53,54 +53,43 @@ MonoBehaviour:
       type: {class: IntVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: 0
-        <DefaultValue>k__BackingField: 2
     - rid: 1013236396207898711
       type: {class: FloatVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: 0
-        <DefaultValue>k__BackingField: 0
     - rid: 1013236396207898712
       type: {class: BoolVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: 0
-        <DefaultValue>k__BackingField: 0
     - rid: 1013236396207898713
       type: {class: StringVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: Kamila
-        <DefaultValue>k__BackingField: Gracz
     - rid: 1013236396207898714
       type: {class: IntVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: 0
-        <DefaultValue>k__BackingField: 0
     - rid: 1013236396207898715
       type: {class: IntVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: 0
-        <DefaultValue>k__BackingField: 0
     - rid: 1013236396207898717
       type: {class: BoolVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: 1
-        <DefaultValue>k__BackingField: 1
     - rid: 1013236398597603328
       type: {class: StringVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: 
-        <DefaultValue>k__BackingField: Kot
     - rid: 1013236398597603399
       type: {class: IntVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: 0
-        <DefaultValue>k__BackingField: 0
     - rid: 1013236398597603400
       type: {class: IntVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: 0
-        <DefaultValue>k__BackingField: 0
     - rid: 1013236445153853511
       type: {class: IntVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
         <Value>k__BackingField: 0
-        <DefaultValue>k__BackingField: 0

@@ -8,7 +8,7 @@ namespace GlobalVariable
     {
         public static VariablesManager Instance;
         public Dictionary<string, IVariable> Variables { get; private set; } = new();
-        public Action<GlobalVariables.VariableWrapper> OnVariableChanged;
+        public Action<IVariable> OnVariableChanged;
 
         private void Awake()
         {
@@ -16,8 +16,9 @@ namespace GlobalVariable
                 Instance = this;
             
             var variables = GlobalVariables.instance.Variables;
+            
             for (var i = 0; i < variables.Count; i++)
-                Variables.Add(variables[i].variableName, variables[i].variable);
+                Variables.Add(variables[i].variableName, variables[i].variable.Clone());
         }
         
         public IVariable GetVariableFromName(string variableName)

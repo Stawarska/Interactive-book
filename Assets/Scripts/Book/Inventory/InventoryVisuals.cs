@@ -21,14 +21,12 @@ namespace Book.Inventory
         [SerializeField] private int slotsQuantity;
         [SerializeField, Child] private List<BaseItemSlot> freeItemSlots;
 
-        private readonly Dictionary<string, BaseItemSlot> items = new(); 
+        private readonly Dictionary<IVariable, BaseItemSlot> items = new(); 
 
         public void Awake()
         {
             inventoryButton.onClick.AddListener(ChangeActiveState);
             closeButton.onClick.AddListener(CloseInventory);
-
-            VariablesManager.Instance.OnVariableChanged += UpdateSlotContent;
             
             foreach (var slot in freeItemSlots)
                 slot.gameObject.SetActive(false);
@@ -59,69 +57,63 @@ namespace Book.Inventory
         {
             foreach (var item in inventoryItemsData.Items)
             {
-                var variable = GlobalVariables.instance.GetVariableFromName(item.VariableNameInt);
-                var value = variable.variable.GetValue<int>();
+                var variable = (Variable<int>)VariablesManager.Instance.GetVariableFromName(item.VariableNameInt);
+                variable.OnValueChanged += (_, _) => OnItemUpdated(variable, item);
                 
-                if(value == 0)
+                if(variable.Value == 0)
                     return;
                 
-                AddItem(variable);
+                AddItem(variable, item);
             }
         }
 
-        private void UpdateSlotContent(GlobalVariables.VariableWrapper variable)
+        private void OnItemUpdated(Variable<int> variable, BaseItemData item)
         {
-            if(!inventoryItemsData.GetItem(variable.variableName, out var baseItemData))
-                return;
-            
-            if (variable.variable.GetValue<int>() == 0)
+            if (variable.Value == 0)
             {
                 RemoveItem(variable);
                 return;
             }
-
-            if (items.ContainsKey(variable.variableName))
+        
+            if (items.ContainsKey(variable))
             {
                 UpdateItem(variable);
                 return;
             }
             
-            AddItem(variable);
+            AddItem(variable, item);
         }
-
-        private void AddItem(GlobalVariables.VariableWrapper variable)
+        
+        private void AddItem(Variable<int> variable, BaseItemData itemData)
         {
             var slot = freeItemSlots[^1];
             freeItemSlots.RemoveAt(freeItemSlots.Count - 1);
             slot.transform.SetSiblingIndex(items.Count);
-            items.Add(variable.variableName, slot);
-            SetItem(variable, slot);
+            items.Add(variable, slot);
+            SetItem(variable, slot, itemData);
         }
-
-        private void RemoveItem(GlobalVariables.VariableWrapper variable)
+        
+        private void RemoveItem(Variable<int> variable)
         {
-            if(!items.Remove(variable.variableName, out var slot))
+            if(!items.Remove(variable, out var slot))
                 return;
             freeItemSlots.Add(slot);
             slot.transform.SetAsLastSibling();
             CleanSlot(slot);
         }
-
-        private void UpdateItem(GlobalVariables.VariableWrapper variable)
+        
+        private void UpdateItem(Variable<int> variable)
         {
-            if(!items.TryGetValue(variable.variableName, out var slot))
+            if(!items.TryGetValue(variable, out var slot))
                return;
-            slot.quantity.SetText(variable.variable.GetValue<int>().ToString());
+            slot.quantity.SetText(variable.Value.ToString());
         }
 
-        private void SetItem(GlobalVariables.VariableWrapper variable, BaseItemSlot slot)
+        private void SetItem(Variable<int> variable, BaseItemSlot slot, BaseItemData itemData)
         {
-            if(!inventoryItemsData.GetItem(variable.variableName, out var baseItemData))
-                return;
-            
-            slot.itemName.text = variable.variableName;
-            slot.quantity.SetText(variable.variable.GetValue<int>().ToString());
-            slot.image.sprite = baseItemData.Icon;
+            slot.itemName.text = itemData.DisplayName;
+            slot.quantity.SetText(variable.Value.ToString());
+            slot.image.sprite = itemData.Icon;
             slot.gameObject.SetActive(true);
         }
 

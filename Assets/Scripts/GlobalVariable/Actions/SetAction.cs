@@ -7,49 +7,15 @@ namespace GlobalVariable.Actions
     public class SetAction<T> : IVariableAction<T>
     {
         [SerializeField] protected T value;
-        public virtual T Perform(T other)
-        {
-            return other;
-        }
-    }
-    
-    [Serializable]
-    public class SetActionInt : SetAction<int>, IIntAction
-    {
-        public override int Perform(int other)
-        {
-            other = value;
-            return base.Perform(other);
-        }
-    }
 
-    [Serializable]
-    public class SetActionFloat : SetAction<float>, IFloatAction
-    {
-        public override float Perform(float other)
+        public void Perform(Variable<T> variable)
         {
-            other = value;
-            return base.Perform(other);
+            variable.SetValue(value);
         }
     }
     
-    [Serializable]
-    public class SetActionBool : SetAction<bool>, IBoolAction
-    {
-        public override bool Perform(bool other)
-        {
-            other = value;
-            return base.Perform(other);
-        }
-    }
-    
-    [Serializable]
-    public class SetActionString : SetAction<string>, IStringAction
-    {
-        public override string Perform(string other)
-        {
-            other = value;
-            return base.Perform(other);
-        }
-    }
+    [Serializable] public class SetActionInt : SetAction<int> { }
+    [Serializable] public class SetActionFloat : SetAction<float> { }
+    [Serializable] public class SetActionBool : SetAction<bool> { }
+    [Serializable] public class SetActionString : SetAction<string> { }
 }
