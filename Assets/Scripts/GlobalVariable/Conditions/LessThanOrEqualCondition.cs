@@ -13,9 +13,6 @@ namespace GlobalVariable.Conditions
         }
     }
     
-    [Serializable]
-    public class LessThanOrEqualConditionInt : LessThanOrEqualCondition<int>, IIntCondition { }
-    
-    [Serializable]
-    public class LessThanOrEqualConditionFloat : LessThanOrEqualCondition<float>, IFloatCondition { }
+    [Serializable] public class LessThanOrEqualConditionInt : LessThanOrEqualCondition<int> { }
+    [Serializable] public class LessThanOrEqualConditionFloat : LessThanOrEqualCondition<float> { }
 }

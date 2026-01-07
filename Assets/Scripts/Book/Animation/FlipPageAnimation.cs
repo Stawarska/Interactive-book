@@ -443,14 +443,23 @@ namespace Book.Animation
 
         public void FlipPage(Page page)
         {
-            //TODO: dodać implementacje
-            
+            PrepareToFlip(page);
+            FlipRightPage();
+        }
+
+        public void SpawnWithoutAnimation(Page next)
+        {
+            PrepareToFlip(next);
+            Flip();
+        }
+
+        private void PrepareToFlip(Page page)
+        {
             if(currentSpawnedPage)
                 Destroy(currentSpawnedPage.gameObject);
 
             currentPage = nextPage;
             nextPage = page;
-            FlipRightPage();
         }
     }
 }

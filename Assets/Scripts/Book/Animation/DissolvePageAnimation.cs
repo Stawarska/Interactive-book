@@ -18,16 +18,26 @@ namespace Book.Animation
         public void FlipPage(Page next)
         {
             pageImage.gameObject.SetActive(true);
-            
+            PrepareToFlip(next);
+            StartCoroutine(FadeImageAlpha(pageImage, 0f, pageFlipTime));
+        }
+
+        public void SpawnWithoutAnimation(Page next)
+        {
+            pageImage.gameObject.SetActive(false);
+            PrepareToFlip(next);
+        }
+
+        private void PrepareToFlip(Page page)
+        {
             if(nextPage != null)
                 pageImage.sprite = GeneratePreview.GeneratePageSprite(nextPage.gameObject, GeneratePreview.PageSection.Full);
             
             if(currentSpawnedPage)
                 Destroy(currentSpawnedPage.gameObject);
             
-            nextPage = next;
+            nextPage = page;
             currentSpawnedPage = Instantiate(nextPage, prefabParent).GetComponent<RectTransform>();
-            StartCoroutine(FadeImageAlpha(pageImage, 0f, pageFlipTime));
         }
 
         private IEnumerator FadeImageAlpha(Image image, float targetAlpha, float duration)

@@ -13,9 +13,6 @@ namespace GlobalVariable.Conditions
         }
     }
     
-    [Serializable]
-    public class GreaterThanConditionInt : GreaterThanCondition<int>, IIntCondition { }
-    
-    [Serializable]
-    public class GreaterThanConditionFloat : GreaterThanCondition<float>, IFloatCondition { }
+    [Serializable] public class GreaterThanConditionInt : GreaterThanCondition<int> { }
+    [Serializable] public class GreaterThanConditionFloat : GreaterThanCondition<float> { }
 }

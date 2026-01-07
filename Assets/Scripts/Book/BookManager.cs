@@ -38,7 +38,10 @@ namespace Book
             if (Instance == null)
                 Instance = this;
             pageAnimation = pageAnimationPrefab.GetComponent<ISwapPageAnimation>();
-            SelectNextPage(bookGraph.GetFirstPage());
+            SetFirstPage();
+            
+            if(inventoryPrefab != null)
+                inventoryPrefab.SetActive(true);
         }
         
         public void SelectNextPage(Page page)
@@ -62,6 +65,13 @@ namespace Book
         {
             targetPage = page;
             pageAnimation.FlipPage(page);
+        }
+
+        private void SetFirstPage()
+        {
+            var firstPage = bookGraph.GetFirstPage();
+            targetPage = firstPage;
+            pageAnimation.SpawnWithoutAnimation(firstPage);
         }
 
 #if UNITY_EDITOR

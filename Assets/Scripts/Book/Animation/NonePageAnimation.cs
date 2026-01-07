@@ -21,6 +21,8 @@ namespace Book.Animation
             currentSpawnedPage = Instantiate(nextPage, bookPanel).GetComponent<RectTransform>();
         }
 
+        public void SpawnWithoutAnimation(Page next) => FlipPage(next);
+
         private void OnValidate() => this.ValidateRefs();
     }
 }

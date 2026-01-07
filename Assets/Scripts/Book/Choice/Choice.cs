@@ -33,8 +33,8 @@ namespace Book
                     Debug.LogError($" Choice {name} don't have a connected page");
                     return;
                 }
-                BookManager.Instance.SelectNextPage(ConnectedPage);
                 OnChoicePicked?.Invoke();
+                BookManager.Instance.SelectNextPage(ConnectedPage);
             });
 
             OnChoicePicked += PerformActions;

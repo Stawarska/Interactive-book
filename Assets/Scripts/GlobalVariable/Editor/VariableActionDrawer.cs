@@ -10,7 +10,7 @@ namespace GlobalVariable.Editor
         public override VisualElement CreatePropertyGUI(SerializedProperty property)
         {
             var drawer = new VariableOperationPropertyDrawer();
-            return drawer.CreatePropertyGUI(property.FindPropertyRelative("variableAction"));
+            return drawer.CreatePropertyGUI(property.FindPropertyRelative(VariableAction.SerializationHelper.VariableActionName));
         }
     }
 }

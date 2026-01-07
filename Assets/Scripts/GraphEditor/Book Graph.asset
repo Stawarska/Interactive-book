@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2941509133944818688
+--- !u!114 &-9098913351716632252
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Paragraph
   m_EditorClassIdentifier: Book::Nodes.ParagraphNode
   graph: {fileID: 11400000}
-  position: {x: -24, y: 24}
+  position: {x: 3064, y: 1496}
   ports:
     keys:
     - choice
@@ -22,22 +22,19 @@ MonoBehaviour:
     - <EditorChoices>k__BackingField 1
     values:
     - _fieldName: choice
-      _node: {fileID: -2941509133944818688}
+      _node: {fileID: -9098913351716632252}
       _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: <EditorChoices>k__BackingField 0
-        node: {fileID: 6918514830548823513}
-        reroutePoints: []
-      - fieldName: <EditorChoices>k__BackingField 0
-        node: {fileID: 7738804019568279915}
+      - fieldName: <EditorChoices>k__BackingField 3
+        node: {fileID: -3553128140705309809}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: <EditorChoices>k__BackingField
-      _node: {fileID: -2941509133944818688}
+      _node: {fileID: -9098913351716632252}
       _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections: []
@@ -46,24 +43,24 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: <EditorChoices>k__BackingField 0
-      _node: {fileID: -2941509133944818688}
+      _node: {fileID: -9098913351716632252}
       _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: choice
-        node: {fileID: 6918514830548823513}
+        node: {fileID: -3553128140705309809}
         reroutePoints: []
       _direction: 1
       _connectionType: 1
       _typeConstraint: 0
       _dynamic: 1
     - _fieldName: <EditorChoices>k__BackingField 1
-      _node: {fileID: -2941509133944818688}
+      _node: {fileID: -9098913351716632252}
       _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: choice
-        node: {fileID: 7738804019568279915}
+        node: {fileID: -3096311151844743539}
         reroutePoints: []
       _direction: 1
       _connectionType: 1
@@ -71,11 +68,1067 @@ MonoBehaviour:
       _dynamic: 1
   choice:
     choice: {fileID: 0}
-  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: 2ef88378a7730f846aa7a2cec7c4dd2e, type: 3}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
   <EditorChoices>k__BackingField:
-  - choice: {fileID: 5380591329720734600, guid: c87deb6ac9c948247a9261534432ab6d, type: 3}
-  - choice: {fileID: 8279053549996328542, guid: c87deb6ac9c948247a9261534432ab6d, type: 3}
-  <PageVariant>k__BackingField: {fileID: 4243619044979244584, guid: c87deb6ac9c948247a9261534432ab6d, type: 3}
+  - choice: {fileID: 2650565439972360853, guid: 82129711b842ede408c1cd68fdfe1b58, type: 3}
+  - choice: {fileID: 5207765919370067963, guid: 82129711b842ede408c1cd68fdfe1b58, type: 3}
+  <PageVariant>k__BackingField: {fileID: 3112455520907433930, guid: 82129711b842ede408c1cd68fdfe1b58, type: 3}
+--- !u!114 &-5297658265282284027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480287faf054c44add41e5ed21861fd, type: 3}
+  m_Name: Paragraph
+  m_EditorClassIdentifier: Book::Nodes.ParagraphNode
+  graph: {fileID: 11400000}
+  position: {x: 6840, y: 1352}
+  ports:
+    keys:
+    - choice
+    - <EditorChoices>k__BackingField
+    - <EditorChoices>k__BackingField 0
+    - <EditorChoices>k__BackingField 1
+    values:
+    - _fieldName: choice
+      _node: {fileID: -5297658265282284027}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: <EditorChoices>k__BackingField 3
+        node: {fileID: 7360949584696373529}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField
+      _node: {fileID: -5297658265282284027}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField 0
+      _node: {fileID: -5297658265282284027}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: 7360949584696373529}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 1
+      _node: {fileID: -5297658265282284027}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: 2012140103170446822}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  choice:
+    choice: {fileID: 0}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+  <EditorChoices>k__BackingField:
+  - choice: {fileID: 3267801679384845422, guid: a75919fa819313e47862d401ea8b1e7b, type: 3}
+  - choice: {fileID: 7330605738799014318, guid: a75919fa819313e47862d401ea8b1e7b, type: 3}
+  <PageVariant>k__BackingField: {fileID: 1385508939892050297, guid: a75919fa819313e47862d401ea8b1e7b, type: 3}
+--- !u!114 &-4864999215180804553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480287faf054c44add41e5ed21861fd, type: 3}
+  m_Name: Paragraph
+  m_EditorClassIdentifier: Book::Nodes.ParagraphNode
+  graph: {fileID: 11400000}
+  position: {x: 6840, y: -184}
+  ports:
+    keys:
+    - choice
+    - <EditorChoices>k__BackingField
+    - <EditorChoices>k__BackingField 0
+    - <EditorChoices>k__BackingField 1
+    values:
+    - _fieldName: choice
+      _node: {fileID: -4864999215180804553}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: <EditorChoices>k__BackingField 1
+        node: {fileID: 7360949584696373529}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField
+      _node: {fileID: -4864999215180804553}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField 0
+      _node: {fileID: -4864999215180804553}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: 7360949584696373529}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 1
+      _node: {fileID: -4864999215180804553}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: 2012140103170446822}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  choice:
+    choice: {fileID: 0}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+  <EditorChoices>k__BackingField:
+  - choice: {fileID: 7683133052796524803, guid: e0ca9ffe0db947241aeb667c69db1e2a, type: 3}
+  - choice: {fileID: 230827478844340085, guid: e0ca9ffe0db947241aeb667c69db1e2a, type: 3}
+  <PageVariant>k__BackingField: {fileID: 6394262006468900058, guid: e0ca9ffe0db947241aeb667c69db1e2a, type: 3}
+--- !u!114 &-4275508606780812614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480287faf054c44add41e5ed21861fd, type: 3}
+  m_Name: Paragraph
+  m_EditorClassIdentifier: Book::Nodes.ParagraphNode
+  graph: {fileID: 11400000}
+  position: {x: 3048, y: -136}
+  ports:
+    keys:
+    - choice
+    - <EditorChoices>k__BackingField
+    - <EditorChoices>k__BackingField 0
+    - <EditorChoices>k__BackingField 1
+    values:
+    - _fieldName: choice
+      _node: {fileID: -4275508606780812614}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: <EditorChoices>k__BackingField 1
+        node: {fileID: -3553128140705309809}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField
+      _node: {fileID: -4275508606780812614}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField 0
+      _node: {fileID: -4275508606780812614}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -3553128140705309809}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 1
+      _node: {fileID: -4275508606780812614}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -3096311151844743539}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  choice:
+    choice: {fileID: 0}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+  <EditorChoices>k__BackingField:
+  - choice: {fileID: 4716408023361084042, guid: 96b52afd74fe30a42a1bd067d72735d4, type: 3}
+  - choice: {fileID: 438217528828079688, guid: 96b52afd74fe30a42a1bd067d72735d4, type: 3}
+  <PageVariant>k__BackingField: {fileID: 8956047854595804634, guid: 96b52afd74fe30a42a1bd067d72735d4, type: 3}
+--- !u!114 &-4105920133242223442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480287faf054c44add41e5ed21861fd, type: 3}
+  m_Name: Paragraph
+  m_EditorClassIdentifier: Book::Nodes.ParagraphNode
+  graph: {fileID: 11400000}
+  position: {x: 6840, y: 584}
+  ports:
+    keys:
+    - choice
+    - <EditorChoices>k__BackingField
+    - <EditorChoices>k__BackingField 0
+    - <EditorChoices>k__BackingField 1
+    values:
+    - _fieldName: choice
+      _node: {fileID: -4105920133242223442}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: <EditorChoices>k__BackingField 2
+        node: {fileID: 7360949584696373529}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField
+      _node: {fileID: -4105920133242223442}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField 0
+      _node: {fileID: -4105920133242223442}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: 7360949584696373529}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 1
+      _node: {fileID: -4105920133242223442}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: 2012140103170446822}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  choice:
+    choice: {fileID: 0}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+  <EditorChoices>k__BackingField:
+  - choice: {fileID: 691651349208707882, guid: 57764cc99d91db14d989fed29a8cc186, type: 3}
+  - choice: {fileID: 4270489051450228356, guid: 57764cc99d91db14d989fed29a8cc186, type: 3}
+  <PageVariant>k__BackingField: {fileID: 3950823245162890655, guid: 57764cc99d91db14d989fed29a8cc186, type: 3}
+--- !u!114 &-3747447441114809672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480287faf054c44add41e5ed21861fd, type: 3}
+  m_Name: Paragraph
+  m_EditorClassIdentifier: Book::Nodes.ParagraphNode
+  graph: {fileID: 11400000}
+  position: {x: 6840, y: 2888}
+  ports:
+    keys:
+    - choice
+    - <EditorChoices>k__BackingField
+    - <EditorChoices>k__BackingField 0
+    - <EditorChoices>k__BackingField 1
+    values:
+    - _fieldName: choice
+      _node: {fileID: -3747447441114809672}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: <EditorChoices>k__BackingField 5
+        node: {fileID: 7360949584696373529}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField
+      _node: {fileID: -3747447441114809672}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField 0
+      _node: {fileID: -3747447441114809672}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: 7360949584696373529}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 1
+      _node: {fileID: -3747447441114809672}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: 2012140103170446822}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  choice:
+    choice: {fileID: 0}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+  <EditorChoices>k__BackingField:
+  - choice: {fileID: 8921726307123503737, guid: 7c589fa3babdc91449f80168b8f6ff78, type: 3}
+  - choice: {fileID: 7617311269789339543, guid: 7c589fa3babdc91449f80168b8f6ff78, type: 3}
+  <PageVariant>k__BackingField: {fileID: 5297175253398600111, guid: 7c589fa3babdc91449f80168b8f6ff78, type: 3}
+--- !u!114 &-3553128140705309809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480287faf054c44add41e5ed21861fd, type: 3}
+  m_Name: Paragraph
+  m_EditorClassIdentifier: Book::Nodes.ParagraphNode
+  graph: {fileID: 11400000}
+  position: {x: 2328, y: -8}
+  ports:
+    keys:
+    - choice
+    - <EditorChoices>k__BackingField
+    - <EditorChoices>k__BackingField 0
+    - <EditorChoices>k__BackingField 1
+    - <EditorChoices>k__BackingField 2
+    - <EditorChoices>k__BackingField 3
+    - <EditorChoices>k__BackingField 4
+    - <EditorChoices>k__BackingField 5
+    - <EditorChoices>k__BackingField 6
+    values:
+    - _fieldName: choice
+      _node: {fileID: -3553128140705309809}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: -731105926292619560}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: 6275608140453256366}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: -4275508606780812614}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: 8596880719218812160}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: -9098913351716632252}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: 5063919155467591480}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: 3397336675068077404}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField
+      _node: {fileID: -3553128140705309809}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField 0
+      _node: {fileID: -3553128140705309809}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: 6275608140453256366}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 1
+      _node: {fileID: -3553128140705309809}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -4275508606780812614}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 2
+      _node: {fileID: -3553128140705309809}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: 8596880719218812160}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 3
+      _node: {fileID: -3553128140705309809}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -9098913351716632252}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 4
+      _node: {fileID: -3553128140705309809}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: 5063919155467591480}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 5
+      _node: {fileID: -3553128140705309809}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: 3397336675068077404}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 6
+      _node: {fileID: -3553128140705309809}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -3096311151844743539}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  choice:
+    choice: {fileID: 0}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: 4d91bc7575f190749a894a09a7690d92, type: 3}
+  <EditorChoices>k__BackingField:
+  - choice: {fileID: 4321429500650144081, guid: f5554806a93a4844f81329f0a8d0737d, type: 3}
+  - choice: {fileID: 7517402819579630612, guid: f5554806a93a4844f81329f0a8d0737d, type: 3}
+  - choice: {fileID: 7963699573405443630, guid: f5554806a93a4844f81329f0a8d0737d, type: 3}
+  - choice: {fileID: 8920531659804177158, guid: f5554806a93a4844f81329f0a8d0737d, type: 3}
+  - choice: {fileID: 2174935519866484187, guid: f5554806a93a4844f81329f0a8d0737d, type: 3}
+  - choice: {fileID: 448327930538709214, guid: f5554806a93a4844f81329f0a8d0737d, type: 3}
+  - choice: {fileID: 5879698512531286631, guid: f5554806a93a4844f81329f0a8d0737d, type: 3}
+  <PageVariant>k__BackingField: {fileID: 3969918951385776680, guid: f5554806a93a4844f81329f0a8d0737d, type: 3}
+--- !u!114 &-3530257167641394719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480287faf054c44add41e5ed21861fd, type: 3}
+  m_Name: Paragraph
+  m_EditorClassIdentifier: Book::Nodes.ParagraphNode
+  graph: {fileID: 11400000}
+  position: {x: 6840, y: -952}
+  ports:
+    keys:
+    - choice
+    - <EditorChoices>k__BackingField
+    - <EditorChoices>k__BackingField 0
+    - <EditorChoices>k__BackingField 1
+    values:
+    - _fieldName: choice
+      _node: {fileID: -3530257167641394719}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: 7360949584696373529}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField
+      _node: {fileID: -3530257167641394719}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField 0
+      _node: {fileID: -3530257167641394719}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: 7360949584696373529}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 1
+      _node: {fileID: -3530257167641394719}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: 2012140103170446822}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  choice:
+    choice: {fileID: 0}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+  <EditorChoices>k__BackingField:
+  - choice: {fileID: 5813527203613565555, guid: 8cf5a9da48a75a14e9a132fb8332c541, type: 3}
+  - choice: {fileID: 659399581853798482, guid: 8cf5a9da48a75a14e9a132fb8332c541, type: 3}
+  <PageVariant>k__BackingField: {fileID: 2875208124645329672, guid: 8cf5a9da48a75a14e9a132fb8332c541, type: 3}
+--- !u!114 &-3491435323263691150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480287faf054c44add41e5ed21861fd, type: 3}
+  m_Name: Paragraph
+  m_EditorClassIdentifier: Book::Nodes.ParagraphNode
+  graph: {fileID: 11400000}
+  position: {x: 8728, y: 104}
+  ports:
+    keys:
+    - choice
+    - <EditorChoices>k__BackingField
+    - <EditorChoices>k__BackingField 0
+    values:
+    - _fieldName: choice
+      _node: {fileID: -3491435323263691150}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: 2012140103170446822}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField
+      _node: {fileID: -3491435323263691150}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField 0
+      _node: {fileID: -3491435323263691150}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: 2759525713029888998}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  choice:
+    choice: {fileID: 0}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+  <EditorChoices>k__BackingField:
+  - choice: {fileID: 3941314068704095245, guid: bf1f8a066fcd44048960f99a078c3f01, type: 3}
+  <PageVariant>k__BackingField: {fileID: 3384013146273197398, guid: bf1f8a066fcd44048960f99a078c3f01, type: 3}
+--- !u!114 &-3096311151844743539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480287faf054c44add41e5ed21861fd, type: 3}
+  m_Name: Paragraph
+  m_EditorClassIdentifier: Book::Nodes.ParagraphNode
+  graph: {fileID: 11400000}
+  position: {x: 3976, y: -72}
+  ports:
+    keys:
+    - choice
+    - <EditorChoices>k__BackingField
+    - <EditorChoices>k__BackingField 0
+    - <EditorChoices>k__BackingField 1
+    - <EditorChoices>k__BackingField 2
+    values:
+    - _fieldName: choice
+      _node: {fileID: -3096311151844743539}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: <EditorChoices>k__BackingField 1
+        node: {fileID: 6275608140453256366}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 1
+        node: {fileID: -4275508606780812614}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 1
+        node: {fileID: 8596880719218812160}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 1
+        node: {fileID: -9098913351716632252}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 1
+        node: {fileID: 5063919155467591480}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 1
+        node: {fileID: 3397336675068077404}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 6
+        node: {fileID: -3553128140705309809}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 1
+        node: {fileID: 7203988995493054350}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 1
+        node: {fileID: -1480421088587462919}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField
+      _node: {fileID: -3096311151844743539}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField 0
+      _node: {fileID: -3096311151844743539}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: 7203988995493054350}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 1
+      _node: {fileID: -3096311151844743539}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -1480421088587462919}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 2
+      _node: {fileID: -3096311151844743539}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -1390873636997881944}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  choice:
+    choice: {fileID: 0}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+  <EditorChoices>k__BackingField:
+  - choice: {fileID: 4507759133547769158, guid: 0676bdd31c361b54189d5f514d7973f0, type: 3}
+  - choice: {fileID: 5413426483959076356, guid: 0676bdd31c361b54189d5f514d7973f0, type: 3}
+  - choice: {fileID: 7626827323150530317, guid: 0676bdd31c361b54189d5f514d7973f0, type: 3}
+  <PageVariant>k__BackingField: {fileID: 7255603703323329814, guid: 0676bdd31c361b54189d5f514d7973f0, type: 3}
+--- !u!114 &-1480421088587462919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480287faf054c44add41e5ed21861fd, type: 3}
+  m_Name: Paragraph
+  m_EditorClassIdentifier: Book::Nodes.ParagraphNode
+  graph: {fileID: 11400000}
+  position: {x: 4712, y: 344}
+  ports:
+    keys:
+    - choice
+    - <EditorChoices>k__BackingField
+    - <EditorChoices>k__BackingField 0
+    - <EditorChoices>k__BackingField 1
+    - <EditorChoices>k__BackingField 2
+    values:
+    - _fieldName: choice
+      _node: {fileID: -1480421088587462919}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: <EditorChoices>k__BackingField 1
+        node: {fileID: -3096311151844743539}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: 7203988995493054350}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField
+      _node: {fileID: -1480421088587462919}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField 0
+      _node: {fileID: -1480421088587462919}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: 7203988995493054350}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 1
+      _node: {fileID: -1480421088587462919}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -3096311151844743539}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 2
+      _node: {fileID: -1480421088587462919}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -1390873636997881944}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  choice:
+    choice: {fileID: 0}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+  <EditorChoices>k__BackingField:
+  - choice: {fileID: 5175198330758390464, guid: 3455fa0d2460f1b47a592e37f04741f7, type: 3}
+  - choice: {fileID: 4403565813821629768, guid: 3455fa0d2460f1b47a592e37f04741f7, type: 3}
+  - choice: {fileID: 6945986168809291632, guid: 3455fa0d2460f1b47a592e37f04741f7, type: 3}
+  <PageVariant>k__BackingField: {fileID: 2583150716495136875, guid: 3455fa0d2460f1b47a592e37f04741f7, type: 3}
+--- !u!114 &-1390873636997881944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480287faf054c44add41e5ed21861fd, type: 3}
+  m_Name: Paragraph
+  m_EditorClassIdentifier: Book::Nodes.ParagraphNode
+  graph: {fileID: 11400000}
+  position: {x: 5416, y: 104}
+  ports:
+    keys:
+    - choice
+    - <EditorChoices>k__BackingField
+    - <EditorChoices>k__BackingField 0
+    values:
+    - _fieldName: choice
+      _node: {fileID: -1390873636997881944}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: <EditorChoices>k__BackingField 2
+        node: {fileID: -3096311151844743539}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 2
+        node: {fileID: 7203988995493054350}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 2
+        node: {fileID: -1480421088587462919}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField
+      _node: {fileID: -1390873636997881944}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField 0
+      _node: {fileID: -1390873636997881944}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: 7360949584696373529}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  choice:
+    choice: {fileID: 0}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+  <EditorChoices>k__BackingField:
+  - choice: {fileID: 4423044282969322768, guid: ae20c1e7e5735f54392ddd7dba3fd52a, type: 3}
+  <PageVariant>k__BackingField: {fileID: 551858536827760412, guid: ae20c1e7e5735f54392ddd7dba3fd52a, type: 3}
+--- !u!114 &-731105926292619560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480287faf054c44add41e5ed21861fd, type: 3}
+  m_Name: Paragraph
+  m_EditorClassIdentifier: Book::Nodes.ParagraphNode
+  graph: {fileID: 11400000}
+  position: {x: 1368, y: -8}
+  ports:
+    keys:
+    - choice
+    - <EditorChoices>k__BackingField
+    - <EditorChoices>k__BackingField 0
+    values:
+    - _fieldName: choice
+      _node: {fileID: -731105926292619560}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: 3333204058939133630}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField
+      _node: {fileID: -731105926292619560}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField 0
+      _node: {fileID: -731105926292619560}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -3553128140705309809}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  choice:
+    choice: {fileID: 0}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+  <EditorChoices>k__BackingField:
+  - choice: {fileID: 9106938949656263716, guid: c87deb6ac9c948247a9261534432ab6d, type: 3}
+  <PageVariant>k__BackingField: {fileID: 2356443490743499925, guid: c87deb6ac9c948247a9261534432ab6d, type: 3}
+--- !u!114 &-215985936288252904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480287faf054c44add41e5ed21861fd, type: 3}
+  m_Name: Paragraph
+  m_EditorClassIdentifier: Book::Nodes.ParagraphNode
+  graph: {fileID: 11400000}
+  position: {x: 6840, y: 2120}
+  ports:
+    keys:
+    - choice
+    - <EditorChoices>k__BackingField
+    - <EditorChoices>k__BackingField 0
+    - <EditorChoices>k__BackingField 1
+    values:
+    - _fieldName: choice
+      _node: {fileID: -215985936288252904}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: <EditorChoices>k__BackingField 4
+        node: {fileID: 7360949584696373529}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField
+      _node: {fileID: -215985936288252904}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField 0
+      _node: {fileID: -215985936288252904}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: 7360949584696373529}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 1
+      _node: {fileID: -215985936288252904}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: 2012140103170446822}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  choice:
+    choice: {fileID: 0}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+  <EditorChoices>k__BackingField:
+  - choice: {fileID: 4111253732205223725, guid: 0759d47931138fc4893afcecf12118a9, type: 3}
+  - choice: {fileID: 8396302732662832860, guid: 0759d47931138fc4893afcecf12118a9, type: 3}
+  <PageVariant>k__BackingField: {fileID: 2329168344749163902, guid: 0759d47931138fc4893afcecf12118a9, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,10 +1142,31 @@ MonoBehaviour:
   m_Name: Book Graph
   m_EditorClassIdentifier: Nodes::Graph.Editor.BookGraph
   nodes:
-  - {fileID: -2941509133944818688}
-  - {fileID: 6918514830548823513}
-  - {fileID: 7738804019568279915}
---- !u!114 &6918514830548823513
+  - {fileID: 1233841560048528500}
+  - {fileID: 3333204058939133630}
+  - {fileID: -731105926292619560}
+  - {fileID: -3553128140705309809}
+  - {fileID: 6275608140453256366}
+  - {fileID: -4275508606780812614}
+  - {fileID: 8596880719218812160}
+  - {fileID: -9098913351716632252}
+  - {fileID: 5063919155467591480}
+  - {fileID: 3397336675068077404}
+  - {fileID: -3096311151844743539}
+  - {fileID: 7203988995493054350}
+  - {fileID: -1480421088587462919}
+  - {fileID: -1390873636997881944}
+  - {fileID: 7360949584696373529}
+  - {fileID: -3530257167641394719}
+  - {fileID: -4864999215180804553}
+  - {fileID: -4105920133242223442}
+  - {fileID: -5297658265282284027}
+  - {fileID: -215985936288252904}
+  - {fileID: -3747447441114809672}
+  - {fileID: 2012140103170446822}
+  - {fileID: -3491435323263691150}
+  - {fileID: 2759525713029888998}
+--- !u!114 &1233841560048528500
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,7 +1179,241 @@ MonoBehaviour:
   m_Name: Paragraph
   m_EditorClassIdentifier: Book::Nodes.ParagraphNode
   graph: {fileID: 11400000}
-  position: {x: 856, y: -456}
+  position: {x: 168, y: -40}
+  ports:
+    keys:
+    - choice
+    - <EditorChoices>k__BackingField
+    - <EditorChoices>k__BackingField 0
+    values:
+    - _fieldName: choice
+      _node: {fileID: 1233841560048528500}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField
+      _node: {fileID: 1233841560048528500}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField 0
+      _node: {fileID: 1233841560048528500}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: 3333204058939133630}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  choice:
+    choice: {fileID: 0}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: d74271cf46dd1a24bbf09fa81621e6f4, type: 3}
+  <EditorChoices>k__BackingField:
+  - choice: {fileID: 8523474283950775314, guid: f4693ce86cd60fe45a7cb1c01b75e0ac, type: 3}
+  <PageVariant>k__BackingField: {fileID: 2404709263293792710, guid: f4693ce86cd60fe45a7cb1c01b75e0ac, type: 3}
+--- !u!114 &2012140103170446822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480287faf054c44add41e5ed21861fd, type: 3}
+  m_Name: Paragraph
+  m_EditorClassIdentifier: Book::Nodes.ParagraphNode
+  graph: {fileID: 11400000}
+  position: {x: 8040, y: 104}
+  ports:
+    keys:
+    - choice
+    - <EditorChoices>k__BackingField
+    - <EditorChoices>k__BackingField 0
+    values:
+    - _fieldName: choice
+      _node: {fileID: 2012140103170446822}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: <EditorChoices>k__BackingField 1
+        node: {fileID: -3530257167641394719}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 1
+        node: {fileID: -4864999215180804553}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 1
+        node: {fileID: -4105920133242223442}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 1
+        node: {fileID: -5297658265282284027}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 1
+        node: {fileID: -215985936288252904}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 1
+        node: {fileID: -3747447441114809672}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField
+      _node: {fileID: 2012140103170446822}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField 0
+      _node: {fileID: 2012140103170446822}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -3491435323263691150}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  choice:
+    choice: {fileID: 0}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+  <EditorChoices>k__BackingField:
+  - choice: {fileID: 5995468006289503991, guid: 9f6233880db97a341a2cdba6ee6537d0, type: 3}
+  <PageVariant>k__BackingField: {fileID: 791258680269796304, guid: 9f6233880db97a341a2cdba6ee6537d0, type: 3}
+--- !u!114 &2759525713029888998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480287faf054c44add41e5ed21861fd, type: 3}
+  m_Name: Paragraph
+  m_EditorClassIdentifier: Book::Nodes.ParagraphNode
+  graph: {fileID: 11400000}
+  position: {x: 9336, y: 104}
+  ports:
+    keys:
+    - choice
+    - <EditorChoices>k__BackingField
+    values:
+    - _fieldName: choice
+      _node: {fileID: 2759525713029888998}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: -3491435323263691150}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField
+      _node: {fileID: 2759525713029888998}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  choice:
+    choice: {fileID: 0}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+  <EditorChoices>k__BackingField: []
+  <PageVariant>k__BackingField: {fileID: 601737394939686775, guid: 73c6f7671716c004485cca680dafb442, type: 3}
+--- !u!114 &3333204058939133630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480287faf054c44add41e5ed21861fd, type: 3}
+  m_Name: Paragraph
+  m_EditorClassIdentifier: Book::Nodes.ParagraphNode
+  graph: {fileID: 11400000}
+  position: {x: 808, y: -8}
+  ports:
+    keys:
+    - choice
+    - <EditorChoices>k__BackingField
+    - <EditorChoices>k__BackingField 0
+    values:
+    - _fieldName: choice
+      _node: {fileID: 3333204058939133630}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: 1233841560048528500}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField
+      _node: {fileID: 3333204058939133630}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField 0
+      _node: {fileID: 3333204058939133630}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -731105926292619560}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  choice:
+    choice: {fileID: 0}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+  <EditorChoices>k__BackingField:
+  - choice: {fileID: 1279055146422355780, guid: 0b8695ac2849d414395cf9a9d5887c19, type: 3}
+  <PageVariant>k__BackingField: {fileID: 660334520583148358, guid: 0b8695ac2849d414395cf9a9d5887c19, type: 3}
+--- !u!114 &3397336675068077404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480287faf054c44add41e5ed21861fd, type: 3}
+  m_Name: Paragraph
+  m_EditorClassIdentifier: Book::Nodes.ParagraphNode
+  graph: {fileID: 11400000}
+  position: {x: 3064, y: 3112}
   ports:
     keys:
     - choice
@@ -114,22 +1422,242 @@ MonoBehaviour:
     - <EditorChoices>k__BackingField 1
     values:
     - _fieldName: choice
-      _node: {fileID: 6918514830548823513}
+      _node: {fileID: 3397336675068077404}
       _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: <EditorChoices>k__BackingField 1
-        node: {fileID: 7738804019568279915}
+      - fieldName: <EditorChoices>k__BackingField 5
+        node: {fileID: -3553128140705309809}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField
+      _node: {fileID: 3397336675068077404}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField 0
+      _node: {fileID: 3397336675068077404}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -3553128140705309809}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 1
+      _node: {fileID: 3397336675068077404}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -3096311151844743539}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  choice:
+    choice: {fileID: 0}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+  <EditorChoices>k__BackingField:
+  - choice: {fileID: 3708742915530768040, guid: 956f2fe1581947349a40a3fbd9f9d82f, type: 3}
+  - choice: {fileID: 2660237072388547649, guid: 956f2fe1581947349a40a3fbd9f9d82f, type: 3}
+  <PageVariant>k__BackingField: {fileID: 3617532944909251611, guid: 956f2fe1581947349a40a3fbd9f9d82f, type: 3}
+--- !u!114 &5063919155467591480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480287faf054c44add41e5ed21861fd, type: 3}
+  m_Name: Paragraph
+  m_EditorClassIdentifier: Book::Nodes.ParagraphNode
+  graph: {fileID: 11400000}
+  position: {x: 3064, y: 2296}
+  ports:
+    keys:
+    - choice
+    - <EditorChoices>k__BackingField
+    - <EditorChoices>k__BackingField 0
+    - <EditorChoices>k__BackingField 1
+    values:
+    - _fieldName: choice
+      _node: {fileID: 5063919155467591480}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: <EditorChoices>k__BackingField 4
+        node: {fileID: -3553128140705309809}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField
+      _node: {fileID: 5063919155467591480}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField 0
+      _node: {fileID: 5063919155467591480}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -3553128140705309809}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 1
+      _node: {fileID: 5063919155467591480}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -3096311151844743539}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  choice:
+    choice: {fileID: 0}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+  <EditorChoices>k__BackingField:
+  - choice: {fileID: 7919361369305221917, guid: a2f87a189340c1a43b477b38f870e198, type: 3}
+  - choice: {fileID: 3384236401775342908, guid: a2f87a189340c1a43b477b38f870e198, type: 3}
+  <PageVariant>k__BackingField: {fileID: 2501715391552517329, guid: a2f87a189340c1a43b477b38f870e198, type: 3}
+--- !u!114 &6275608140453256366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480287faf054c44add41e5ed21861fd, type: 3}
+  m_Name: Paragraph
+  m_EditorClassIdentifier: Book::Nodes.ParagraphNode
+  graph: {fileID: 11400000}
+  position: {x: 3048, y: -984}
+  ports:
+    keys:
+    - choice
+    - <EditorChoices>k__BackingField
+    - <EditorChoices>k__BackingField 0
+    - <EditorChoices>k__BackingField 1
+    values:
+    - _fieldName: choice
+      _node: {fileID: 6275608140453256366}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: -3553128140705309809}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField
+      _node: {fileID: 6275608140453256366}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField 0
+      _node: {fileID: 6275608140453256366}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -3553128140705309809}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 1
+      _node: {fileID: 6275608140453256366}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -3096311151844743539}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  choice:
+    choice: {fileID: 0}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+  <EditorChoices>k__BackingField:
+  - choice: {fileID: 5624709664853132108, guid: 36e134bbf4e574e4a9b69135e5e5f382, type: 3}
+  - choice: {fileID: 2527619863736107805, guid: 36e134bbf4e574e4a9b69135e5e5f382, type: 3}
+  <PageVariant>k__BackingField: {fileID: 2426296450297026313, guid: 36e134bbf4e574e4a9b69135e5e5f382, type: 3}
+--- !u!114 &7203988995493054350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480287faf054c44add41e5ed21861fd, type: 3}
+  m_Name: Paragraph
+  m_EditorClassIdentifier: Book::Nodes.ParagraphNode
+  graph: {fileID: 11400000}
+  position: {x: 4712, y: -632}
+  ports:
+    keys:
+    - choice
+    - <EditorChoices>k__BackingField
+    - <EditorChoices>k__BackingField 0
+    - <EditorChoices>k__BackingField 1
+    - <EditorChoices>k__BackingField 2
+    values:
+    - _fieldName: choice
+      _node: {fileID: 7203988995493054350}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: -3096311151844743539}
         reroutePoints: []
       - fieldName: <EditorChoices>k__BackingField 0
-        node: {fileID: -2941509133944818688}
+        node: {fileID: -1480421088587462919}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: <EditorChoices>k__BackingField
-      _node: {fileID: 6918514830548823513}
+      _node: {fileID: 7203988995493054350}
       _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections: []
@@ -138,24 +1666,36 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: <EditorChoices>k__BackingField 0
-      _node: {fileID: 6918514830548823513}
+      _node: {fileID: 7203988995493054350}
       _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: choice
-        node: {fileID: -2941509133944818688}
+        node: {fileID: -1480421088587462919}
         reroutePoints: []
       _direction: 1
       _connectionType: 1
       _typeConstraint: 0
       _dynamic: 1
     - _fieldName: <EditorChoices>k__BackingField 1
-      _node: {fileID: 6918514830548823513}
+      _node: {fileID: 7203988995493054350}
       _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: choice
-        node: {fileID: 7738804019568279915}
+        node: {fileID: -3096311151844743539}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 2
+      _node: {fileID: 7203988995493054350}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -1390873636997881944}
         reroutePoints: []
       _direction: 1
       _connectionType: 1
@@ -163,12 +1703,13 @@ MonoBehaviour:
       _dynamic: 1
   choice:
     choice: {fileID: 0}
-  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: 69f597114e3aeba4f9ec458337a09552, type: 3}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
   <EditorChoices>k__BackingField:
-  - choice: {fileID: 7317059784525546829, guid: f5554806a93a4844f81329f0a8d0737d, type: 3}
-  - choice: {fileID: 6194965921405197758, guid: f5554806a93a4844f81329f0a8d0737d, type: 3}
-  <PageVariant>k__BackingField: {fileID: 6427079661783655431, guid: f5554806a93a4844f81329f0a8d0737d, type: 3}
---- !u!114 &7738804019568279915
+  - choice: {fileID: 3004195941121388566, guid: 30944b477ece4a34c931e7a8c821dcea, type: 3}
+  - choice: {fileID: 8514252720066189729, guid: 30944b477ece4a34c931e7a8c821dcea, type: 3}
+  - choice: {fileID: 3013741551601983292, guid: 30944b477ece4a34c931e7a8c821dcea, type: 3}
+  <PageVariant>k__BackingField: {fileID: 493679750996720839, guid: 30944b477ece4a34c931e7a8c821dcea, type: 3}
+--- !u!114 &7360949584696373529
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,31 +1722,50 @@ MonoBehaviour:
   m_Name: Paragraph
   m_EditorClassIdentifier: Book::Nodes.ParagraphNode
   graph: {fileID: 11400000}
-  position: {x: 728, y: 584}
+  position: {x: 6008, y: 152}
   ports:
     keys:
     - choice
     - <EditorChoices>k__BackingField
     - <EditorChoices>k__BackingField 0
     - <EditorChoices>k__BackingField 1
+    - <EditorChoices>k__BackingField 2
+    - <EditorChoices>k__BackingField 3
+    - <EditorChoices>k__BackingField 4
+    - <EditorChoices>k__BackingField 5
     values:
     - _fieldName: choice
-      _node: {fileID: 7738804019568279915}
+      _node: {fileID: 7360949584696373529}
       _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: <EditorChoices>k__BackingField 1
-        node: {fileID: 6918514830548823513}
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: -1390873636997881944}
         reroutePoints: []
-      - fieldName: <EditorChoices>k__BackingField 1
-        node: {fileID: -2941509133944818688}
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: -3530257167641394719}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: -4864999215180804553}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: -4105920133242223442}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: -5297658265282284027}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: -215985936288252904}
+        reroutePoints: []
+      - fieldName: <EditorChoices>k__BackingField 0
+        node: {fileID: -3747447441114809672}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: <EditorChoices>k__BackingField
-      _node: {fileID: 7738804019568279915}
+      _node: {fileID: 7360949584696373529}
       _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections: []
@@ -214,24 +1774,72 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: <EditorChoices>k__BackingField 0
-      _node: {fileID: 7738804019568279915}
+      _node: {fileID: 7360949584696373529}
       _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: choice
-        node: {fileID: -2941509133944818688}
+        node: {fileID: -3530257167641394719}
         reroutePoints: []
       _direction: 1
       _connectionType: 1
       _typeConstraint: 0
       _dynamic: 1
     - _fieldName: <EditorChoices>k__BackingField 1
-      _node: {fileID: 7738804019568279915}
+      _node: {fileID: 7360949584696373529}
       _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: choice
-        node: {fileID: 6918514830548823513}
+        node: {fileID: -4864999215180804553}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 2
+      _node: {fileID: 7360949584696373529}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -4105920133242223442}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 3
+      _node: {fileID: 7360949584696373529}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -5297658265282284027}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 4
+      _node: {fileID: 7360949584696373529}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -215985936288252904}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 5
+      _node: {fileID: 7360949584696373529}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -3747447441114809672}
         reroutePoints: []
       _direction: 1
       _connectionType: 1
@@ -239,8 +1847,85 @@ MonoBehaviour:
       _dynamic: 1
   choice:
     choice: {fileID: 0}
-  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: 2ef88378a7730f846aa7a2cec7c4dd2e, type: 3}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: 4d91bc7575f190749a894a09a7690d92, type: 3}
   <EditorChoices>k__BackingField:
-  - choice: {fileID: 5104770655236292891, guid: 36e134bbf4e574e4a9b69135e5e5f382, type: 3}
-  - choice: {fileID: 6998442326029670617, guid: 36e134bbf4e574e4a9b69135e5e5f382, type: 3}
-  <PageVariant>k__BackingField: {fileID: 5155077497445191108, guid: 36e134bbf4e574e4a9b69135e5e5f382, type: 3}
+  - choice: {fileID: 1722182164845400067, guid: 8c806a91a7fb58344a1c11b611796da2, type: 3}
+  - choice: {fileID: 1474299975885682000, guid: 8c806a91a7fb58344a1c11b611796da2, type: 3}
+  - choice: {fileID: 5966275399823827764, guid: 8c806a91a7fb58344a1c11b611796da2, type: 3}
+  - choice: {fileID: 7333161985835708153, guid: 8c806a91a7fb58344a1c11b611796da2, type: 3}
+  - choice: {fileID: 4040092058294078292, guid: 8c806a91a7fb58344a1c11b611796da2, type: 3}
+  - choice: {fileID: 3438152696865645135, guid: 8c806a91a7fb58344a1c11b611796da2, type: 3}
+  <PageVariant>k__BackingField: {fileID: 815237173450170984, guid: 8c806a91a7fb58344a1c11b611796da2, type: 3}
+--- !u!114 &8596880719218812160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480287faf054c44add41e5ed21861fd, type: 3}
+  m_Name: Paragraph
+  m_EditorClassIdentifier: Book::Nodes.ParagraphNode
+  graph: {fileID: 11400000}
+  position: {x: 3064, y: 680}
+  ports:
+    keys:
+    - choice
+    - <EditorChoices>k__BackingField
+    - <EditorChoices>k__BackingField 0
+    - <EditorChoices>k__BackingField 1
+    values:
+    - _fieldName: choice
+      _node: {fileID: 8596880719218812160}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor, Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: <EditorChoices>k__BackingField 2
+        node: {fileID: -3553128140705309809}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField
+      _node: {fileID: 8596880719218812160}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: <EditorChoices>k__BackingField 0
+      _node: {fileID: 8596880719218812160}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -3553128140705309809}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: <EditorChoices>k__BackingField 1
+      _node: {fileID: 8596880719218812160}
+      _typeQualifiedName: Graph.Editor.Nodes.ChoiceEditor[], Book, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: choice
+        node: {fileID: -3096311151844743539}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 1
+  choice:
+    choice: {fileID: 0}
+  <PageTemplate>k__BackingField: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+  <EditorChoices>k__BackingField:
+  - choice: {fileID: 2681152949775728985, guid: 7e59b829650dad0498599d0fad585948, type: 3}
+  - choice: {fileID: 789152641685892836, guid: 7e59b829650dad0498599d0fad585948, type: 3}
+  <PageVariant>k__BackingField: {fileID: 2592765824710740072, guid: 7e59b829650dad0498599d0fad585948, type: 3}

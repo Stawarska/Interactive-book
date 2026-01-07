@@ -13,15 +13,8 @@ namespace GlobalVariable.Conditions
         }
     }
 
-    [Serializable]
-    public class EqualsConditionBool : EqualsCondition<bool>, IBoolCondition { }
-    
-    [Serializable]
-    public class EqualsConditionInt : EqualsCondition<int>, IIntCondition { }
-    
-    [Serializable]
-    public class EqualsConditionString : EqualsCondition<string>, IStringCondition { }
-    
-    [Serializable]
-    public class EqualsConditionFloat : EqualsCondition<float>, IFloatCondition { }
+    [Serializable] public class EqualsConditionBool : EqualsCondition<bool>{ }
+    [Serializable] public class EqualsConditionInt : EqualsCondition<int> { }
+    [Serializable] public class EqualsConditionString : EqualsCondition<string> { }
+    [Serializable] public class EqualsConditionFloat : EqualsCondition<float> { }
 }

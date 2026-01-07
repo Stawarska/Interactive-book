@@ -5,7 +5,6 @@ using Nodes;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
-using UnityEngine.UI;
 using Utils;
 using XNodeEditor;
 using Object = UnityEngine.Object;

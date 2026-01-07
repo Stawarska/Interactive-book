@@ -13,5 +13,12 @@ namespace GlobalVariable.Conditions
             var variable = VariablesManager.Instance.Variables[variableCondition.VariableID];
             return variableCondition.Operation.CheckCondition(variable);
         }
+        
+        #if UNITY_EDITOR
+        public static class SerializationHelper
+        {
+            public static string VariableConditionName => nameof(variableCondition);
+        }
+        #endif
     }
 }

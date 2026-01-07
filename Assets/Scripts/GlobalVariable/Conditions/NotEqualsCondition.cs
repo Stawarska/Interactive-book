@@ -13,15 +13,8 @@ namespace GlobalVariable.Conditions
         }
     }
     
-    [Serializable]
-    public class NotEqualsConditionBool : NotEqualsCondition<bool>, IBoolCondition { }
-    
-    [Serializable]
-    public class NotEqualsConditionInt : NotEqualsCondition<int>, IIntCondition { }
-    
-    [Serializable]
-    public class NotEqualsConditionString : NotEqualsCondition<string>, IStringCondition { }
-    
-    [Serializable]
-    public class NotEqualsConditionFloat : NotEqualsCondition<float>, IFloatCondition { }
+    [Serializable] public class NotEqualsConditionBool : NotEqualsCondition<bool> { }
+    [Serializable] public class NotEqualsConditionInt : NotEqualsCondition<int> { }
+    [Serializable] public class NotEqualsConditionString : NotEqualsCondition<string> { }
+    [Serializable] public class NotEqualsConditionFloat : NotEqualsCondition<float> { }
 }
