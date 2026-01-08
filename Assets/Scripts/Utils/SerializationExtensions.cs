@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if UNITY_EDITOR
+using System;
 using UnityEditor;
 
 namespace Utils
@@ -30,3 +31,4 @@ namespace Utils
         }
     }
 }
+#endif

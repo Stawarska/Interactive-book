@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if UNITY_EDITOR
+using System;
 using UnityEditor;
 using UnityEngine;
 
@@ -41,3 +42,4 @@ namespace Book
         public event Action OnContentChanged;
     }
 }
+#endif

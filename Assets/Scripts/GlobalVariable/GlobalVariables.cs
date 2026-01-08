@@ -1,15 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 namespace GlobalVariable
 {
+#if UNITY_EDITOR
     [CreateAssetMenu(fileName = "GlobalVariables", menuName = "GlobalVariables")]
     [FilePath("Assets/Scripts/GlobalVariable/GlobalVariables.asset", FilePathAttribute.Location.ProjectFolder)]
-    public class GlobalVariables : ScriptableSingleton<GlobalVariables>
+#endif
+    public class GlobalVariables : 
+#if !UNITY_EDITOR
+        ScriptableObject
+#else
+        ScriptableSingleton<GlobalVariables>
+#endif
     {
         [Serializable]
         public class VariableWrapper

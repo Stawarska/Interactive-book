@@ -164,6 +164,6 @@ namespace Nodes
         {
             DeletePagePrefab();
         }
+#endif
     }
 }
-#endif

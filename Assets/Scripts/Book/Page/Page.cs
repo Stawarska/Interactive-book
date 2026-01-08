@@ -14,6 +14,7 @@ namespace Book
 
         public void OnValidate() => this.ValidateRefs();
 
+#if UNITY_EDITOR
         public void CopyContentFrom(IPageContent[] pageContents)
         {
             //TODO: dokończyć logikę kopiowania noda
@@ -25,5 +26,6 @@ namespace Book
                 PageContents[i].DrawEditor();
             }
         }
+#endif
     }
 }

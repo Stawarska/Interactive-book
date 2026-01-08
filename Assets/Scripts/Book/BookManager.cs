@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Book.Animation;
 using Book.Inventory;
 using Graph;
+using KBCore.Refs;
 using SaintsField;
 using SaintsField.Playa;
 using UnityEditor;
@@ -15,6 +16,7 @@ namespace Book
         
         [Header("Graph")]
         [SerializeField] private BookGraph bookGraph;
+        [SerializeField, Child] private BookSizeSetter bookSizeSetter;
         
         [Header("Animation")]
         [ResourcePath(typeof(ISwapPageAnimation)), SerializeField] private string pageAnimationPath;
@@ -28,6 +30,9 @@ namespace Book
         [ShowIf(nameof(useInventory)), SerializeField, ReadOnly] private string previousInventoryPath;
         [ShowIf(nameof(useInventory)), SerializeField, ReadOnly] private GameObject inventoryPrefab;
         [ShowIf(nameof(useInventory)), SerializeField] private Transform inventoryParent;
+
+        public float BookWidth => bookSizeSetter.Width;
+        public float BookHeight => bookSizeSetter.Height;
 
         private Stack<Page> pagesHistory = new();
         private Page targetPage;
@@ -73,6 +78,8 @@ namespace Book
             targetPage = firstPage;
             pageAnimation.SpawnWithoutAnimation(firstPage);
         }
+
+        private void OnValidate() => this.ValidateRefs();
 
 #if UNITY_EDITOR
         

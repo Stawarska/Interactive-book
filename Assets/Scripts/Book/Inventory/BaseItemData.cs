@@ -13,6 +13,13 @@ namespace Book.Inventory
         [field: SerializeField] public Sprite Icon { get; private set; }
         [field: SerializeField] public string DisplayName { get; private set; }
         
-        private IEnumerable<string> IntVariables() => GlobalVariables.instance.GetVariablesNamesOfType(typeof(IntVariable));
+        private IEnumerable<string> IntVariables()
+        {
+#if !UNITY_EDITOR
+            return null;
+#else
+            return GlobalVariables.instance.GetVariablesNamesOfType(typeof(IntVariable));
+#endif
+        }
     }
 }

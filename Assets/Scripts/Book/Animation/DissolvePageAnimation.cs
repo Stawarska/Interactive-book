@@ -31,7 +31,7 @@ namespace Book.Animation
         private void PrepareToFlip(Page page)
         {
             if(nextPage != null)
-                pageImage.sprite = GeneratePreview.GeneratePageSprite(nextPage.gameObject, GeneratePreview.PageSection.Full);
+                pageImage.sprite = GeneratePreview.GeneratePageSprite(nextPage.gameObject, GeneratePreview.PageSection.Full, new Vector2(BookManager.Instance.BookWidth, BookManager.Instance.BookHeight));
             
             if(currentSpawnedPage)
                 Destroy(currentSpawnedPage.gameObject);

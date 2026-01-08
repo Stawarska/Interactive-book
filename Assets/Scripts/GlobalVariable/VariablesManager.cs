@@ -10,12 +10,14 @@ namespace GlobalVariable
         public Dictionary<string, IVariable> Variables { get; private set; } = new();
         public Action<IVariable> OnVariableChanged;
 
+        [SerializeField] private GlobalVariables globalVariables;
+
         private void Awake()
         {
             if (Instance == null)
                 Instance = this;
             
-            var variables = GlobalVariables.instance.Variables;
+            var variables = globalVariables.Variables;
             
             for (var i = 0; i < variables.Count; i++)
                 Variables.Add(variables[i].variableName, variables[i].variable.Clone());

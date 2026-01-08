@@ -236,7 +236,7 @@ MonoBehaviour:
   <Conditions>k__BackingField: []
   <Actions>k__BackingField: []
   button: {fileID: 4216937036373191667}
-  hoverColor: {r: 0.98490566, g: 0.40203688, b: 0, a: 1}
+  hoverColor: {r: 0, g: 0, b: 0, a: 1}
   references:
     version: 2
     RefIds: []

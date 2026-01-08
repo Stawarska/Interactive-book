@@ -1,5 +1,4 @@
 ﻿using System;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
@@ -15,9 +14,9 @@ namespace Utils
             Right
         }
         
-        public static Texture2D GeneratePagePreview(GameObject uiPrefab, PageSection section)
+        public static Texture2D GeneratePagePreview(GameObject uiPrefab, PageSection section, Vector2 size)
         {
-            var tempInstance = (GameObject)PrefabUtility.InstantiatePrefab(uiPrefab);
+            var tempInstance = Object.Instantiate(uiPrefab);
 
             if (tempInstance == null)
                 return null;
@@ -36,8 +35,8 @@ namespace Utils
 
                 tempInstance.transform.SetParent(canvasObj.transform, false);
 
-                var width = EditorPrefs.GetFloat(Consts.BookSizeX);
-                var height = EditorPrefs.GetFloat(Consts.BookSizeY);
+                var width = size.x;
+                var height = size.y;
 
                 canvas.GetComponent<RectTransform>().sizeDelta = new Vector2(width, height);
                 rectTransform.anchoredPosition = Vector2.zero;
@@ -88,9 +87,9 @@ namespace Utils
             }
         }
         
-        public static Sprite GeneratePageSprite(GameObject uiPrefab, PageSection section)
+        public static Sprite GeneratePageSprite(GameObject uiPrefab, PageSection section, Vector2 size)
         {
-            var texture = GeneratePagePreview(uiPrefab, section);
+            var texture = GeneratePagePreview(uiPrefab, section, size);
             return texture != null ? Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f)) : null;
         }
     }

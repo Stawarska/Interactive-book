@@ -84,7 +84,8 @@ namespace Graph.Editor.Nodes
 
             if (isUIElement && cachedPreview == null)
             {
-                cachedPreview = GeneratePreview.GeneratePagePreview(node.PageVariant.gameObject, GeneratePreview.PageSection.Full);
+                var bookManager = Object.FindFirstObjectByType<BookManager>();
+                cachedPreview = GeneratePreview.GeneratePagePreview(node.PageVariant.gameObject, GeneratePreview.PageSection.Full, new Vector2(bookManager.BookWidth, bookManager.BookHeight));
             }
 
             var preview = isUIElement ? cachedPreview : AssetPreview.GetAssetPreview(node.PageVariant);
