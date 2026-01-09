@@ -10,10 +10,15 @@ namespace Graph
     {
         public Page GetFirstPage()
         {
-            if (nodes.Count == 0)
-                return null;
-
-            return nodes[0] is not ParagraphNode paragraphNode ? null : paragraphNode.PageVariant;
+            foreach (var node in nodes)
+            {
+                if(node is not StartNode startNode)
+                    continue;
+                
+                return startNode.GetStartPage();
+            }
+            Debug.LogWarning("No start node found");
+            return null;
         }
     }
 }
