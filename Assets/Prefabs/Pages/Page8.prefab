@@ -272,7 +272,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6555182722502769573, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_text
-      value: Book - Page Curl
+      value: "Framework Book - Page Curl to darmowy asset dost\u0119pny w Unity Asset
+        Store, kt\xF3ry oferuje gotow\u0105 animacj\u0119 przewracania stron wraz
+        z obs\u0142ug\u0105 interakcji polegaj\u0105cych na chwytaniu i zginaniu
+        kartki zgodnie z ruchem myszki. W projekcie zosta\u0142 on znacz\u0105co
+        zmodyfikowany i dostosowany do indywidualnych potrzeb, jednak podstawowa
+        logika dzia\u0142ania pochodzi w\u0142a\u015Bnie z tego rozwi\u0105zania."
       objectReference: {fileID: 0}
     - target: {fileID: 6626788620660627496, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_Pivot.x

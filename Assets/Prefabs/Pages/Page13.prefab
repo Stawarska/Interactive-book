@@ -397,7 +397,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6555182722502769573, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_text
-      value: 
+      value: "\u2022 Uruchomienie gotowego projektu stworzonego za pomoc\u0105 autorskiej
+        biblioteki\n\u2022 Mo\u017Cliwo\u015B\u0107 interakcji z opcj\u0105 wyboru,
+        umo\u017Cliwiaj\u0105c\u0105 przej\u015Bcie do nast\u0119pnej strony \n\u2022
+        Je\u015Bli opcja inwentarza zosta\u0142a wybrana w projekcie - mo\u017Cliwo\u015B\u0107
+        interakcji z oknem inwentarza, w celu weryfikacji posiadanych przedmiot\xF3w "
       objectReference: {fileID: 0}
     - target: {fileID: 6626788620660627496, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_Pivot.x

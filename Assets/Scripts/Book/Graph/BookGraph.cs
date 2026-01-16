@@ -17,7 +17,7 @@ namespace Graph
                 
                 return startNode.GetStartPage();
             }
-            Debug.LogWarning("No start node found");
+            Debug.LogWarning("Start node not found");
             return null;
         }
     }

@@ -222,9 +222,34 @@ PrefabInstance:
       value: "\u2022 Cel pracy"
       objectReference: {fileID: 0}
     - target: {fileID: 8762708712689314134, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: 'managedReferences[-2]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
       propertyPath: <ConnectedPage>k__BackingField
       value: 
       objectReference: {fileID: 2356443490743499925, guid: c87deb6ac9c948247a9261534432ab6d, type: 3}
+    - target: {fileID: 8762708712689314134, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: <Conditions>k__BackingField.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: 'managedReferences[1519397761985806406]'
+      value: 'GlobalVariables GlobalVariable.VariableOperation`1[[GlobalVariable.Conditions.IVariableCondition,
+        GlobalVariables]]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: <Conditions>k__BackingField.Array.data[0].variableCondition
+      value: 1519397761985806406
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: managedReferences[1519397761985806406].<Operation>k__BackingField
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: managedReferences[1519397761985806406].<VariableID>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

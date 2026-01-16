@@ -19,7 +19,7 @@ MonoBehaviour:
   - variableName: "\u017Bycie"
     variable:
       rid: 1013236396207898711
-  - variableName: Posiadanie klucza
+  - variableName: "Czy k\u0142ama\u0142"
     variable:
       rid: 1013236396207898712
   - variableName: Imie
@@ -31,7 +31,7 @@ MonoBehaviour:
   - variableName: Stamina
     variable:
       rid: 1013236396207898715
-  - variableName: Posiadanie broni
+  - variableName: "Czy uratowa\u0142 kota"
     variable:
       rid: 1013236396207898717
   - variableName: "Imi\u0119 kota"
@@ -43,7 +43,7 @@ MonoBehaviour:
   - variableName: Zaufanie
     variable:
       rid: 1013236398597603400
-  - variableName: Item stary klucz
+  - variableName: Stary klucz
     variable:
       rid: 1013236445153853511
   references:
@@ -80,7 +80,7 @@ MonoBehaviour:
     - rid: 1013236398597603328
       type: {class: StringVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:
-        <Value>k__BackingField: 
+        <Value>k__BackingField: Bonifacy
     - rid: 1013236398597603399
       type: {class: IntVariable, ns: GlobalVariable, asm: GlobalVariables}
       data:

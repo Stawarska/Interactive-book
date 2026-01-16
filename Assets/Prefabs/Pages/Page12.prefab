@@ -161,7 +161,7 @@ PrefabInstance:
         nowa opcja animacji.\n\u2022 Mo\u017Cliwo\u015B\u0107 zdefiniowania nowego
         UI inwentarza, kt\xF3ry automatycznie zostanie udost\u0119pniony designerom
         jako nowa opcja inwentarza\n\u2022 Programista mo\u017Ce zdefiniowa\u0107
-        nowe warunki w systemie zmiennych wykorzystywanych do tworzenia opcji kluczowych."
+        nowe warunki w systemie globalnych zmiennych "
       objectReference: {fileID: 0}
     - target: {fileID: 6626788620660627496, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_Pivot.x

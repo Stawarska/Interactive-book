@@ -1,5 +1,80 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &147433605386368253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3024337974434982979}
+  - component: {fileID: 7704766061352576981}
+  - component: {fileID: 3001858573178820341}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3024337974434982979
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147433605386368253}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6626788620660627496}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.54, y: 0.31}
+  m_AnchorMax: {x: 0.95, y: 0.8}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7704766061352576981
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147433605386368253}
+  m_CullTransparentMesh: 1
+--- !u!114 &3001858573178820341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147433605386368253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -2668256261665702891, guid: 623bb4302dc073d469c00e7fc36c310a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &610394833069607913
 GameObject:
   m_ObjectHideFlags: 0
@@ -33,7 +108,7 @@ RectTransform:
   - {fileID: 2728182726152013323}
   m_Father: {fileID: 4912258784100344534}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.3212517, y: 0.7743532}
+  m_AnchorMin: {x: 0.3212517, y: 0.7}
   m_AnchorMax: {x: 0.6821037, y: 1}
   m_AnchoredPosition: {x: 1.492157, y: 0}
   m_SizeDelta: {x: 11.370292, y: 0}
@@ -141,7 +216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Motywacja
+  m_text: "Tytu\u0142"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a0f617bfec781149a50bc96c329a5c1, type: 2}
   m_sharedMaterial: {fileID: -5692138682575764132, guid: 5a0f617bfec781149a50bc96c329a5c1, type: 2}
@@ -320,7 +395,7 @@ RectTransform:
   m_Father: {fileID: 4912258784100344534}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.05, y: 0.1}
-  m_AnchorMax: {x: 0.95, y: 0.75}
+  m_AnchorMax: {x: 0.95, y: 0.6}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -390,8 +465,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6626788620660627496}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.15, y: 0.43}
-  m_AnchorMax: {x: 0.85, y: 0.79}
+  m_AnchorMin: {x: 0.09, y: 0.35}
+  m_AnchorMax: {x: 0.47, y: 0.77}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -423,8 +498,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u2022 Liczne zlecenia od klient\xF3w na ksi\u0105\u017Cki paragrafowe\n\u2022
-    Przy\u015Bpieszenie pracy  "
+  m_text: Opis
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5a0f617bfec781149a50bc96c329a5c1, type: 2}
   m_sharedMaterial: {fileID: -5692138682575764132, guid: 5a0f617bfec781149a50bc96c329a5c1, type: 2}
@@ -529,7 +603,7 @@ RectTransform:
   m_Father: {fileID: 6626788620660627496}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1, y: 0.05}
-  m_AnchorMax: {x: 0.9, y: 0.4}
+  m_AnchorMax: {x: 0.9, y: 0.26}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -544,7 +618,7 @@ GameObject:
   - component: {fileID: 6626788620660627496}
   - component: {fileID: 5173843818124351913}
   m_Layer: 5
-  m_Name: chapter_page_template
+  m_Name: chapter_Image_page_template
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -565,6 +639,7 @@ RectTransform:
   - {fileID: 5492113232532788467}
   - {fileID: 2839265356417471175}
   - {fileID: 7040508624663062433}
+  - {fileID: 3024337974434982979}
   - {fileID: 4912258784100344534}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -589,6 +664,7 @@ MonoBehaviour:
   - rid: 5625638404082630726
   - rid: 5625638404082630728
   - rid: 1519397701887197255
+  - rid: 1519397883681964102
   <Choices>k__BackingField: []
   <ChoiceParent>k__BackingField: {fileID: 3693563408632539783}
   <ChoiceTemplate>k__BackingField: {fileID: 8762708712689314134, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
@@ -600,6 +676,11 @@ MonoBehaviour:
       data:
         <FieldName>k__BackingField: Choices title
         <TextFieldRef>k__BackingField: {fileID: 1476512903122434483}
+    - rid: 1519397883681964102
+      type: {class: PageImage, ns: Book, asm: Book}
+      data:
+        <FieldName>k__BackingField: Image
+        <ImageRef>k__BackingField: {fileID: 3001858573178820341}
     - rid: 5625638404082630726
       type: {class: PageText, ns: Book, asm: Book}
       data:

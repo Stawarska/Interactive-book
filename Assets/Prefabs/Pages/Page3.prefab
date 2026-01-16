@@ -272,7 +272,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6555182722502769573, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_text
-      value: Unity to super silnik
+      value: "Unity to powsta\u0142y w 2005 roku wieloplatformowy silnik do gier
+        oraz platforma do tworzenia interaktywnych tre\u015Bci 2D i 3D w czasie rzeczywistym,
+        wykorzystywana zar\xF3wno przez du\u017Ce studia produkcyjne, jak i niezale\u017Cnych
+        deweloper\xF3w. Na przestrzeni lat narz\u0119dzie to sta\u0142o si\u0119
+        jednym z~filar\xF3w wsp\xF3\u0142czesnego gamedevu dzi\u0119ki przyst\u0119pno\u015Bci,
+        szerokiej dokumentacji, du\u017Cej liczbie wbudowanych funkcji oraz aktywnej
+        spo\u0142eczno\u015Bci, kt\xF3ra nieustannie rozwija ekosystem silnika."
       objectReference: {fileID: 0}
     - target: {fileID: 6626788620660627496, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_Pivot.x

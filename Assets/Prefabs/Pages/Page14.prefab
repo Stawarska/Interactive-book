@@ -24,6 +24,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Page14
       objectReference: {fileID: 0}
+    - target: {fileID: 6555182722502769573, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+      propertyPath: m_text
+      value: "\u2022 Autorska biblioteka wymaga wersji Unity 6000.2.2 lub wy\u017Cszej.\n\u2022
+        Graf musi dzia\u0142a\u0107 wystarczaj\u0105co p\u0142ynnie nawet przy du\u017Cej
+        liczbie nod\xF3w, aby praca by\u0142a efektywna. Dlatego nody powinny by\u0107
+        na tyle dobrze zoptymalizowane, by ich du\u017Ca liczba (zazwyczaj licz\u0105ca
+        setki, jak w przypadku typowych ksi\u0105\u017Cek) nie stanowi\u0142a problemu
+        dla silnika i nie powodowa\u0142a spadk\xF3w wydajno\u015Bci."
+      objectReference: {fileID: 0}
     - target: {fileID: 6626788620660627496, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

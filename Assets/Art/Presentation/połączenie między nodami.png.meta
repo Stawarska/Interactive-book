@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 483d8f647bd3d204e825534c74287d2e
+guid: f87c446676c95e04aa8200b3cf4f8520
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4677531925145623770
-    second: Gemini_Generated_Image_okhzarokhzarokhz (1)_0
+      213: -5480631965237904270
+    second: "po\u0142\u0105czenie mi\u0119dzy nodami_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gemini_Generated_Image_okhzarokhzarokhz (1)_0
+      name: "po\u0142\u0105czenie mi\u0119dzy nodami_0"
       rect:
         serializedVersion: 2
-        x: 434
-        y: 173
-        width: 462
-        height: 445
+        x: 0
+        y: 0
+        width: 922
+        height: 797
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: adc9ad7d08ee9e040800000000000000
-      internalID: 4677531925145623770
+      spriteID: 27cf757e342e0f3b0800000000000000
+      internalID: -5480631965237904270
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Gemini_Generated_Image_okhzarokhzarokhz (1)_0: 4677531925145623770
+      "po\u0142\u0105czenie mi\u0119dzy nodami_0": -5480631965237904270
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
