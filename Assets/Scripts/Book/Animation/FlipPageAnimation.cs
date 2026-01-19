@@ -45,13 +45,20 @@ namespace Book.Animation
         private Page nextPage;
         private Page currentPage;
         
+        private Vector2Int prevScreenSize;
 
         private void Awake()
         {
             left.gameObject.SetActive(false);
             right.gameObject.SetActive(false);
-            CalcCurlCriticalPoints();
+  
+            UpdateSizeVariables();
+        }
 
+        private async void UpdateSizeVariables()
+        {
+            await Awaitable.EndOfFrameAsync();
+            CalcCurlCriticalPoints();
             var rect = bookPanel.rect;
             float pageWidth = rect.width / 2.0f;
             float pageHeight = rect.height;
@@ -68,6 +75,14 @@ namespace Book.Animation
 
             shadowLtr.rectTransform.sizeDelta = new Vector2(pageWidth, shadowPageHeight);
             shadowLtr.rectTransform.pivot = new Vector2(0, pageWidth / 2 / shadowPageHeight);
+            
+            prevScreenSize = new Vector2Int(Screen.width, Screen.height);
+        }
+
+        private void Update()
+        {
+            if (prevScreenSize.x != Screen.width || prevScreenSize.y != Screen.height)
+                UpdateSizeVariables();
         }
 
         private void CalcCurlCriticalPoints()
@@ -243,9 +258,6 @@ namespace Book.Animation
             
             right.sprite = GeneratePreview.GeneratePageSprite(nextPage.gameObject, GeneratePreview.PageSection.Left, new Vector2(BookManager.Instance.BookWidth, BookManager.Instance.BookHeight));  
             rightNext.sprite = GeneratePreview.GeneratePageSprite(nextPage.gameObject, GeneratePreview.PageSection.Right, new Vector2(BookManager.Instance.BookWidth, BookManager.Instance.BookHeight));
-            
-            // right.sprite = targetPage.TextPagePrefab.SpritePage;
-            // rightNext.sprite = targetPage.ImagePagePrefab.SpritePage;
         }
 
         private void DragLeftPageToPoint(Vector3 point)
@@ -278,10 +290,6 @@ namespace Book.Animation
                 right.sprite = GeneratePreview.GeneratePageSprite(currentPage.gameObject, GeneratePreview.PageSection.Left, new Vector2(BookManager.Instance.BookWidth, BookManager.Instance.BookHeight));
             left.sprite = GeneratePreview.GeneratePageSprite(nextPage.gameObject, GeneratePreview.PageSection.Right, new Vector2(BookManager.Instance.BookWidth, BookManager.Instance.BookHeight));
             leftNext.sprite = GeneratePreview.GeneratePageSprite(nextPage.gameObject, GeneratePreview.PageSection.Left, new Vector2(BookManager.Instance.BookWidth, BookManager.Instance.BookHeight));
-            
-            // right.sprite = currentPage.TextPagePrefab.SpritePage;
-            // left.sprite = targetPage.ImagePaePrefab.SpritePage;
-            // leftNext.sprite = targetPage.TextPagePrefab.SpritePage;
         }
 
 
@@ -310,9 +318,6 @@ namespace Book.Animation
             
             leftNext.sprite = GeneratePreview.GeneratePageSprite(nextPage.gameObject, GeneratePreview.PageSection.Left, new Vector2(BookManager.Instance.BookWidth, BookManager.Instance.BookHeight));
             rightNext.sprite = GeneratePreview.GeneratePageSprite(nextPage.gameObject, GeneratePreview.PageSection.Right, new Vector2(BookManager.Instance.BookWidth, BookManager.Instance.BookHeight));
-
-            // leftNext.sprite = targetPage.TextPagePrefab.SpritePage;
-            // rightNext.sprite = targetPage.ImagePagePrefab.SpritePage;
         }
 
         private void TweenBack()
