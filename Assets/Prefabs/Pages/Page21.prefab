@@ -94,7 +94,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5849285117779513869, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
       propertyPath: m_text
-      value: "Powr\xF3t do funkcjonalno\u015Bci"
+      value: "\u2022 Powr\xF3t do funkcjonalno\u015Bci"
       objectReference: {fileID: 0}
     - target: {fileID: 8762708712689314134, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
       propertyPath: <ConnectedPage>k__BackingField
@@ -151,7 +151,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6555182722502769573, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_text
-      value: 
+      value: "W ramach pracy zosta\u0142y stworzone 3 rodziaje animacji:\n\t\u2022
+        animacja przewracania stron (obecnie wybrana)\n\t\u2022 animacja przenikania
+        \n\t\u2022 brak animacji \nSystem mo\u017Cna z \u0142atwo\u015Bci\u0105 rozszerza\u0107
+        o kolejne rodzaje animacji  "
       objectReference: {fileID: 0}
     - target: {fileID: 6626788620660627496, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_Pivot.x
@@ -343,7 +346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5849285117779513869, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
       propertyPath: m_text
-      value: Podsumowanie
+      value: "\u2022 Podsumowanie"
       objectReference: {fileID: 0}
     - target: {fileID: 8762708712689314134, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
       propertyPath: <ConnectedPage>k__BackingField

@@ -12,7 +12,6 @@ namespace Book.Animation
         [SerializeField] private RectTransform prefabParent;
         [SerializeField] private float pageFlipTime;
         [SerializeField] private Image pageImage;
-        private RectTransform currentSpawnedPage;
         private Page nextPage;
 
         public void FlipPage(Page next)
@@ -31,13 +30,13 @@ namespace Book.Animation
         private void PrepareToFlip(Page page)
         {
             if(nextPage != null)
-                pageImage.sprite = GeneratePreview.GeneratePageSprite(nextPage.gameObject, GeneratePreview.PageSection.Full, new Vector2(BookManager.Instance.BookWidth, BookManager.Instance.BookHeight));
+                pageImage.sprite = GeneratePreview.GeneratePageSprite(nextPage.OriginalPrefab.gameObject, GeneratePreview.PageSection.Full, new Vector2(BookManager.Instance.BookWidth, BookManager.Instance.BookHeight));
             
-            if(currentSpawnedPage)
-                Destroy(currentSpawnedPage.gameObject);
+            if(nextPage)
+                Destroy(nextPage.gameObject);
             
             nextPage = page;
-            currentSpawnedPage = Instantiate(nextPage, prefabParent).GetComponent<RectTransform>();
+            nextPage.ParentAndFill(prefabParent);
         }
 
         private IEnumerator FadeImageAlpha(Image image, float targetAlpha, float duration)

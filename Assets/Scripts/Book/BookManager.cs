@@ -51,6 +51,8 @@ namespace Book
         
         public void SelectNextPage(Page page)
         {
+            //This is necessary, to ensure that Choice is pointing into prefab, not self
+            page = page.InstantiatePage();
             if(targetPage != null)
                 pagesHistory.Push(targetPage);
             SelectPage(page);
@@ -74,7 +76,7 @@ namespace Book
 
         private void SetFirstPage()
         {
-            var firstPage = bookGraph.GetFirstPage();
+            var firstPage = bookGraph.GetFirstPage().InstantiatePage();
             targetPage = firstPage;
             pageAnimation.SpawnWithoutAnimation(firstPage);
         }

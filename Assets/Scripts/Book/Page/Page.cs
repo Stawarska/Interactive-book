@@ -12,7 +12,22 @@ namespace Book
         [field: SerializeField] public Transform ChoiceParent { get; private set; }
         [field: SerializeField] public Choice ChoiceTemplate { get; private set; }
 
+        public Page OriginalPrefab { get; private set; }
+
         public void OnValidate() => this.ValidateRefs();
+
+        public Page InstantiatePage()
+        {
+            var copy = Instantiate(this);
+            foreach (var choice in copy.Choices)
+            {
+                if (choice.ConnectedPage == copy)
+                    choice.ConnectedPage = this;
+            }
+            copy.OriginalPrefab = this;
+            return copy;
+        }
+        
 
 #if UNITY_EDITOR
         public void CopyContentFrom(IPageContent[] pageContents)
@@ -27,5 +42,15 @@ namespace Book
             }
         }
 #endif
+        public void ParentAndFill(RectTransform prefabParent)
+        {
+            var rectTransform = GetComponent<RectTransform>();
+            rectTransform.SetParent(prefabParent);
+            rectTransform.anchorMin = Vector2.zero;
+            rectTransform.anchorMax = Vector2.one;
+            rectTransform.anchoredPosition = Vector2.zero;
+            rectTransform.offsetMin = Vector2.zero;
+            rectTransform.offsetMax = Vector2.zero;
+        }
     }
 }

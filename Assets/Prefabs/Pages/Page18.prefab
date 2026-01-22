@@ -94,7 +94,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5849285117779513869, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
       propertyPath: m_text
-      value: Podsumowanie
+      value: "\u2022 Podsumowanie"
       objectReference: {fileID: 0}
     - target: {fileID: 8762708712689314134, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
       propertyPath: <ConnectedPage>k__BackingField
@@ -120,6 +120,127 @@ MonoBehaviour:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
   m_PrefabInstance: {fileID: 4816799977734117330}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7835483921479246533
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4781458433717122737}
+    m_Modifications:
+    - target: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4129077335517252314, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_Name
+      value: base_choice_white
+      objectReference: {fileID: 0}
+    - target: {fileID: 5849285117779513869, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: m_text
+      value: Widok pliku Global Variables
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762708712689314134, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+      propertyPath: <ConnectedPage>k__BackingField
+      value: 
+      objectReference: {fileID: 1508894151953926903, guid: cea56bedf42696348be796b80acdd36f, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+--- !u!114 &1524009124916824979 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8762708712689314134, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+  m_PrefabInstance: {fileID: 7835483921479246533}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb6eb2f28a454b929da7463b059c6cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Book::Book.Choice
+--- !u!224 &8589098206919763389 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1985982239764875128, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
+  m_PrefabInstance: {fileID: 7835483921479246533}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8071110348344662652
 PrefabInstance:
@@ -215,7 +336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5849285117779513869, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
       propertyPath: m_text
-      value: "Powr\xF3t do funkcjonalno\u015Bci"
+      value: "\u2022 Powr\xF3t do funkcjonalno\u015Bci"
       objectReference: {fileID: 0}
     - target: {fileID: 8762708712689314134, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
       propertyPath: <ConnectedPage>k__BackingField
@@ -252,19 +373,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: <Choices>k__BackingField.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: '<Choices>k__BackingField.Array.data[0]'
       value: 
-      objectReference: {fileID: 691651349208707882}
+      objectReference: {fileID: 1524009124916824979}
     - target: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: '<Choices>k__BackingField.Array.data[1]'
+      value: 
+      objectReference: {fileID: 691651349208707882}
+    - target: {fileID: 5173843818124351913, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+      propertyPath: '<Choices>k__BackingField.Array.data[2]'
       value: 
       objectReference: {fileID: 4270489051450228356}
     - target: {fileID: 6201669281698029941, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_text
-      value: 'Manager zmiennych '
+      value: Globalne zmienne
       objectReference: {fileID: 0}
     - target: {fileID: 6245519580763252434, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_Name
@@ -272,7 +397,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6555182722502769573, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_text
-      value: 
+      value: "\u2022 W pliku scriptable object Global Variables mo\u017Cemy \u0142atwo
+        dodawa\u0107 nowe zmienne, kt\xF3rych b\u0119dziemy chcieli u\u017Cy\u0107
+        w naszym projekcie.\n\n\u2022 Bazuj\u0105c na nich mo\u017Cemy potem doda\u0107
+        akcje do naszych wybor\xF3w,  oraz ograniczy\u0107 je warunkami."
       objectReference: {fileID: 0}
     - target: {fileID: 6626788620660627496, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_Pivot.x
@@ -357,6 +485,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3693563408632539783, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8589098206919763389}
     - targetCorrespondingSourceObject: {fileID: 3693563408632539783, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7750123531617934596}
