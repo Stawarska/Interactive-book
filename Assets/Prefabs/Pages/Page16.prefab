@@ -278,8 +278,8 @@ PrefabInstance:
       propertyPath: m_text
       value: "Tworzenie w\u0142asnego projektu ksi\u0105\u017Cki zaczyna si\u0119
         w grafie. Za jego pomoc\u0105 tworzymy w\u0119z\u0142y stron, wype\u0142niamy
-        je kontentem, tworzymy w nich wybory i \u0142\u0105czymy z innymi w\u0119z\u0142ami
-        stron."
+        je tre\u015Bci\u0105, tworzymy w nich wybory i \u0142\u0105czymy z innymi
+        w\u0119z\u0142ami stron."
       objectReference: {fileID: 0}
     - target: {fileID: 6626788620660627496, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_Pivot.x

@@ -157,14 +157,14 @@ PrefabInstance:
       propertyPath: m_text
       value: "\u2022 Projektowanie ksi\u0105\u017Cki za pomoc\u0105 grafu, jej tre\u015Bci
         i po\u0142\u0105cze\u0144 pomi\u0119dzy wyborami korzystaj\u0105c z gotowych
-        szablon\xF3w, lub przygotowywa\u0107 w\u0142asne.\n\u2022 Tworzenie nowych
-        zmiennych oraz w edytorze wybor\xF3w w nodzie strony mo\u017Cliwo\u015B\u0107
-        ustawiania akcji, kt\xF3re maj\u0105 si\u0119 wykona\u0107 przy wybraniu
-        danej opcji oraz ustawianie warunk\xF3w, kt\xF3re musz\u0105 zosta\u0107
-        spe\u0142nione.\n\u2022 Mo\u017Cliwo\u015B\u0107 wybrania jednej z dost\u0119pnych
+        szablon\xF3w, lub przygotowywanie w\u0142asnych.\n\u2022 Tworzenie nowych
+        zmiennych.  \n\u2022 Mo\u017Cliwo\u015B\u0107 dodawania akcji i warunk\xF3w
+        do wybor\xF3w.\n\u2022 Mo\u017Cliwo\u015B\u0107 wybrania jednego z dost\u0119pnych
         wariant\xF3w animacji przewracania ksi\u0105\u017Cki.\n\u2022 Mo\u017Cliwo\u015B\u0107
         wybrania, czy ksi\u0105\u017Cka ma korzysta\u0107 z funkcji inwentarza i
-        wyb\xF3r jednego z gotowych design\xF3w.\n"
+        wyb\xF3r jednego z gotowych design\xF3w.\n\u2022 Mo\u017Cliwo\u015B\u0107
+        dodawania, kt\xF3re zmienne maj\u0105 by\u0107 traktowane jako przedmiot
+        do inwentarza.\n"
       objectReference: {fileID: 0}
     - target: {fileID: 6626788620660627496, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_Pivot.x

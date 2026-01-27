@@ -272,14 +272,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6555182722502769573, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_text
-      value: "Biblioteka rozszerza natywne mo\u017Cliwo\u015Bci artybutu SerializeReference
+      value: "\u2022 Biblioteka rozszerza natywne mo\u017Cliwo\u015Bci artybutu SerializeReference
         w Unity, udost\u0119pniaj\u0105c rozbudowany zestaw narz\u0119dzi edytorowych
         do pracy z typami polimorficznymi, takimi jak klasy abstrakcyjne czy interfejsy,
         bez konieczno\u015Bci modyfikowania wewn\u0119trznych mechanizm\xF3w serializacji
-        silnika. Jej g\u0142\xF3wn\u0105 funkcj\u0105 jest umo\u017Cliwienie wygodnego
-        wyboru konkretnej implementacji danego typu bezpo\u015Brednio w Inspektorze,
-        r\xF3wnie\u017C w tablicach i listach, przy zachowaniu pe\u0142nej kompatybilno\u015Bci
-        z natywnym formatem serializacji Unity."
+        silnika. \n\u2022 Jej g\u0142\xF3wn\u0105 funkcj\u0105 jest umo\u017Cliwienie
+        wygodnego wyboru konkretnej implementacji danego typu bezpo\u015Brednio w
+        Inspektorze, r\xF3wnie\u017C w tablicach i listach, przy zachowaniu pe\u0142nej
+        kompatybilno\u015Bci z natywnym formatem serializacji Unity."
       objectReference: {fileID: 0}
     - target: {fileID: 6626788620660627496, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_Pivot.x

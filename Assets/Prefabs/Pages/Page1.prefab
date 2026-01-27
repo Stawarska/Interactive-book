@@ -147,9 +147,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6555182722502769573, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_text
-      value: "\u2022 Celem niniejszej pracy by\u0142o opracowanie narz\u0119dzia
-        do tworzenia interaktywnych ksi\u0105\u017Cek, kt\xF3re umo\u017Cliwia mi\u0119dzy
-        innymi tworzenie ksi\u0105\u017Cek paragrafowych z wyborami.  "
+      value: "\u2022 Celem pracy by\u0142o opracowanie narz\u0119dzia do tworzenia
+        interaktywnych ksi\u0105\u017Cek, kt\xF3re umo\u017Cliwia mi\u0119dzy innymi
+        tworzenie ksi\u0105\u017Cek paragrafowych z wyborami.  "
       objectReference: {fileID: 0}
     - target: {fileID: 6626788620660627496, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_Pivot.x

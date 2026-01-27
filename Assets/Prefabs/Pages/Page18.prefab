@@ -215,7 +215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5849285117779513869, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
       propertyPath: m_text
-      value: Widok pliku Global Variables
+      value: "\u2022 Widok pliku Global Variables"
       objectReference: {fileID: 0}
     - target: {fileID: 8762708712689314134, guid: 8adc4a092313bfc4f898c07a82083b7f, type: 3}
       propertyPath: <ConnectedPage>k__BackingField

@@ -272,14 +272,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6555182722502769573, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_text
-      value: "Biblioteka Scene Reference Attribute, to zestaw atrybut\xF3w i narz\u0119dzi
-        s\u0142u\u017C\u0105cych do statycznego wyszukiwania, filtrowania i serializacji
-        komponent\xF3w oraz interfejs\xF3w ju\u017C na etapie edycji, co pozwala
-        ograniczy\u0107 potrzeb\u0119 korzystania w czasie wykonywania z metod takich
-        jak GetComponent czy FindObject. Logika wyszukiwania zale\u017Cno\u015Bci
-        zostaje przeniesiona do fazy OnValidate, dzi\u0119ki czemu obni\u017Cony
-        zostaje koszt inicjalizacji scen, a konfiguracja obiekt\xF3w staje si\u0119
-        bardziej deterministyczna."
+      value: "\u2022 Biblioteka Scene Reference Attribute, to zestaw atrybut\xF3w
+        i narz\u0119dzi s\u0142u\u017C\u0105cych do statycznego wyszukiwania, filtrowania
+        i serializacji komponent\xF3w oraz interfejs\xF3w ju\u017C na etapie edytora,
+        co pozwala ograniczy\u0107 potrzeb\u0119 korzystania w czasie wykonywania
+        z metod takich jak GetComponent czy FindObject.\n\u2022 Logika wyszukiwania
+        zale\u017Cno\u015Bci zostaje przeniesiona do fazy OnValidate, dzi\u0119ki
+        czemu obni\u017Cony zostaje koszt inicjalizacji scen, a konfiguracja obiekt\xF3w
+        staje si\u0119 bardziej deterministyczna."
       objectReference: {fileID: 0}
     - target: {fileID: 6626788620660627496, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_Pivot.x

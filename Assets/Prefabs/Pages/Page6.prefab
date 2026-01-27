@@ -151,11 +151,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6555182722502769573, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_text
-      value: "xNode to biblioteka do Unity umo\u017Cliwiaj\u0105ca tworzenie graf\xF3w
-        opartych na w\u0119z\u0142ach. Zosta\u0142a wybrana ze wzgl\u0119du na otwarty
-        kod \u017Ar\xF3d\u0142owy, licencj\u0119 MIT oraz pe\u0142n\u0105 mo\u017Cliwo\u015B\u0107
-        modyfikacji, co pozwoli\u0142o dostosowa\u0107 narz\u0119dzie do specyficznych
-        potrzeb projektu."
+      value: "\u2022 xNode to biblioteka do Unity umo\u017Cliwiaj\u0105ca tworzenie
+        graf\xF3w opartych na w\u0119z\u0142ach. \n\u2022 Zosta\u0142a wybrana ze
+        wzgl\u0119du na otwarty kod \u017Ar\xF3d\u0142owy, licencj\u0119 MIT oraz
+        pe\u0142n\u0105 mo\u017Cliwo\u015B\u0107 modyfikacji, co pozwoli\u0142o dostosowa\u0107
+        narz\u0119dzie do specyficznych potrzeb projektu."
       objectReference: {fileID: 0}
     - target: {fileID: 6626788620660627496, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_Pivot.x

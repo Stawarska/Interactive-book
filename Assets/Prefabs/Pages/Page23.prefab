@@ -148,9 +148,10 @@ PrefabInstance:
     - target: {fileID: 6555182722502769573, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_text
       value: "\u2022 Dodanie wsparcia dla systemu lokalizacji, aby mo\u017Cliwe by\u0142o
-        \u0142atwe t\u0142umaczenie na dowolny j\u0119zyk.\n\u2022 Wprowadzenie obs\u0142ugi
-        dodatkowych typ\xF3w tre\u015Bci na stronach, takich jak wideo i audio.\n\u2022
-        Rozszerzenie systemu animacji przewracania stron o nowe warianty.\n"
+        \u0142atwe t\u0142umaczenie tre\u015Bci na dowolny j\u0119zyk.\n\u2022 Wprowadzenie
+        obs\u0142ugi dodatkowych typ\xF3w tre\u015Bci na stronach, takich jak wideo
+        i audio.\n\u2022 Rozszerzenie systemu animacji przewracania stron o nowe
+        warianty.\n"
       objectReference: {fileID: 0}
     - target: {fileID: 6626788620660627496, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_Pivot.x
