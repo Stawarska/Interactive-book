@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Paragraph
   m_EditorClassIdentifier: Book::Nodes.ParagraphNode
   graph: {fileID: 11400000}
-  position: {x: 3048, y: 1608}
+  position: {x: 3064, y: 1624}
   ports:
     keys:
     - choice
@@ -1780,7 +1780,7 @@ MonoBehaviour:
   m_Name: Paragraph
   m_EditorClassIdentifier: Book::Nodes.ParagraphNode
   graph: {fileID: 11400000}
-  position: {x: 3048, y: 3432}
+  position: {x: 3064, y: 3464}
   ports:
     keys:
     - choice
@@ -1853,7 +1853,7 @@ MonoBehaviour:
   m_Name: Paragraph
   m_EditorClassIdentifier: Book::Nodes.ParagraphNode
   graph: {fileID: 11400000}
-  position: {x: 3048, y: 2504}
+  position: {x: 3064, y: 2520}
   ports:
     keys:
     - choice
@@ -2392,7 +2392,7 @@ MonoBehaviour:
   m_Name: Paragraph
   m_EditorClassIdentifier: Book::Nodes.ParagraphNode
   graph: {fileID: 11400000}
-  position: {x: 3048, y: 712}
+  position: {x: 3064, y: 728}
   ports:
     keys:
     - choice

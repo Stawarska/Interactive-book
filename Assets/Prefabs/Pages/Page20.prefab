@@ -274,9 +274,10 @@ PrefabInstance:
       propertyPath: m_text
       value: "\u2022 W Book Managerze mo\u017Cemy wybra\u0107, czy nasz projekt ma
         posiada\u0107 inwentarz, oraz z jakiego prefaba ma on korzysta\u0107 \n\u2022
-        System jest napisany modularnie, dzi\u0119ki czemu programista mo\u017Ce
-        stworzy\u0107 dowoln\u0105 klas\u0119 z w\u0142asnymi funkcjonalno\u015Bciami,
-        wystarczy \u017Ce jego klasa b\u0119dziecie dziedziczy\u0107 po IInwentoryVisuals"
+        W inventory items data mo\u017Cemy dodawa\u0107, kt\xF3re zmienne z systemu
+        globalnych zmiennych maj\u0105 by\u0107 traktowane jako przedmiot, oraz doda\u0107
+        im reprezentacj\u0119 wizualn\u0105 i pod jak\u0105 nazw\u0105 maj\u0105
+        si\u0119 wy\u015Bwietla\u0107"
       objectReference: {fileID: 0}
     - target: {fileID: 6626788620660627496, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_Pivot.x

@@ -157,9 +157,9 @@ PrefabInstance:
       propertyPath: m_text
       value: "\u2022 Dodawanie nowych szablon\xF3w stron i nowych typ\xF3w kontentu
         strony\n\u2022 Mo\u017Cliwo\u015B\u0107 zdefiniowania nowych typ\xF3w animacji
-        strony, kt\xF3ry automatycznie zostanie udost\u0119pniony designerom jako
-        nowa opcja animacji.\n\u2022 Mo\u017Cliwo\u015B\u0107 zdefiniowania nowego
-        UI inwentarza, kt\xF3ry automatycznie zostanie udost\u0119pniony designerom
+        strony, kt\xF3re automatycznie zostan\u0105 udost\u0119pnione designerom
+        jako nowa opcja animacji.\n\u2022 Mo\u017Cliwo\u015B\u0107 zdefiniowania
+        nowego UI inwentarza, kt\xF3ry automatycznie zostanie udost\u0119pniony designerom
         jako nowa opcja inwentarza\n\u2022 Programista mo\u017Ce zdefiniowa\u0107
         nowe warunki w systemie globalnych zmiennych "
       objectReference: {fileID: 0}
