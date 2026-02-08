@@ -153,9 +153,9 @@ PrefabInstance:
       propertyPath: m_text
       value: "\u2022 Framework SaintsField, to rozszerzenie inspektora w Unity, kt\xF3re
         skupia si\u0119 na ulepszeniu i rozszerzaniu sposobu wy\u015Bwietlania p\xF3l
-        skrypt\xF3w w Inspektorze Unity. \n\u2022 Umo\u017Cliwia tworzenie bardziej
-        zaawansowanych i elastycznych atrybut\xF3w. \n\u2022 Wspiera oba wykorzystywane
-        w Unity systemy interfejsu edytora, IMGUI oraz UI Toolkit."
+        skrypt\xF3w w Inspektorze Unity. \n\u2022 Opiera si\u0119 na atrybutach.\n\u2022
+        Wspiera oba wykorzystywane w Unity systemy interfejsu edytora, IMGUI oraz
+        UI Toolkit."
       objectReference: {fileID: 0}
     - target: {fileID: 6626788620660627496, guid: c658cfa27fd35ae4e9bd52abee519064, type: 3}
       propertyPath: m_Pivot.x

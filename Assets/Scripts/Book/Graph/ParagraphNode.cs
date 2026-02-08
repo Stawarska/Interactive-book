@@ -66,6 +66,7 @@ namespace Nodes
         
         public void OnPageTemplateChanged(Object newValue)
         {
+            ClearDynamicPorts();
             DeletePagePrefab();
             CreatePrefabVariant(newValue);
             var inputChoice = GetInputValue<ChoiceEditor>(nameof(choice));
